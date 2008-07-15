@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<som>
+	<class 	name="test.DateTypeTest" 
+			sheet="日期">
+		<property name="date" title="日期型-文本">
+			<string_rule parent_rule="date_string_rule">
+				<message> 输入日期不合法，输入格式为YYYY-MM-DD</message>
+			</string_rule>
+		</property>
+		<property name="sqlDate" title="SQL日期型-文本">
+			<string_rule parent_rule="date_string_rule">
+				<message> 输入日期不合法，输入格式为YYYY-MM-DD</message>
+			</string_rule>
+		</property>
+		<property name="timestamp" title="时间戳型-文本">
+			<string_rule parent_rule="date_string_rule">
+				<message> 输入日期不合法，输入格式为YYYY-MM-DD</message>
+			</string_rule>
+		</property>
+	</class>
+</som>
