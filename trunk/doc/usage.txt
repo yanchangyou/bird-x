@@ -1,0 +1,7 @@
+按照excel的sheet模板，
+写出对应的Object
+其中sheet的一个title对应对应Object的property，
+通过配置文件som将它们一一对应起来，
+然后读取excel开始映射
+
+在io.excel.test.integrateTest.TestMain中有几个测试用例：
