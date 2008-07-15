@@ -1,0 +1,107 @@
+sheet-object-mapping.xml
+<sheet-object-mapping>
+	<class name="" sheet="">
+		<property name="" title="">
+	</class>
+</sheet-object-mapping>
+
+Map property_title_map = new HashMap();
+property_title_map.put("property","title");
+
+Map title_column_map = new HashMap();
+title_column_map.put("title",column);
+
+SheetObjectMapping
+
+SheetObjectMapping.config(Class objClass) {
+	String configFileName = objClass.getPackage().repalce(".","\\") + "\\sheet-object-mapping.xml";
+	classLoader.getResourceAsStream(ISS_APP_CONFIG);
+	configPropertyTitleMap();
+	
+};
+SheetObjectMapping aSheetObjectMapping = SheetObjectMapping.config();
+
+
+sheet2list(sheet) {
+	titleRow = sheet.getRow(0);
+	aSheetObjectMapping.configTitleColumnMap(titleRow);
+	
+	list
+	it = sheet.getRowIt();
+	
+	while (it.hasNext()) {
+		row = it.next();
+		Object obj = row2object(row, aSheetObjectMapping);
+		list.add(obj);
+	}
+	return list;
+}
+
+Object row2object(Row row, SheetObjectMapping map) {
+	Class objClass = Class.forName(map.getClassName())
+	Object obj = objClass.newInstance();
+	Set filedSet = map.getFieldMap().keySet();
+	Iterator it = set.getI();
+	while (it.hasNext()) {
+		String field = (String)it.next();
+		Field filed = objClass.getField(field);
+		short column = ((Short)map.getTitleColumnMap(field)).shortValue();
+		Object value = cellWrap(row.getCell((short)column),filed.type());
+		filed.set(obj, value);
+	}	
+	return obj;
+}
+
+cellWrap(cell,aClass) {
+	Object value = null;
+	String date = cell2string(cell);
+	if (aClass.equals(int.class)) {
+		value = new Integer(data);
+	} else if (aClass.equals(long.class)) {
+		value = Long(data);
+	} else if (aClass.equals(double.class)) {
+		value = new Double(data);
+	} else if (aClass.equals(int.class)) {
+		value = Integer.parseInt(data);
+	} else if (aClass.equals(int.class)) {
+		value = Integer.parseInt(data);
+	} 
+	
+}
+
+public String cell2string(HSSFCell cell) {
+		if (cell == null) {
+			return "";
+		}
+		String str = null;
+		final int cellType = cell.getCellType();
+		switch (cellType) {
+		case HSSFCell.CELL_TYPE_STRING 	: str = "" + cell.getStringCellValue().trim(); break;
+		case HSSFCell.CELL_TYPE_NUMERIC : str = "" + cell.getNumericCellValue(); break;		
+		case HSSFCell.CELL_TYPE_BLANK 	: str = "" ; 							break;
+		case HSSFCell.CELL_TYPE_BOOLEAN : str = "" + cell.getBooleanCellValue() ; break;
+		case HSSFCell.CELL_TYPE_ERROR 	: str = "" + cell.getErrorCellValue() ; break;
+		case HSSFCell.CELL_TYPE_FORMULA : str = "" + cell.getStringCellValue(); break;		
+		}
+		
+		return str;
+	}
+
+
+int
+long
+double
+string
+date
+true
+
+
+¿‡–ÕºÏ≤È
+nullable
+emptyable
+spaceable
+
+
+
+
+
