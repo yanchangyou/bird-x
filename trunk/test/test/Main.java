@@ -30,8 +30,7 @@ import org.software.bird.som.exception.SheetTitleNotFoundException;
  */
 public class Main {
 	
-	public static void main(String[] args) {
-		
+	public static void main(String[] args) {		
 		
 		String fileName = "支持的变量类型.xls";
 		
