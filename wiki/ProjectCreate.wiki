@@ -1,4 +1,4 @@
-#labels Phase-Implementation,项目搭建,手册
+#labels Phase-Implementation,项目搭建,手册,项目搭建
 = bird-x项目搭建 =
 
  项目搭建分三步
