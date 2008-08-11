@@ -1,4 +1,4 @@
-#labels Phase-Implementation,项目搭建手册
+#labels Phase-Implementation,项目搭建,手册
 = bird-x项目搭建 =
 
 项目搭建分两步
@@ -30,7 +30,5 @@ copy svn 地址 已备后面使用
   http://lh4.ggpht.com/yanchangyou/SKAjfgSd0XI/AAAAAAAAAnA/9xG043-drzU/s800/import%20svn%204.jpg
  选择truck
   http://lh4.ggpht.com/yanchangyou/SKAjgo5VGJI/AAAAAAAAAnI/0ebU-Eo22gQ/s800/import%20svn%205.jpg
- 项目名称中输入bird-x
-  http://lh4.ggpht.com/yanchangyou/SKAjg2qwnAI/AAAAAAAAAnQ/rFgiEqTeNfo/s800/import%20svn%206.jpg
- 项目搭建成功
-  http://lh3.ggpht.com/yanchangyou/SKApa5lvtTI/AAAAAAAAAn4/40jn-SlaD-o/s800/import%20svn%207.jpg
+  项目搭建成功
+  http://lh4.ggpht.com/yanchangyou/SKAs6oZZa4I/AAAAAAAAAoY/1TN-HKZflxs/s800/import%20svn%206.jpg
