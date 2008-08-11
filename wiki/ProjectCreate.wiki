@@ -34,8 +34,8 @@ copy svn 地址 已备后面使用
  创建新的资源位置
   http://lh4.ggpht.com/yanchangyou/SKAjfD0jwRI/AAAAAAAAAmw/dDbIhnMmqeI/s800/import%20svn%203.jpg
  输入svn地址 
- * 项目成员访问  : https://bird-x.googlecode.com/svn/
- * 匿名访问      : http://bird-x.googlecode.com/svn/
+  项目成员访问  : https://bird-x.googlecode.com/svn/    
+  匿名访问      : http://bird-x.googlecode.com/svn/
   http://lh4.ggpht.com/yanchangyou/SKAjfgSd0XI/AAAAAAAAAnA/9xG043-drzU/s800/import%20svn%204.jpg
  选择truck
   http://lh4.ggpht.com/yanchangyou/SKAjgo5VGJI/AAAAAAAAAnI/0ebU-Eo22gQ/s800/import%20svn%205.jpg
