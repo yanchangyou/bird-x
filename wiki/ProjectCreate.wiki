@@ -1,3 +1,4 @@
+#labels Phase-Implementation
 #bird-x 项目在eclipse下搭建.
 
 = 项目搭建 =
@@ -7,11 +8,23 @@ Add your content here.
 
 = 获取svn地址 =
 
-进入Source栏目下面就要svn的地址
+进入Source栏目下面
+  http://lh5.ggpht.com/yanchangyou/SKAVHzRZj-I/AAAAAAAAAlI/jcXR_XSGlaY/s144/gotoPage.jpg
+获取svn地址
+  http://lh4.ggpht.com/yanchangyou/SKAjhQ-GtcI/AAAAAAAAAnY/pxt8cOnyROM/s144/getSVN.jpg
 copy svn 地址
-http://picasaweb.google.com/yanchangyou/BirdX/photo#5233205990770970594
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+=将项目导入到eclipse中=
+
+1,在eclipse项目中点右键-->导入
+  http://lh6.ggpht.com/yanchangyou/SKAje19uJNI/AAAAAAAAAmo/krgTZ6TE9tg/s144/import%20svn%201.jpg
+
+  http://lh3.ggpht.com/yanchangyou/SKAjfTAJN4I/AAAAAAAAAm4/AQuQuvHZQLw/s144/import%20svn%202.jpg
+
+  http://lh4.ggpht.com/yanchangyou/SKAjfD0jwRI/AAAAAAAAAmw/dDbIhnMmqeI/s144/import%20svn%203.jpg
+
+  http://lh4.ggpht.com/yanchangyou/SKAjfgSd0XI/AAAAAAAAAnA/9xG043-drzU/s144/import%20svn%204.jpg
+
+  http://lh4.ggpht.com/yanchangyou/SKAjgo5VGJI/AAAAAAAAAnI/0ebU-Eo22gQ/s144/import%20svn%205.jpg
+
+  http://lh4.ggpht.com/yanchangyou/SKAjg2qwnAI/AAAAAAAAAnQ/rFgiEqTeNfo/s144/import%20svn%206.jpg
