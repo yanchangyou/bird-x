@@ -1,11 +1,15 @@
-#summary One-sentence summary of this page.
+#bird-x 项目在eclipse下搭建.
 
-= Introduction =
+= 项目搭建 =
 
 Add your content here.
 
 
-= Details =
+= 获取svn地址 =
+
+进入Source栏目下面就要svn的地址
+copy svn 地址
+http://picasaweb.google.com/yanchangyou/BirdX/photo#5233205990770970594
 
 Add your content here.  Format your content with:
   * Text in *bold* or _italic_
