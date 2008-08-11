@@ -1,15 +1,17 @@
 #labels Phase-Implementation,项目搭建,手册
 = bird-x项目搭建 =
 
- 项目搭建分两步
+ 项目搭建分三步
   * 1,获取svn地址
   * 2,将项目导入到eclipse中
+  * 3,搭建成与否测试
  前提条件
+  * 安装了eclipse
   * eclipse安装了svn插件
  说明
   * 这是最简化的搭建方式
-  * 匿名访问只能得代码不能修改
-  * 以项目成员方式访问可以修改代码, 前提是 有google的账户并且是这个项目的成员
+  * 匿名访问只能得代码, 不能修改
+  * 以项目成员方式访问, 可以修改代码, 前提是 有google的账户并且是这个项目的成员
 
 = 1,获取svn地址 =
 
@@ -31,9 +33,15 @@ copy svn 地址 已备后面使用
   http://lh3.ggpht.com/yanchangyou/SKAjfTAJN4I/AAAAAAAAAm4/AQuQuvHZQLw/s800/import%20svn%202.jpg
  创建新的资源位置
   http://lh4.ggpht.com/yanchangyou/SKAjfD0jwRI/AAAAAAAAAmw/dDbIhnMmqeI/s800/import%20svn%203.jpg
- 输入svn地址 https://bird-x.googlecode.com/svn/
+ 输入svn地址 
+ * 项目成员访问  : https://bird-x.googlecode.com/svn/
+ * 匿名访问      : http://bird-x.googlecode.com/svn/
   http://lh4.ggpht.com/yanchangyou/SKAjfgSd0XI/AAAAAAAAAnA/9xG043-drzU/s800/import%20svn%204.jpg
  选择truck
   http://lh4.ggpht.com/yanchangyou/SKAjgo5VGJI/AAAAAAAAAnI/0ebU-Eo22gQ/s800/import%20svn%205.jpg
- 项目搭建成功
+ 项目搭建完成
   http://lh4.ggpht.com/yanchangyou/SKAs6oZZa4I/AAAAAAAAAoY/1TN-HKZflxs/s800/import%20svn%206.jpg
+
+= 3, 搭建成功与否测试 =
+ 运行下图的类进行测试, 如果有正确输出, 表示搭建成功
+  http://lh5.ggpht.com/yanchangyou/SKAvU_A1OnI/AAAAAAAAAo4/lHZ36VVAPWs/s800/import%20svn%207.jpg
