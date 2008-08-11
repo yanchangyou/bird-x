@@ -5,12 +5,3 @@ find:
 ^(\w+)\t(.+)$
 replace:
 <property name="$1" title="$2"></property>
-
-
-
-参考段
-成本中心
-一二级
-三四级
-项目段
-备注段
