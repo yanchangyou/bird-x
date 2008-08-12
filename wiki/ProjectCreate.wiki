@@ -7,7 +7,7 @@
   * 3,搭建成功与否测试
  前提条件
   * 安装了eclipse
-  * eclipse安装了svn插件
+  * eclipse安装了svn插件 [http://www.ibm.com/developerworks/cn/opensource/os-ecl-subversion/ svn插件安装说明]
  说明
   * 这是最简化的搭建方式
   * 匿名访问只能得代码, 不能修改
