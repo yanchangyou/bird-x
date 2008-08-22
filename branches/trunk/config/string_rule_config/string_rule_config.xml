@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<all_string_rules>
+
+	<import src="string_rule_config|data_type_string_rule.xml"></import>
+	
+	
+	<!--  in this way to check if exist the same name of a rule -->	
+	<string_rule_name_constant_easy_to_copy_and_check_same_name>
+		public final static String number_string_rule = "number_string_rule";
+		public final static String common_string_rule = "common_string_rule";
+	</string_rule_name_constant_easy_to_copy_and_check_same_name>
+	
+	<string_rule name="number_string_rule">
+		<description>数字规则</description>
+		<match>^\d+(\.\d*)?$</match>
+		<emptyable>true</emptyable>
+		<message>请输入正确的数字</message>		
+	</string_rule>
+	
+	<string_rule name="common_string_rule">
+		<description>普通字符串规则</description>
+		<match>^[^&quot;&apos;&amp;&lt;&gt;]*$</match>
+		<emptyable>true</emptyable>
+	</string_rule>	
+	
+	
+</all_string_rules>
+
