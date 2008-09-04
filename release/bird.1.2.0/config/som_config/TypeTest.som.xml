@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+
+<som>
+	<class name="test.TypeTest" sheet="类型测试"
+		titleRowIndex="1" firstDataRowIndex="2">
+		<property name="number" title="数字">
+			<string_rule>
+				<match>\d{0,9}(\.\d{1,6})?</match>
+				<message>请输数字, 范围 [0,999,999,999]</message>
+			</string_rule>
+		</property>
+		
+		<property name="date" title="日期">
+			<string_rule parent_rule="">
+				<match>\d{4}-\d{1,2}-\d{1,2}</match>
+				<message>请输入日期</message>
+			</string_rule>
+		</property>
+		
+		<property name="string" title="字符串">
+			<string_rule parent_rule="common_string_rule">
+				<match>.{0,16}</match>
+				<message>请输入小于16个字符的字符串, 不能输入特殊字符：&quot;,&apos;,&amp;,&lt;&gt;	</message>
+			</string_rule>
+		</property>
+	</class>
+</som>

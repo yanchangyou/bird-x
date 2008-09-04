@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<all_string_rules>
+	<!-- in this way to check if exist the same name of a rule -->
+	<string_rule_name_constant_easy_to_copy_and_check_same_name>
+		public final static String byte_type_string_rule = "byte_type_string_rule";
+		public final static String date_string_rule = "date_string_rule";
+		public final static String date_string_rule2 = "date_string_rule2";
+	</string_rule_name_constant_easy_to_copy_and_check_same_name>
+	
+	<string_rule name="byte_type_string_rule">
+		<description>字节整形字符规则</description>
+		<match>^\d{1,2}$</match>
+		<emptyable>false</emptyable>
+		<message>请输入正确字节整数，范围是[-128, 127]</message>		
+	</string_rule>
+	
+	<string_rule name="date_string_rule">
+		<description>日期格式：YYYY-MM-DD</description>
+		<match>^\d{4}-(0?[1-9]|1[0-2])-(0?[1-9]|[12][0-9]|3[01])$</match>
+		<emptyable>true</emptyable>
+		<message>请输入正确的日期，格式为：YYYY-MM-DD</message>	
+	</string_rule>
+	
+	<string_rule name="date_string_rule2" parent_rule="date_string_rule">
+		<description>日期格式：YYYY-MM-DD</description>
+		<match>^[-&lt;&gt;&amp;&apos;&quot;]*$</match>
+		<emptyable>false</emptyable>
+	</string_rule>
+</all_string_rules>
+
