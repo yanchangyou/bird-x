@@ -85,7 +85,11 @@ public class ExcelUtil {
 			if (HSSFDateUtil.isCellDateFormatted(cell)) {
 				str = "" + dateFormat.format(cell.getDateCellValue());
 			} else {
-				str = "" + new BigDecimal(String.valueOf(cell.getNumericCellValue())).setScale(2,BigDecimal.ROUND_HALF_UP);
+				//modify by cyyan 2008-09-23 19:17:28 
+				//excel中数值转换过来时采用E计数法, 导致后面的规则校验失败;
+				//为此进行把E计数法转换普通计数法, 并且使用小数点后15位, (15位是小数的最大精度, 能够保证非本组件带来的误差)
+				// 使用15位小数后, 会带来多个末尾的0, 相邻的一条语句是去掉这些末尾0
+				str = "" + new BigDecimal(String.valueOf(cell.getNumericCellValue())).setScale(15,BigDecimal.ROUND_HALF_UP);
 				str = str.replaceAll("\\.0*$", "");
 			}
 			break;
