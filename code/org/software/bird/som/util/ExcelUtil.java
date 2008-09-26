@@ -85,12 +85,37 @@ public class ExcelUtil {
 			if (HSSFDateUtil.isCellDateFormatted(cell)) {
 				str = "" + dateFormat.format(cell.getDateCellValue());
 			} else {
+				String numberStr = String.valueOf(cell.getNumericCellValue());
+				
 				//modify by cyyan 2008-09-23 19:17:28 
 				//excel中数值转换过来时采用E计数法, 导致后面的规则校验失败;
 				//为此进行把E计数法转换普通计数法, 并且使用小数点后15位, (15位是小数的最大精度, 能够保证非本组件带来的误差)
 				// 使用15位小数后, 会带来多个末尾的0, 相邻的一条语句是去掉这些末尾0
-				str = "" + new BigDecimal(String.valueOf(cell.getNumericCellValue())).setScale(15,BigDecimal.ROUND_HALF_UP);
-				str = str.replaceAll("\\.0*$", "");
+				str = "" + new BigDecimal(numberStr).setScale(15, BigDecimal.ROUND_HALF_UP);
+				
+				//modify yanchangyou 2008-09-26 18:01:43 
+				//原来的情况只能去掉 .0000* 这种模式, 修改后能去掉末尾的0, 如果末尾紧连接
+				if (str.indexOf('.') != -1) {
+					str = str.replaceAll("(\\.)?0*$", "");
+				}				
+
+				/*
+				 * 快速去掉小数点后末尾的零, 和小数点后全身零的情况
+				 */
+//				if (str.indexOf('.') != -1) { //只处理有小数点
+//					int index = str.length();
+//					for (int i = str.length()-1; i > -1; i--) {
+//						if (str.charAt(i) == '0') {
+//							index = i;
+//						} else if (str.charAt(i) == '.'){
+//							index = i;
+//							break;
+//						} else {
+//							break;
+//						}
+//					}
+//					str = str.substring(0, index);
+//				}
 			}
 			break;
 		case HSSFCell.CELL_TYPE_BLANK:

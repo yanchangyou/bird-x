@@ -140,7 +140,7 @@ public class CoreParseUtil {
 				try {
 					stringRule.test(cellStr);
 				} catch(BreakStringRuleException e) {
-					errorMsg.append("[" + som.getPropertyTitleMap().get(property) +"]输入不合法，" + stringRule.getMessage() + "<BR>");
+					errorMsg.append("[" + som.getPropertyTitleMap().get(property) +"]输入不合法，" + stringRule.getMessage() + "实际输入是：" + cellStr + "<BR>");
 					continue;
 				}
 			}
