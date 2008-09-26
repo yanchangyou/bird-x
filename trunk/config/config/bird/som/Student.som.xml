@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+
+<som>
+	<class name="test.Student" sheet="学生信息"
+		titleRowIndex="1" firstDataRowIndex="2">
+		<property name="no" title="学号">
+			<string_rule>
+				<match>\d{8,12}</match>
+				<message>请输长度为8~12位的学号</message>
+			</string_rule>
+		</property>
+		<property name="name" title="姓名">
+			<string_rule>
+				<match>[^\x00-\xff]{2,5}</match>
+				<message>请输入2~5个汉字</message>
+			</string_rule>
+		</property>
+		<property name="birthday" title="出生日期">
+			<string_rule parent_rule="">
+				<match>\d{4}-\d{1,2}-\d{1,2}</match>
+				<message>请输入yyyy-mm-dd格式的日期</message>
+			</string_rule>
+		</property>
+		
+		<property name="sex" title="性别">
+			<string_rule>
+				<match>[男|女]</match>
+				<message>请输入男或女</message>
+			</string_rule>
+		</property>
+		
+		<property name="height" title="身高">
+			<string_rule>
+				<match>[0-2](\.\d{1,2})?</match>
+				<message>请输入0~3米之间的身高</message>
+			</string_rule>
+		</property>
+	</class>
+</som>
