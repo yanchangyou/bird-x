@@ -2,7 +2,7 @@
 
 <all_string_rules>
 
-	<import src="config|bird|rule|rule.xml"></import>
+	<import src="config|bird|rule|data_type_string_rule.xml"></import>
 	
 	
 	<!--  in this way to check if exist the same name of a rule -->	
