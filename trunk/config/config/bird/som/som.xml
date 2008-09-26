@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<som_list>
+	<som src="config|bird|som|DateTypeTest.som.xml"></som>
+	<som src="config|bird|som|NumberTypeTest.som.xml"></som>
+	<som src="config|bird|som|StringTypeTest.som.xml"></som>
+	<som src="config|bird|som|TypeTest.som.xml"></som>
+	<som src="config|bird|som|amount.som.xml"></som>
+</som_list>

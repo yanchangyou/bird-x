@@ -53,7 +53,7 @@ import org.xml.sax.SAXException;
  */
 public class SheetObjectMappingConfig {
 
-	final public static String som_config_file = "som_config"+ File.separator + "sheet_object_config.xml";
+	final public static String som_config_file = "config" + File.separator + "bird" + File.separator + "som" + File.separator + "som.xml";
 	final public static String som_tag_name = "som";
 	final public static String som_class_tag_name = "class";
 	final public static String som_class_name_property_name = "name";

@@ -45,8 +45,10 @@ import org.xml.sax.SAXException;
 public final class StringRuleConfig {
 
 	// 配置文件的固定位置
-	private final static String string_rule_config = "string_rule_config"
-			+ File.separator + "string_rule_config.xml";
+	private final static String string_rule_config = "config"
+		+ File.separator + "bird"
+		+ File.separator + "rule"
+		+ File.separator + "rule.xml";
 
 	// 配置文件中的标签
 
