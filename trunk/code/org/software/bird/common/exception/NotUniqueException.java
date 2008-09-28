@@ -17,7 +17,7 @@
 
 package org.software.bird.common.exception;
 /**
- * Class description goes here.
+ * 不唯一异常
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
  * @version $Id: NotUniqueException.java,v0.1 2007-12-8 上午11:58:36 cyyan Exp$

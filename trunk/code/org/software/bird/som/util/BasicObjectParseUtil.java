@@ -39,7 +39,7 @@ import org.software.bird.som.exception.UnsupportedParseException;
 
 
 /**
- * Class description goes here.
+ * 基本类型的解析
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
  * @version $Id: BasicObjectFormat.java,v0.1 2007-12-7 下午04:03:41 cyyan Exp$
@@ -76,7 +76,15 @@ public class BasicObjectParseUtil {
 		objectParsorMap.put(java.sql.Date.class, new SQLDateParser());
 		objectParsorMap.put(java.sql.Timestamp.class, new TimestampParser());
 	}
-	
+	/**
+	 * 解析字符成对象
+	 * @param str
+	 * @param pattern
+	 * @param objClass
+	 * @return
+	 * @throws UnsupportedParseException
+	 * @throws Exception
+	 */
 	public static Object parase(String str,String pattern, Class objClass) throws UnsupportedParseException, Exception  {
 		if (!allParsableObject.contains(objClass)) {
 			throw new UnsupportedParseException("supported this class parse");
@@ -86,6 +94,13 @@ public class BasicObjectParseUtil {
 		return parser.parse(str);
 	}
 	
+	/**
+	 * 解析字符成对象
+	 * @param str
+	 * @param objClass
+	 * @return
+	 * @throws RuleBugException
+	 */
 	public static Object parase(String str, Class objClass)throws RuleBugException  {
 		
 		if (!allParsableObject.contains(objClass)) {

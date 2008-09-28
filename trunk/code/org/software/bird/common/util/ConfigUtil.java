@@ -22,13 +22,19 @@ import java.io.File;
 import org.software.bird.common.BirdConstant;
 
 /**
- * Class description goes here.
+ * 所有配置文件通用函数
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
  * @version $Id: ConfigUtil.java,v0.1 2007-12-16 下午03:06:16 cyyan Exp$
  */
 public class ConfigUtil {
 
+	/**
+	 * 获取配置文件的真实路径
+	 * 配置文件的路径分隔符是｜，此方法就将｜转换为对于操作系统的路径分隔符
+	 * @param path
+	 * @return
+	 */
 	public static String getRealPath(String path) {		
 		return path == null ? null : path.replace(BirdConstant.separator_char_in_config_file, File.separatorChar);
 	}

@@ -17,17 +17,28 @@
 
 package org.software.bird.som.util;
 /**
- * Class description goes here.
+ * 实现基本的检查
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
  * @version $Id: Checkor.java,v0.1 2007-12-7 下午07:04:53 cyyan Exp$
  */
 public class CheckeUtil {
 
+	/**
+	 * 是否是空字符串
+	 * @param string
+	 * @return
+	 */
 	public static boolean isEmptyString(String string) {
 		return string == null || string.matches("^\\s*$");
 	}
 	
+	/**
+	 * 是否超过最大长度
+	 * @param string
+	 * @param length
+	 * @return
+	 */
 	public static boolean isOutOfMaxLength(String string, int length) {
 		return string.length() > length;
 	}

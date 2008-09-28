@@ -1,24 +1,45 @@
 <?xml version="1.0"?>
 
 <som>
-	<class 	name="test.NumberTypeTest" 
-			sheet="数字" titleRowIndex="1"
+	<class name="test.NumberTypeTest" sheet="数字" titleRowIndex="1"
 		firstDataRowIndex="2">
 		<property name="byteVar" title="字节型-数字">
 			<string-rule>
-				
+
 			</string-rule>
 		</property>
-		<property name="byteVar_text" title="字节型-文本"></property>
-		<property name="shortVar" title="短整型-数字"></property>
-		<property name="shortVar_text" title="短整型-文本"></property>
-		<property name="intVar" title="整型-数字"></property>
-		<property name="intVar_text" title="整型-文本"></property>
-		<property name="longVar" title="长整型-数字"></property>
-		<property name="longVar_text" title="长整型-文本"></property>
-		<property name="floatVar" title="单精度浮点-数字"></property>
-		<property name="floatVar_text" title="单精度浮点-文本"></property>
-		<property name="doubleVar" title="双精度浮点-数字"></property>
-		<property name="doubleVar_text" title="双精度浮点-文本"></property>
+		<property name="byteVar_text" title="字节型-文本">
+			<string_rule parent_rule="number_string_rule"></string_rule>
+		</property>
+		<property name="shortVar" title="短整型-数字">
+			<string_rule parent_rule="number_string_rule"></string_rule>
+		</property>
+		<property name="shortVar_text" title="短整型-文本">
+			<string_rule parent_rule="number_string_rule"></string_rule>
+		</property>
+		<property name="intVar" title="整型-数字">
+			<string_rule parent_rule="number_string_rule"></string_rule>
+		</property>
+		<property name="intVar_text" title="整型-文本">
+			<string_rule parent_rule="number_string_rule"></string_rule>
+		</property>
+		<property name="longVar" title="长整型-数字">
+			<string_rule parent_rule="number_string_rule"></string_rule>
+		</property>
+		<property name="longVar_text" title="长整型-文本">
+			<string_rule parent_rule="number_string_rule"></string_rule>
+		</property>
+		<property name="floatVar" title="单精度浮点-数字">
+			<string_rule parent_rule="number_string_rule"></string_rule>
+		</property>
+		<property name="floatVar_text" title="单精度浮点-文本">
+			<string_rule parent_rule="number_string_rule"></string_rule>
+		</property>
+		<property name="doubleVar" title="双精度浮点-数字">
+			<string_rule parent_rule="number_string_rule"></string_rule>
+		</property>
+		<property name="doubleVar_text" title="双精度浮点-文本">
+			<string_rule parent_rule="number_string_rule"></string_rule>
+		</property>
 	</class>
 </som>

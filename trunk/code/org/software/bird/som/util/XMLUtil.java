@@ -32,13 +32,20 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 /**
- * Class description goes here.
+ * 解析xml文件的常用函数
  * 
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
  * @version $Id: XMLUtil.java,v0.1 2007-12-6 下午01:46:58 cyyan Exp$
  */
 public class XMLUtil {
 
+	/**
+	 * 按名获取节点
+	 * @param xmlDocument
+	 * @param tagName
+	 * @param nodeNameValue
+	 * @return
+	 */
 	public static Node getNodeByName(Document xmlDocument, String tagName,
 			String nodeNameValue) {
 		Node node = null;
@@ -54,6 +61,12 @@ public class XMLUtil {
 		return node;
 	}
 
+	/**
+	 * 获取节点的属性值
+	 * @param node
+	 * @param propertyName
+	 * @return
+	 */
 	public static String getNodePropertyValue(Node node, String propertyName) {
 		String propertyValue = null;
 		NamedNodeMap aNamedNodeMap = node.getAttributes();
@@ -64,6 +77,15 @@ public class XMLUtil {
 		return propertyValue;
 	}
 
+	/**
+	 * 解析配置流成poi的Document对象
+	 * @param configFileInputStream
+	 * @return
+	 * @throws FactoryConfigurationError
+	 * @throws ParserConfigurationException
+	 * @throws SAXException
+	 * @throws IOException
+	 */
 	public static Document getDocumentByName(InputStream configFileInputStream) throws FactoryConfigurationError,
 			ParserConfigurationException, SAXException, IOException {
 		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();

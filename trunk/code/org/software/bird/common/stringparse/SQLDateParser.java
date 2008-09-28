@@ -20,7 +20,7 @@ package org.software.bird.common.stringparse;
 import org.software.bird.som.exception.InvalidDateException;
 
 /**
- * Class description goes here.
+ * 对SQLDate类型的解析类
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
  * @version $Id: SQLDateParsor.java,v0.1 2007-12-7 下午05:54:32 cyyan Exp$

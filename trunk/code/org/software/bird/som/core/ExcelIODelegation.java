@@ -31,7 +31,8 @@ import org.software.bird.som.exception.SheetNotFoundException;
 import org.software.bird.som.exception.SheetTitleNotFoundException;
 
 /**
- * Class description goes here.
+ * 接口ExcelIO的内部代理, ExcelIO所有功能都是调用ExcelIODelegation
+ * 使用代理增加了灵活性
  * 
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
  * @version $Id: ExcelParseProxy.java,v0.1 2007-12-8 下午01:43:43 cyyan Exp$
@@ -42,10 +43,27 @@ public class ExcelIODelegation {
 	
 	private ExcelDelegation excelDelegation;
 
+	/**
+	 * 构造函数
+	 * @param stream
+	 * @throws FileNotFoundException
+	 * @throws IOException
+	 * @throws Exception
+	 */
 	public ExcelIODelegation(InputStream stream) throws FileNotFoundException, IOException, Exception{
 		excelDelegation = new ExcelDelegation(stream);
 	}
 	
+	
+	/**
+	 * 解析指sheet成list
+	 * @param sheetName
+	 * @param objClass
+	 * @return
+	 * @throws SheetNotFoundException
+	 * @throws BreakStringRuleException
+	 * @throws SheetTitleNotFoundException
+	 */
 	public List parseAll(String sheetName, Class objClass) throws SheetNotFoundException, BreakStringRuleException, SheetTitleNotFoundException {
 		List list = null;
 		SheetObjectMapping som = SheetObjectMappingConfig.getSOM(objClass);
@@ -73,10 +91,20 @@ public class ExcelIODelegation {
 		return list;
 	}
 
+	/**
+	 * 未实现
+	 * @param obj
+	 * @return
+	 */
 	public List parseByExample(Object obj) {
 		return null;
 	}
 
+	/**
+	 * 未实现
+	 * @param obj
+	 * @return
+	 */
 	public Object parseByObjectWithKey(Object obj) throws NotUniqueException {
 		return null;
 	}

@@ -15,35 +15,20 @@
    limitations under the License.
 ==================================================================== */
 
-package org.software.bird.rule.ruleparse;
-
-import org.software.bird.rule.RuleBugException;
+package org.software.bird.som.exception;
 
 /**
- * 对Byte类型的解析类
+ * Class description goes here.
  * 
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: t.java,v0.1 2007-12-7 下午05:44:50 cyyan Exp$
+ * @version $Id: InValidExcelFileException.java,v0.1 2007-12-17 上午09:46:40 cyyan
+ *          Exp$
  */
+public class InvalidExcelFileException extends Exception {
+	
+	private static final long serialVersionUID = 6408272008461180852L;
 
-public class ByteParser extends NumberParser {
-
-	public Object parse(String str) throws RuleBugException {
-		Number num = (Number) super.parse(str);
-		if (!isInRange(num)) {
-			throw new RuleBugException(
-					constructNumberRuleBugReport(num, "Byte"));
-		}
-		Byte byteVar = new Byte(num.byteValue());
-		return byteVar;
-	}
-
-	public String getRange() {
-		return "[" + Byte.MIN_VALUE + "," + Byte.MAX_VALUE + "]";
-	}
-
-	public boolean isInRange(Number num) {
-		return Byte.MIN_VALUE <= num.doubleValue()
-				&& num.doubleValue() <= Byte.MAX_VALUE;
+	public InvalidExcelFileException(String string) {
+		super(string);
 	}
 }

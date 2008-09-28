@@ -23,7 +23,7 @@ import org.software.bird.som.exception.InvalidNumberException;
 
 
 /**
- * Class description goes here.
+ * 对Float类型的解析类
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
  * @version $Id: te.java,v0.1 2007-12-7 下午05:44:57 cyyan Exp$

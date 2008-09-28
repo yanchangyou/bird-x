@@ -20,7 +20,6 @@ package org.software.bird.som.core;
 
 
 
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.HashMap;
@@ -47,7 +46,7 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 /**
- * Class description goes here.
+ * 将配置文件处理成对象
  * 
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
  * @version $Id: SheetObjectConfig.java,v0.1 2007-12-5 下午09:39:11 cyyan Exp$
@@ -55,8 +54,12 @@ import org.xml.sax.SAXException;
 public class SheetObjectMappingConfig {
 
 	
-	
+	//配置文件的路径
 	final public static String som_config_file = ConfigUtil.getRealPath(BootConfig.getProperty("ether.anima.bird.som.boot.path"));
+	
+	/**
+	 * 配置文件中的节点名称
+	 */
 	final public static String som_tag_name = "som";
 	final public static String som_class_tag_name = "class";
 	final public static String som_class_name_property_name = "name";
@@ -74,6 +77,11 @@ public class SheetObjectMappingConfig {
 	
 	private static Map class_som_map = new HashMap();	
 	
+	/**
+	 * 按名提取一个som
+	 * @param objClass
+	 * @return
+	 */
 	public static SheetObjectMapping getSOM(Class objClass) {
 		
 		if (CheckUtil.isEmptyMap(class_som_map)) {

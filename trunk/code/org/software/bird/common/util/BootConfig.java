@@ -21,7 +21,7 @@ import java.io.InputStream;
 import java.util.Properties;
 
 /**
- * Class description goes here.
+ * 处理根配置文件
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
  * @version $Id: BootConfig.java,v0.1 2008-9-28 上午09:07:22 cyyan Exp$
@@ -30,7 +30,10 @@ public class BootConfig {
 
 	final public static String bootPropertiesPath = "ether.properties";
 	final private static Properties bootProperties = new Properties();
-	static {		
+	static {
+		/**
+		 * 自动初始化, 加载配置文件
+		 */
 		try {
 			InputStream configFileInputStream = CommonUtil.getInputStreamBySourceName(bootPropertiesPath);
 			bootProperties.load(configFileInputStream);
@@ -39,7 +42,11 @@ public class BootConfig {
 			System.out.println("Ether warning : ether.properties not found, this will deal with before 1.5;");
 		}
 	}
-	
+	/**
+	 * 获取根配置文件的属性
+	 * @param key
+	 * @return
+	 */
 	public static String getProperty(String key) {
 		return bootProperties.getProperty(key);
 	}

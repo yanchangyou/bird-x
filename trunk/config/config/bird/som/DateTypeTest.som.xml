@@ -3,17 +3,32 @@
 <som>
 	<class 	name="test.DateTypeTest" 
 			sheet="日期">
-		<property name="date" title="日期型-文本">
+		<property name="dateText" title="日期型-文本">
 			<string_rule parent_rule="date_string_rule">
 				<message> 输入日期不合法，输入格式为YYYY-MM-DD</message>
 			</string_rule>
 		</property>
-		<property name="sqlDate" title="SQL日期型-文本">
+		<property name="sqlDateText" title="SQL日期型-文本">
 			<string_rule parent_rule="date_string_rule">
 				<message> 输入日期不合法，输入格式为YYYY-MM-DD</message>
 			</string_rule>
 		</property>
-		<property name="timestamp" title="时间戳型-文本">
+		<property name="timestampText" title="时间戳型-文本">
+			<string_rule parent_rule="date_string_rule">
+				<message> 输入日期不合法，输入格式为YYYY-MM-DD</message>
+			</string_rule>
+		</property>		
+		<property name="dateDate" title="日期型-日期">
+			<string_rule parent_rule="date_string_rule">
+				<message> 输入日期不合法，输入格式为YYYY-MM-DD</message>
+			</string_rule>
+		</property>
+		<property name="sqlDateDate" title="SQL日期型-日期">
+			<string_rule parent_rule="date_string_rule">
+				<message> 输入日期不合法，输入格式为YYYY-MM-DD</message>
+			</string_rule>
+		</property>
+		<property name="timestampDate" title="时间戳型-日期">
 			<string_rule parent_rule="date_string_rule">
 				<message> 输入日期不合法，输入格式为YYYY-MM-DD</message>
 			</string_rule>

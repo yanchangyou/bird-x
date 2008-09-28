@@ -27,7 +27,7 @@ import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 /**
- * Class description goes here.
+ * 处理excel的相关函数
  * 
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
  * @version $Id: ExcelUtil.java,v0.1 2007-12-6 下午01:46:38 cyyan Exp$
@@ -36,12 +36,23 @@ public class ExcelUtil {
 
 	final public static SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 	
+	/**
+	 * 获取表单中的title 行poi对象
+	 * @param sheet
+	 * @param titleRowIndex
+	 * @return
+	 */
 	public static HSSFRow getSheetTitleRow(HSSFSheet sheet, int titleRowIndex) {
 		return sheet.getRow(titleRowIndex);
 	}
 	
 	
-	
+	/**
+	 * 判断表单中一行是否为空
+	 * 如果为空就不用解析, 用于排除excel中空白行
+	 * @param row
+	 * @return
+	 */
 	public static boolean isEmptyRow(HSSFRow row) {
 		boolean result = true;
 		if (row == null) {
@@ -58,6 +69,11 @@ public class ExcelUtil {
 		return result;
 	}
 
+	/**
+	 * 判断是否是空单元格
+	 * @param cell
+	 * @return
+	 */
 	public static boolean isEmptyCell(HSSFCell cell) {
 		String cellStr = null;
 		cellStr = cell2string(cell, null);
@@ -65,7 +81,7 @@ public class ExcelUtil {
 	}
 
 	/**
-	 * 对单元格的数据转换成字符串
+	 * 对单元格的数据转换成字符串, 以便后面统一处理
 	 * 
 	 * @param cell
 	 * @return
@@ -142,6 +158,13 @@ public class ExcelUtil {
 
 
 
+	/**
+	 * 获取excel中的方程
+	 * @param sheet
+	 * @param workbook
+	 * @param row
+	 * @return
+	 */
 	public static HSSFFormulaEvaluator getFormulaEvaluator(HSSFSheet sheet, HSSFWorkbook workbook, HSSFRow row) {
 		HSSFFormulaEvaluator evaluator = new HSSFFormulaEvaluator(sheet, workbook);
 		evaluator.setCurrentRow(row);

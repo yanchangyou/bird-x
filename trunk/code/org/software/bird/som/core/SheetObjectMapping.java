@@ -28,7 +28,7 @@ import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.software.bird.common.util.CommonUtil;
 
 /**
- * Class description goes here.
+ * 对应配置文件的类
  * 
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
  * @version $Id: SheetObjectMapping.java,v0.1 2007-12-5 下午03:42:01 cyyan Exp$
@@ -101,6 +101,10 @@ public class SheetObjectMapping {
 		return propertyColumnMap;
 	}
 
+	/**
+	 * 配置属性到列的映射
+	 *
+	 */
 	public void configPropertyColumnMap() {
 		propertyColumnMap = new HashMap();
 		Set propertySet = propertyTitleMap.keySet();
@@ -135,6 +139,10 @@ public class SheetObjectMapping {
 		return configFileName;
 	}
 
+	/**
+	 * 初始化配置文件
+	 *
+	 */
 	private void initConfigFileName() {
 		configFileName = CommonUtil.getPackagePath(objClass) + "\\"
 				+ CommonUtil.getClassNameWithoutPackage(objClass) + ".som.xml";
@@ -164,6 +172,11 @@ public class SheetObjectMapping {
 		this.dataRowMaxNumber = dataRowMaxNumber;
 	}
 
+	/**
+	 * 提供excel的全局引用, 处理函数等只能是一个excel内部使用
+	 * @author cyyan
+	 *
+	 */
 	class ExcelReference {
 
 		public HSSFWorkbook workbook;
