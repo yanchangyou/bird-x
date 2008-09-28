@@ -11,6 +11,12 @@
 		
 			<not_exist_sheet_by_name></not_exist_sheet_by_name>
 		</exist_excel>
+		1, excel没找到
+		2, sheet没找到
+		3, title没找到
+		4, 属性值没找到
+		5, 属性值校验不通过
+		
 	</type>
 	
 	
