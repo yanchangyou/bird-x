@@ -24,7 +24,7 @@ import java.util.List;
 import org.software.bird.common.util.CommonUtil;
 import org.software.bird.rule.BreakStringRuleException;
 import org.software.bird.som.ExcelIO;
-import org.software.bird.som.exception.InValidExcelFileException;
+import org.software.bird.som.exception.InvalidExcelFileException;
 import org.software.bird.som.exception.SheetNotFoundException;
 import org.software.bird.som.exception.SheetTitleNotFoundException;
 
@@ -49,7 +49,7 @@ public class TestTypeMain {
 			System.out.println(list);
 
 			
-		} catch(InValidExcelFileException e) {
+		} catch(InvalidExcelFileException e) {
 			e.printStackTrace();
 			System.out.println(e.getMessage());
 		} catch (SheetNotFoundException e) {
