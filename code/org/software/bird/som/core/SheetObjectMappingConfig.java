@@ -32,6 +32,7 @@ import javax.xml.parsers.ParserConfigurationException;
 import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.software.bird.common.exception.ConfigFileNotFoundException;
+import org.software.bird.common.util.BootConfig;
 import org.software.bird.common.util.CheckUtil;
 import org.software.bird.common.util.CommonUtil;
 import org.software.bird.common.util.ConfigUtil;
@@ -53,7 +54,9 @@ import org.xml.sax.SAXException;
  */
 public class SheetObjectMappingConfig {
 
-	final public static String som_config_file = "config" + File.separator + "bird" + File.separator + "som" + File.separator + "som.xml";
+	
+	
+	final public static String som_config_file = ConfigUtil.getRealPath(BootConfig.getProperty("ether.anima.bird.som.boot.path"));
 	final public static String som_tag_name = "som";
 	final public static String som_class_tag_name = "class";
 	final public static String som_class_name_property_name = "name";

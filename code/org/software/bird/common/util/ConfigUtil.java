@@ -29,7 +29,7 @@ import org.software.bird.common.BirdConstant;
  */
 public class ConfigUtil {
 
-	public static String getRealPath(String path) {
-		return path.replace(BirdConstant.separator_char_in_config_file, File.separatorChar);
+	public static String getRealPath(String path) {		
+		return path == null ? null : path.replace(BirdConstant.separator_char_in_config_file, File.separatorChar);
 	}
 }
