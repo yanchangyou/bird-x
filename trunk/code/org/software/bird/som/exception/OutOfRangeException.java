@@ -17,7 +17,7 @@
 
 package org.software.bird.som.exception;
 /**
- * Class description goes here.
+ * 超过最大范围异常
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
  * @version $Id: OutOfRangeException.java,v0.1 2007-12-7 下午05:36:29 cyyan Exp$
