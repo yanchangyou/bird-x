@@ -17,7 +17,7 @@
 
 package org.software.bird.som.exception;
 /**
- * Class description goes here.
+ * 超出最大长度异常
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
  * @version $Id: OutOfMaxLengthException.java,v0.1 2007-12-7 下午04:49:26 cyyan Exp$

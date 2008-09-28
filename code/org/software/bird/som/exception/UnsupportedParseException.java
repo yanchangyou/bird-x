@@ -17,7 +17,7 @@
 
 package org.software.bird.som.exception;
 /**
- * Class description goes here.
+ * 不支持解析的异常
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
  * @version $Id: UnParseException.java,v0.1 2007-12-7 下午06:16:47 cyyan Exp$

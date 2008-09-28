@@ -17,7 +17,7 @@
 
 package org.software.bird.som.exception;
 /**
- * Class description goes here.
+ * SOM“Ï≥£
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
  * @version $Id: SomException.java,v0.1 2007-12-17 …œŒÁ10:01:57 cyyan Exp$

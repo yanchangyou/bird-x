@@ -17,7 +17,7 @@
 
 package org.software.bird.som.exception;
 /**
- * Class description goes here.
+ * 表单没有找到异常
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
  * @version $Id: SheetNotExistException.java,v0.1 2007-12-17 上午09:21:04 cyyan Exp$

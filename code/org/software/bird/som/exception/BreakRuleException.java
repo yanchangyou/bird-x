@@ -17,7 +17,7 @@
 
 package org.software.bird.som.exception;
 /**
- * Class description goes here.
+ * 破坏规则的异常
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
  * @version $Id: BreakRuleException.java,v0.1 2007-12-7 下午07:31:03 cyyan Exp$

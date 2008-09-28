@@ -17,7 +17,7 @@
 
 package org.software.bird.som.exception;
 /**
- * Class description goes here.
+ * 标题没有找到异常
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
  * @version $Id: TitleNotFoundException.java,v0.1 2007-12-17 上午10:41:50 cyyan Exp$
