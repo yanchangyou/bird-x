@@ -21,7 +21,7 @@ import org.software.bird.rule.RuleBugException;
 
 
 /**
- * Class description goes here.
+ * 对Short类型的解析类
  * 
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
  * @version $Id: safd.java,v0.1 2007-12-7 下午05:45:02 cyyan Exp$

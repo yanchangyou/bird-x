@@ -17,7 +17,7 @@
 
 package org.software.bird.common.exception;
 /**
- * Class description goes here.
+ * 配置文件没有找到异常
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
  * @version $Id: ConfigFileNotFoundException.java,

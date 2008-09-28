@@ -32,13 +32,25 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 /**
- * Class description goes here.
+ * 对excel解析的一些常用方法
+ * 
+ * 此类在所有方法,基于配置文件
  * 
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
  * @version $Id: Excel2ObjectUtil.java,v0.1 2007-12-6 下午01:55:32 cyyan Exp$
  */
 public class ExcelParserUtil {
 
+	/**
+	 * 按名获取表单名称, 这些对应关系是在配置文件配置的
+	 * @param xmlDocument
+	 * @param objClass
+	 * @return
+	 * @throws FactoryConfigurationError
+	 * @throws ParserConfigurationException
+	 * @throws SAXException
+	 * @throws IOException
+	 */
 	public static String getSheetNameByClass(Document xmlDocument,
 			Class objClass) throws FactoryConfigurationError,
 			ParserConfigurationException, SAXException, IOException {
@@ -49,6 +61,17 @@ public class ExcelParserUtil {
 		return sheetName;
 	}
 
+	/**
+	 * 
+	 * 按名获取配置文件
+	 * 
+	 * @param configFileName
+	 * @return
+	 * @throws FactoryConfigurationError
+	 * @throws ParserConfigurationException
+	 * @throws SAXException
+	 * @throws IOException
+	 */
 	public static Document getDocumentByConfigFileName(String configFileName)
 			throws FactoryConfigurationError, ParserConfigurationException,
 			SAXException, IOException {
@@ -58,19 +81,42 @@ public class ExcelParserUtil {
 		return XMLUtil.getDocumentByName(configFileInputStream);
 	}	
 
+	/**
+	 * 获取属性列表
+	 * @param xmlDocument
+	 * @param objClass
+	 * @return
+	 */
 	public static NodeList getPropertyList(Document xmlDocument, Class objClass) {
 		Node classNode = null;
 		classNode = getClassNodeByClass(xmlDocument, objClass);
 		return classNode.getChildNodes();
 	}
 
+	/**
+	 * 按类名获取属性列表
+	 * @param xmlDocument
+	 * @param objClass
+	 * @return
+	 * @throws FactoryConfigurationError
+	 * @throws ParserConfigurationException
+	 * @throws SAXException
+	 * @throws IOException
+	 */
 	public static NodeList getPropertyListByClass(Document xmlDocument,
 			Class objClass) throws FactoryConfigurationError,
 			ParserConfigurationException, SAXException, IOException {
 		return getPropertyList(xmlDocument, objClass);
 	}
 
-	
+	/**
+	 * 从excel流中解析出工作薄
+	 * @param excelInputStream
+	 * @return
+	 * @throws FileNotFoundException
+	 * @throws IOException
+	 * @throws Exception
+	 */
 	public static HSSFWorkbook getWorkbook(InputStream excelInputStream)
 			throws FileNotFoundException, IOException, Exception {
 		HSSFWorkbook wb = null;
@@ -79,6 +125,12 @@ public class ExcelParserUtil {
 		return wb;
 	}
 
+	/**
+	 * 按类在配置文件中获取类节点
+	 * @param xmlDocument
+	 * @param objClass
+	 * @return
+	 */
 	public static Node getClassNodeByClass(Document xmlDocument, Class objClass) {
 		Node classNode = null;
 		String className = objClass.getName();

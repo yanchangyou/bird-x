@@ -17,7 +17,7 @@
 
 package org.software.bird.common.exception;
 /**
- * Class description goes here.
+ * ³¬¹ý·¶Î§Òì³£
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
  * @version $Id: OutOfRangeException.java,v0.1 2007-12-7 ÏÂÎç05:36:29 cyyan Exp$

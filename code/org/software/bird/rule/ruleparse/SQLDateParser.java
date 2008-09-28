@@ -20,7 +20,7 @@ package org.software.bird.rule.ruleparse;
 import org.software.bird.rule.RuleBugException;
 
 /**
- * Class description goes here.
+ * 对SQL类型的解析类
  * 
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
  * @version $Id: SQLDateParsor.java,v0.1 2007-12-7 下午05:54:32 cyyan Exp$

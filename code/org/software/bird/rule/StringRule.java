@@ -19,7 +19,7 @@ package org.software.bird.rule;
 
 
 /**
- * Class description goes here.
+ * 字符规则类
  * 
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
  * @version $Id: StringRule.java,v0.1 2007-12-14 上午08:54:46 cyyan Exp$

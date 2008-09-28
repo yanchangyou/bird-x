@@ -17,7 +17,7 @@
 
 package org.software.bird.common.stringparse;
 /**
- * Class description goes here.
+ * 解析接口
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
  * @version $Id: Parsable.java,v0.1 2007-12-7 下午04:34:24 cyyan Exp$

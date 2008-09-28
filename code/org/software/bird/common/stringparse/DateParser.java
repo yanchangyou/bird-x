@@ -27,7 +27,7 @@ import org.software.bird.som.exception.InvalidDateException;
 
 
 /**
- * Class description goes here.
+ * 对Date类型的解析类
  * 
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
  * @version $Id: DateParsor.java,v0.1 2007-12-7 下午05:24:04 cyyan Exp$

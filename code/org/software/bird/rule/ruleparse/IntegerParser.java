@@ -19,11 +19,8 @@ package org.software.bird.rule.ruleparse;
 
 import org.software.bird.rule.RuleBugException;
 
-
-
-
 /**
- * Class description goes here.
+ * 对Integer类型的解析类
  * 
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
  * @version $Id: DoubleParsor.java,v0.1 2007-12-7 下午04:38:28 cyyan Exp$

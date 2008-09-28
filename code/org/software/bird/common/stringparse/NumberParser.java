@@ -27,7 +27,7 @@ import org.software.bird.som.exception.InvalidNumberException;
 
 
 /**
- * Class description goes here.
+ * 对Number类型的解析类
  * 
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
  * @version $Id: NumberParsor.java,v0.1 2007-12-7 下午04:35:28 cyyan Exp$

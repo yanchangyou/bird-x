@@ -34,13 +34,20 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 /**
- * Class description goes here.
+ * 解析xml文件的常用函数
  * 
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
  * @version $Id: XMLUtil.java,v0.1 2007-12-6 下午01:46:58 cyyan Exp$
  */
 public class XMLUtil {
 
+	/**
+	 * 按名获取节点
+	 * @param xmlDocument
+	 * @param tagName
+	 * @param nodeNameValue
+	 * @return
+	 */
 	public static Node getNodeByName(Document xmlDocument, String tagName,
 			String nodeNameValue) {
 		Node node = null;
@@ -56,6 +63,12 @@ public class XMLUtil {
 		return node;
 	}
 
+	/**
+	 * 获取标签中的第一个节点
+	 * @param parentNode
+	 * @param tagName
+	 * @return
+	 */
 	public static Node getFirstChildNodeByTagName(Node parentNode, String tagName) {
 		if (parentNode == null) {
 			return null;
@@ -76,6 +89,12 @@ public class XMLUtil {
 		return node;
 	}
 
+	/**
+	 * 获取某标签的所有节点
+	 * @param parentNode
+	 * @param tagName
+	 * @return
+	 */
 	public static List getAllSubNodeByTagName(Node parentNode, String tagName) {
 		if (parentNode == null) {
 			return null;
@@ -97,6 +116,11 @@ public class XMLUtil {
 		return allNodeList;
 	}
 	
+	/**
+	 * 获取节点文本
+	 * @param node
+	 * @return
+	 */
 	public static String getNodeText(Node node) {
 		String text = null;
 		if (node.getNodeType() == Node.TEXT_NODE) {
@@ -115,6 +139,12 @@ public class XMLUtil {
 		return text;
 	}
 
+	/**
+	 * 获取节点的属性值
+	 * @param node
+	 * @param propertyName
+	 * @return
+	 */
 	public static String getNodePropertyValue(Node node, String propertyName) {
 		if (node == null) {
 			return null;
@@ -131,6 +161,15 @@ public class XMLUtil {
 		return propertyValue;
 	}
 
+	/**
+	 * 从流中获取poi对象的Document对象
+	 * @param inputStream
+	 * @return
+	 * @throws FactoryConfigurationError
+	 * @throws ParserConfigurationException
+	 * @throws SAXException
+	 * @throws IOException
+	 */
 	public static Document getDocumentAtInputStream(
 			InputStream inputStream)
 			throws FactoryConfigurationError, ParserConfigurationException,
@@ -142,6 +181,12 @@ public class XMLUtil {
 		return xmlDocument;
 	}
 
+	/**
+	 * 获取所有的节点值
+	 * @param nodeList
+	 * @param propertyName
+	 * @return
+	 */
 	public static String[] getAllPropertyValue(NodeList nodeList,
 			String propertyName) {
 		String[] propertyValueArray = new String[nodeList.getLength()];

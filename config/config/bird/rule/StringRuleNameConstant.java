@@ -17,7 +17,7 @@ package config.bird.rule;
 ==================================================================== */
 
 /**
- * Class description goes here.
+ * 所有规则的名字, 便于检查是否有重名的情况
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
  * @version $Id: StringRuleNameConstant.java,v0.1 2007-12-14 下午06:31:29 cyyan Exp$

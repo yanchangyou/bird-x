@@ -20,7 +20,7 @@ package org.software.bird.common.util;
 import java.lang.reflect.Method;
 
 /**
- * Class description goes here.
+ * 处理bean的使用类
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
  * @version $Id: BeanUtil.java,v0.1 2007-12-14 下午05:35:29 cyyan Exp$
@@ -37,6 +37,14 @@ public class BeanUtil {
 		this.str = str;
 	}
 
+	/**
+	 * 设置bean的属性值
+	 * @param obj
+	 * @param property
+	 * @param value
+	 * @throws Exception
+	 * @throws NoSuchMethodException
+	 */
 	public static void setPropertyValueOfBean(Object obj, String property, Object value) throws Exception, NoSuchMethodException {
 		Class objClass = obj.getClass();
 		Method getter = objClass.getMethod(CommonUtil
@@ -48,6 +56,14 @@ public class BeanUtil {
 		setter.invoke(obj, new Object[] { value });
 	}
 	
+	/**
+	 * 获取bean属性的类类型
+	 * @param obj
+	 * @param property
+	 * @return
+	 * @throws SecurityException
+	 * @throws NoSuchMethodException
+	 */
 	public static Class getPropertyClassOfBean(Object obj, String property) throws SecurityException, NoSuchMethodException {
 		Method getter = obj.getClass().getMethod(CommonUtil
 				.property2getterName(property), null);

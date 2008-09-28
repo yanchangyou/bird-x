@@ -37,7 +37,8 @@ import org.software.bird.som.util.BasicObjectParseUtil;
 import org.software.bird.som.util.ExcelUtil;
 
 /**
- * Class description goes here.
+ * 核心解析类, 用于 sheet-->list, cell-->property的解析,
+ * 并在解析中进行校验
  * 
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
  * @version $Id: CoreParseUtil.java,v0.1 2007-12-7 下午02:17:22 cyyan Exp$
@@ -46,6 +47,14 @@ public class CoreParseUtil {
 
 	final static String sheet_title_not_found_exception = "请用正确的模板导入";  
 	
+	/**
+	 * 表sheet解析成list
+	 * @param sheet
+	 * @param som
+	 * @return
+	 * @throws BreakStringRuleException
+	 * @throws SheetTitleNotFoundException
+	 */
 	public static List sheet2List(HSSFSheet sheet, SheetObjectMapping som)
 			throws BreakStringRuleException, SheetTitleNotFoundException {
 		List list = new ArrayList();
@@ -101,6 +110,16 @@ public class CoreParseUtil {
 		return list;
 	}
 
+	/**
+	 * 
+	 * 将row解析成对象
+	 * 
+	 * @param row
+	 * @param som
+	 * @return
+	 * @throws BreakStringRuleException
+	 * @throws SheetTitleNotFoundException
+	 */
 	public static Object row2obj(HSSFRow row, SheetObjectMapping som)
 			throws BreakStringRuleException, SheetTitleNotFoundException {
 		Object obj = null;

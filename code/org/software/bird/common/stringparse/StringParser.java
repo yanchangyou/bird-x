@@ -20,7 +20,7 @@ package org.software.bird.common.stringparse;
 import org.software.bird.som.exception.EmptyException;
 
 /**
- * Class description goes here.
+ * 对String类型的解析类
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
  * @version $Id: StringParsor.java,v0.1 2007-12-7 下午05:24:57 cyyan Exp$

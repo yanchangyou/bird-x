@@ -22,7 +22,7 @@ import org.software.bird.common.exception.OutOfRangeException;
 import org.software.bird.som.exception.InvalidNumberException;
 
 /**
- * Class description goes here.
+ * 对Byte类型的解析类
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
  * @version $Id: t.java,v0.1 2007-12-7 下午05:44:50 cyyan Exp$

@@ -17,7 +17,6 @@
 
 package org.software.bird.rule;
 
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Collections;
@@ -39,7 +38,7 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 /**
- * Class description goes here.
+ * 将规则配置文件处理成对象
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
  * @version $Id: StringRuleConfig.java,v0.1 2007-12-14 上午09:21:08 cyyan Exp$
  */

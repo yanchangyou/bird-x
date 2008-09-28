@@ -28,22 +28,39 @@ import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.software.bird.som.util.ExcelParserUtil;
 
 /**
- * Class description goes here.
+ * excel文件对应的对象, 代理excel文件, 这样更具有灵活性
  * 
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
  * @version $Id: ExcelDelegation.java,v0.1 2007-12-15 下午04:00:56 cyyan Exp$
  */
 public class ExcelDelegation {
 
+
 	final private Map name_sheet_map = new HashMap();
 
 	public HSSFWorkbook workbook;
 
+	/**
+	 * 构造函数
+	 * @param stream
+	 * @throws FileNotFoundException
+	 * @throws IOException
+	 * @throws Exception
+	 */
 	public ExcelDelegation(InputStream stream) throws FileNotFoundException,
 			IOException, Exception {
 		configNameSheetMap(stream);
 	}
 
+	/**
+	 * 
+	 * 配置名称到sheet的映射
+	 * 
+	 * @param stream
+	 * @throws FileNotFoundException
+	 * @throws IOException
+	 * @throws Exception
+	 */
 	private void configNameSheetMap(InputStream stream)
 			throws FileNotFoundException, IOException, Exception {
 		if (stream == null) {
@@ -61,14 +78,29 @@ public class ExcelDelegation {
 		stream.close();
 	}
 
+	/**
+	 * 
+	 * 按名获取poi的表单
+	 * 
+	 * @param sheetName
+	 * @return
+	 */
 	public HSSFSheet getSheet(String sheetName) {
 		return (HSSFSheet) name_sheet_map.get(sheetName);
 	}
 
+	/**
+	 * 获取工作薄
+	 * @return
+	 */
 	public HSSFWorkbook getWorkbook() {
 		return workbook;
 	}
 
+	/**
+	 * 设置工作薄
+	 * @param workbook
+	 */
 	public void setWorkbook(HSSFWorkbook workbook) {
 		this.workbook = workbook;
 	}
