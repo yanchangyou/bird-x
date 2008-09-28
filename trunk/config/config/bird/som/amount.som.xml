@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 
 <som>
-	<class 	name="test.Amount" 
+	<class name="test.Amount" 
 			sheet="金额" titleRowIndex="1"
 		firstDataRowIndex="2">
 		<property name="amount" title="金额">

@@ -28,6 +28,7 @@ import javax.xml.parsers.FactoryConfigurationError;
 import javax.xml.parsers.ParserConfigurationException;
 
 import org.software.bird.common.exception.ConfigFileNotFoundException;
+import org.software.bird.common.util.BootConfig;
 import org.software.bird.common.util.CheckUtil;
 import org.software.bird.common.util.CommonUtil;
 import org.software.bird.common.util.ConfigUtil;
@@ -45,10 +46,7 @@ import org.xml.sax.SAXException;
 public final class StringRuleConfig {
 
 	// 配置文件的固定位置
-	private final static String string_rule_config = "config"
-		+ File.separator + "bird"
-		+ File.separator + "rule"
-		+ File.separator + "rule.xml";
+	private final static String string_rule_config = ConfigUtil.getRealPath(BootConfig.getProperty("ether.anima.bird.rule.boot.path"));
 
 	// 配置文件中的标签
 
