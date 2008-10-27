@@ -31,21 +31,41 @@ import org.software.bird.rule.RuleBugException;
  */
 public class DateParser extends StringParser {
 
+	/**
+	 * 默认日前格式
+	 */
 	final private String DATE_PATTERN = "yyyy-MM-dd";
 
+	/**
+	 * 日前格式类型
+	 */
 	public static SimpleDateFormat DATE_FORMAT;
 
+	/**
+	 * 日前格式
+	 */
 	private String pattern;
 
+	/**
+	 * 构造方法
+	 * @param pattern
+	 */
 	public DateParser(String pattern) {
 		this.pattern = pattern;
 		DATE_FORMAT = new SimpleDateFormat(pattern);
 	}
 
+	/**
+	 * 构造方法
+	 */
 	public DateParser() {
 		DATE_FORMAT = new SimpleDateFormat(DATE_PATTERN);
 	}
 
+	/**
+	 * 解析字符串成日前对象
+	 * @param 待解析的字符串
+	 */
 	public Object parse(String dateStr) throws RuleBugException {
 
 		if (!dateStr.matches("^\\d{4}-\\d{1,2}-\\d{1,2}$")) {
@@ -73,18 +93,38 @@ public class DateParser extends StringParser {
 		return date;
 	}
 
+	/**
+	 * pattern的getter方法
+	 * @return 日前格式
+	 */
 	public String getPattern() {
 		return pattern;
 	}
 
+	/**
+	 * pattern 的setter方法
+	 * @param pattern
+	 */
 	public void setPattern(String pattern) {
 		this.pattern = pattern;
 	}
 
+	/**
+	 * 按指定格式解析日前
+	 * @param str
+	 * @param pattern
+	 * @return
+	 * @throws Exception
+	 */
 	public Object parse(String str, String pattern) throws Exception {
 		return parse(str);
 	}
-
+	
+	/**
+	 * 构造规则报告
+	 * @param dateStr
+	 * @return
+	 */
 	public String constructDateRuleBugReport(String dateStr) {
 		return RuleBugException.rule_bug_report_pre + dateStr + " invalid date";
 	}

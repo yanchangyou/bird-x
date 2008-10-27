@@ -30,8 +30,16 @@ import org.software.bird.rule.RuleBugException;
  */
 public abstract class NumberParser extends StringParser {
 
+	/**
+	 * 十进制格式对象
+	 */
 	final static DecimalFormat aDecimalFormat = new DecimalFormat();
 
+	/**
+	 * 把字符串解析成Number
+	 * @param 待解析的字符串
+	 * @return Number实例
+	 */
 	public Object parse(String str) throws RuleBugException {
 		Number num = null;
 		try {
@@ -45,9 +53,25 @@ public abstract class NumberParser extends StringParser {
 		return num;
 	}
 	
+	/**
+	 * 判读Number是否在其范围内部， 这是抽象方法， 具体范围有其子类提供
+	 * @param num
+	 * @return
+	 */
 	public abstract boolean isInRange(Number num);
+	
+	/**
+	 * 获取范围
+	 * @return 对Number范围的描述
+	 */
 	public abstract String getRange();
 	
+	/**
+	 * 构造规则报告
+	 * @param num
+	 * @param type
+	 * @return 报告的字符串
+	 */
 	public String constructNumberRuleBugReport(Number num, String type) {
 		return RuleBugException.rule_bug_report_pre + num.doubleValue() + " out " + type + " range " + getRange();
 	}

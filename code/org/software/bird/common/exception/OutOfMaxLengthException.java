@@ -25,6 +25,11 @@ package org.software.bird.common.exception;
 public class OutOfMaxLengthException extends Exception {
 
 	private static final long serialVersionUID = 4729422591227219038L;
+	
+	/**
+	 * 构造方法
+	 * @param string 异常信息
+	 */
 	public OutOfMaxLengthException(String string) {
 		super(string);
 	}

@@ -26,20 +26,38 @@ public class BreakStringRuleException extends Exception {
 	
 	private static final long serialVersionUID = -4115377227500062678L;
 	
+	/**
+	 * 字符规则
+	 */
 	private StringRule stringRule;
-	
+	/**
+	 * getter方法
+	 * @return
+	 */
 	public StringRule getStringRule() {
 		return stringRule;
 	}
 
+	/**
+	 * setter方法
+	 * @param stringRule
+	 */
 	public void setStringRule(StringRule stringRule) {
 		this.stringRule = stringRule;
 	}
 
+	/**
+	 * 规则异常
+	 * @param msg 异常消息
+	 */
 	public BreakStringRuleException(String msg) {
 		super(msg);
 	}
 	
+	/**
+	 * 规则异常
+	 * @param stringRule
+	 */
 	public BreakStringRuleException(StringRule stringRule) {
 		this(stringRule.getMessage());
 		this.stringRule = stringRule;

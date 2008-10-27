@@ -27,16 +27,6 @@ import java.lang.reflect.Method;
  */
 public class BeanUtil {
 
-	String str;
-	
-	public String getStr() {
-		return str;
-	}
-
-	public void setStr(String str) {
-		this.str = str;
-	}
-
 	/**
 	 * 设置bean的属性值
 	 * @param obj
@@ -69,11 +59,4 @@ public class BeanUtil {
 				.property2getterName(property), null);
 		return getter.getReturnType();
 	}
-	
-	public static void main(String[] args) throws NoSuchMethodException, Exception {
-		BeanUtil aBeanUtil = new BeanUtil();
-		setPropertyValueOfBean(aBeanUtil,"str","x100x");
-		System.out.println(aBeanUtil.getStr());
-	}
-	
 }

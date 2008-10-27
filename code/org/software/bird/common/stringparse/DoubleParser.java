@@ -31,6 +31,14 @@ import org.software.bird.som.exception.InvalidNumberException;
 
 public class DoubleParser extends NumberParser {
 
+	/**
+	 * 解析字符成Double类型
+	 * 
+	 * @param 待解析的字符串
+	 * 
+	 * @exception InvalidNumberException 无效的字符串
+	 * @exception OutOfRangeException超过Double类型的最大范围 -Double.MAX_VALUE <= value && value <= Double.MAX_VALUE
+	 */
 	public Object parse(String str) throws InvalidNumberException, OutOfRangeException {
 		Number num = (Number) super.parse(str);
 		double value = num.doubleValue();

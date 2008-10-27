@@ -28,6 +28,10 @@ import org.software.bird.rule.RuleBugException;
 
 public class DoubleParser extends NumberParser {
 
+	/**
+	 * 把字符串解析成Double对象
+	 * @param 待解析的字符串
+	 */
 	public Object parse(String str) throws RuleBugException {
 		Number num = (Number) super.parse(str);
 		if (!isInRange(num)) {
@@ -38,11 +42,19 @@ public class DoubleParser extends NumberParser {
 		return doubleVar;
 	}
 
+	/**
+	 * 是否在Double范围内部
+	 * @param Number
+	 */
 	public boolean isInRange(Number num) {
 		return -Double.MAX_VALUE <= num.doubleValue()
 				&& num.doubleValue() <= Double.MAX_VALUE;
 	}
 
+	/**
+	 * 获取范围
+	 * @return 范围字符串
+	 */
 	public String getRange() {
 		return "[" + -Double.MAX_VALUE + "," + Double.MAX_VALUE + "]";
 	}

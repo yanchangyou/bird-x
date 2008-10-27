@@ -27,6 +27,10 @@ import org.software.bird.rule.RuleBugException;
  */
 public class IntegerParser extends NumberParser {
 
+	/**
+	 * 把字符串解析成Integer对象
+	 * @param 待解析的字符串
+	 */
 	public Object parse(String str) throws RuleBugException {
 		Number num = (Number) super.parse(str);
 		if (!isInRange(num)) {
@@ -36,10 +40,18 @@ public class IntegerParser extends NumberParser {
 		return doubleVar;
 	}
 
+	/**
+	 * 是否在Integer范围内部
+	 * @param Number
+	 */
 	public String getRange() {		
 		return "["+ Integer.MIN_VALUE + "," + Integer.MAX_VALUE + "]";
 	}
 
+	/**
+	 * 获取范围
+	 * @return 范围字符串
+	 */
 	public boolean isInRange(Number num) {
 		return Integer.MIN_VALUE <= num.doubleValue() && num.doubleValue() <= Integer.MAX_VALUE;
 	}

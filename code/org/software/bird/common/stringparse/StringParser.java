@@ -27,13 +27,11 @@ import org.software.bird.som.exception.EmptyException;
  */
 public class StringParser  extends Parser {
 
-	public static String str2str(String str) throws EmptyException {
-		if (str == null || str.trim().equals("")) {
-			throw new EmptyException("空白字符串异常");
-		}
-		return str;
-	}
-
+	/**
+	 * 解析字符串，不能为空
+	 * @param 要解析字符串
+	 * @exception 对于null和空白字符串都认为是异常
+	 */
 	public Object parse(String str) throws Exception {
 		if (str == null || str.trim().equals("")) {
 			throw new EmptyException("空白字符串异常");
@@ -41,10 +39,19 @@ public class StringParser  extends Parser {
 		return str;
 	}
 
+	/**
+	 * 不要此方法
+	 * @deprecated
+	 */
 	public Object parse(String str, String pattern) throws Exception {
 		return parse(str);
 	}
 
+	/**
+	 * 不要此方法
+	 * 
+	 * @deprecated
+	 */
 	public void setPattern(String pattern) {		
 	}
 }

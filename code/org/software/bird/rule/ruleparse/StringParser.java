@@ -26,6 +26,12 @@ import org.software.bird.rule.RuleBugException;
  * @version $Id: StringParsor.java,v0.1 2007-12-7 ÏÂÎç05:24:57 cyyan Exp$
  */
 public  class StringParser {
+	/**
+	 * ×Ö·û½âÎöÀà
+	 * @param str
+	 * @return
+	 * @throws RuleBugException
+	 */
 	public  Object parse(String str) throws RuleBugException {
 		return str;
 	}

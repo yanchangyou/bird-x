@@ -33,20 +33,35 @@ import org.software.bird.som.exception.SheetTitleNotFoundException;
 
 
 /**
- * SOM组件的接口文件, SOM所有功能都同此类调用
- * 用法如下：
- * ExcelIO aExcelIO = new ExcelIO(excel文件);
- * 将excel文件转换为poi对象,暂存于内存中等待解析
- * List list = aExcelIO.readAll(aClass);
- * 解析excel,并转换为list
+ * SOM组件的接口文件, SOM所有功能都同此类调用<br>
+ * 用法如下：<br>
+ * ExcelIO aExcelIO = new ExcelIO(excel文件);<br>
+ * 将excel文件转换为poi对象,暂存于内存中等待解析<br>
+ * List list = aExcelIO.readAll(aClass);<br>
+ * 解析excel,并转换为list<br>
+ * 
+ * 对于文件的传入方式有:<br>
+ * 1, 文件名 excelFileName<br>
+ * 2, 文件对象 excelFile<br>
+ * 3, 文件输入流 excelInputStream<br>
+ * 
+ * 从excel中读取对象有下列方式：<br>
+ * 1, 按类读取<br>
+ * 2, 按类和sheet名读取<br>
  * 
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
  * @version $Id: ConvertUtil.java,v0.1 2007-12-6 下午01:47:14 cyyan Exp$
  */
 public class ExcelIO {
 
+	/**
+	 * excelIO代理类， 所以的操作都转交个excelIODelegation来做
+	 */
 	private ExcelIODelegation excelIODelegation;
 
+	/**
+	 * excel的异常信息，下一版中将改进
+	 */
 	public static String excel_read_exception_message = "excel没找到或已损坏, 请检查";
 	/**
 	 * 通过文件名传递excel文件

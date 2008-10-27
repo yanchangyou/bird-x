@@ -26,27 +26,48 @@ package org.software.bird.rule;
  */
 public class StringRule {
 
+	/**
+	 * 父规则对象
+	 */
 	private StringRule parentStringRule; 
 	
+	/**
+	 * 规则描述
+	 */
 	private String description;
 
+	/**
+	 * 是否为空
+	 */
 	private boolean emptyable = true;
 
+	/**
+	 * 匹配字符串
+	 */
 	private String match;
 
+	/**
+	 * 不匹配的消息
+	 */
 	private String message;
 
+	/**
+	 * 被测试，校验的字符串
+	 */
 	private String testedString;
 	
 	/**
-	 * 测试时，先测试父规则，测试方法如下：
+	 * 测试时，先测试父规则，测试方法如下：<br>
 	 * 
-	 * 用规则去测试字符串 有两个规则要检查 1，是否为空 2，是否满足正则表达式 
+	 * 用规则去测试字符串 有两个规则要检查 <br>
+	 * 1，是否为空 <br>
+	 * 2，是否满足正则表达式 <br>
 	 * 
-	 * 测试不通过将抛异常 不通过的条件如下： 1，字符串是空的，但规则说明不能为空 code：(isEmpty && !emptyable)
-	 * 2，字符串不为空，规则也不为空，但不满足正则表达式 code：(!isEmpty && !isEmptyString(match) && !str.matches(match))
+	 * 测试不通过将抛异常 不通过的条件如下： <br>
+	 * 1，字符串是空的，但规则说明不能为空 code：(isEmpty && !emptyable)<br>
+	 * 2，字符串不为空，规则也不为空，但不满足正则表达式 code：(!isEmpty && !isEmptyString(match) && !str.matches(match))<br>
 	 * 
-	 * 特殊处理：为了避免 null 字符串的情况，先将 null 转化为 "",以便处理
+	 * 特殊处理：为了避免 null 字符串的情况，先将 null 转化为 "",以便处理<br>
 	 * 
 	 * @param str
 	 * @throws BreakStringRuleException
@@ -70,26 +91,51 @@ public class StringRule {
 		}
 	}
 
+	/**
+	 * 是否是空字符串
+	 * @param str
+	 * @return
+	 */
 	public static boolean isEmptyString(String str) {
 		return str == null || str.matches("^\\s*$");
 	}
 
+	/**
+	 * 把null处理成""
+	 * @param str
+	 * @return
+	 */
 	public static String null2empty(String str) {
 		return str == null ? "" : str;
 	}
 
+	/**
+	 * 是否为空
+	 * @return
+	 */
 	public boolean isEmptyable() {
 		return emptyable;
 	}
 
+	/**
+	 * emptyable 的getter方法
+	 * @return
+	 */
 	public boolean getEmptyable() {
 		return emptyable;
 	}
 
+	/**
+	 * emptyable 的setter方法
+	 * @param emptyable
+	 */
 	public void setEmptyable(boolean emptyable) {
 		this.emptyable = emptyable;
 	}
-
+	/**
+	 * emptyable 的setter方法
+	 * @param emptyable
+	 */
 	public void setEmptyable(String emptyable) {
 		this.emptyable = new Boolean(emptyable).booleanValue();
 	}
@@ -117,23 +163,10 @@ public class StringRule {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-
-	public int getPropertyValueMaxLenght() {
-		int maxLength = 0;
-		String[] stringPropertyArray = {description, match, message};
-		for (int i = 0; i < stringPropertyArray.length; i++) {
-			if (stringPropertyArray[i] != null && stringPropertyArray[i].trim().length() > maxLength ) {
-				maxLength = stringPropertyArray[i].trim().length();
-			}
-		}
-		if (this.parentStringRule != null) {
-			if (maxLength < this.parentStringRule.getPropertyValueMaxLenght()) {
-				maxLength = this.parentStringRule.getPropertyValueMaxLenght();
-			}
-		}
-		return maxLength;
-	}
 	
+	/**
+	 * 转换成字符串
+	 */
 	public String toString() {
 		StringBuffer buf = new StringBuffer();
 		buf.append("字符串：\n" + testedString + "\n规则：\n");
@@ -149,18 +182,33 @@ public class StringRule {
 		return buf.toString();
 	}
 
+	/**
+	 * parentStringRule 的getter方法
+	 * @return StringRule
+	 */
 	public StringRule getParentStringRule() {
 		return parentStringRule;
 	}
-
+	/**
+	 * parentStringRule 的setter方法
+	 * @param parentStringRule
+	 */
 	public void setParentStringRule(StringRule parentStringRule) {
 		this.parentStringRule = parentStringRule;
 	}
 
+	/**
+	 * testedString的 getter方法
+	 * @return
+	 */
 	public String getTestedString() {
 		return testedString;
 	}
 
+	/**
+	 * testedString 的setter方法
+	 * @param testedString
+	 */
 	public void setTestedString(String testedString) {
 		this.testedString = testedString;
 	}

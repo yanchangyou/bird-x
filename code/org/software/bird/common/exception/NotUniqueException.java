@@ -26,6 +26,10 @@ public class NotUniqueException  extends Exception {
 	
 	private static final long serialVersionUID = -4126768831286909445L;
 
+	/**
+	 * 构造方法
+	 * @param string 异常信息
+	 */
 	public NotUniqueException(String string) {
 		super(string);
 	}

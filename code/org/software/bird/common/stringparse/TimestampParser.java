@@ -33,6 +33,11 @@ import org.software.bird.som.exception.InvalidDateException;
  */
 public class TimestampParser extends DateParser {
 
+	/**
+	 * 把字符串解析成TimestampParser对象
+	 * @param dateStr 待解析的字符串
+	 * @exception 无效日期异常
+	 */
 	public Object parse(String dateStr) throws InvalidDateException{
 		Date date = (Date)super.parse(dateStr);
 		return new Timestamp(date.getTime());

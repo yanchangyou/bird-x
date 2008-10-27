@@ -25,6 +25,11 @@ package org.software.bird.common.exception;
 public class OutOfRangeException extends Exception {
 	private static final long serialVersionUID = -9168063220958409888L;
 
+	
+	/**
+	 * 构造方法
+	 * @param string 异常信息
+	 */
 	public OutOfRangeException(String string) {
 		super(string);
 	}

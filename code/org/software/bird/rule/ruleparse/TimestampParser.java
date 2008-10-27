@@ -30,6 +30,12 @@ import org.software.bird.rule.RuleBugException;
  */
 public class TimestampParser extends DateParser {
 
+	/**
+	 * 把字符串解析成Timestamp
+	 * 
+	 * @param dateStr 待解析的日期字符串
+	 * @return 返回Timestamp对象
+	 */
 	public Object parse(String dateStr) throws RuleBugException {
 		Date date = (Date) super.parse(dateStr);
 		return new Timestamp(date.getTime());

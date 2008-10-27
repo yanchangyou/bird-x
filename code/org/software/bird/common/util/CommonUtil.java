@@ -94,6 +94,11 @@ public class CommonUtil {
 		return part[0];
 	}
 
+	/**
+	 * 获取类根路径下的资源流
+	 * @param sourceName
+	 * @return
+	 */
 	public static InputStream getInputStreamBySourceName(String sourceName) {
 		InputStream configFileInputStream = null;
 		ClassLoader classLoader = Thread.currentThread()
@@ -102,6 +107,14 @@ public class CommonUtil {
 		return configFileInputStream;
 	}
 	
+	/**
+	 * 
+	 * 获取与类下面的同路径的资源
+	 * 
+	 * @param sourceName
+	 * @param aClass
+	 * @return
+	 */
 	public static InputStream getInputStreamBySoureNameInSamePackage(String sourceName, Class aClass) {
 		InputStream configFileInputStream = null;
 		ClassLoader classLoader = Thread.currentThread()
@@ -110,6 +123,12 @@ public class CommonUtil {
 		return configFileInputStream;
 	}
 	
+	/**
+	 * 获取重复的字符串
+	 * @param str 基本字符串
+	 * @param time 重复的次数
+	 * @return 字符串
+	 */
 	public static String getCopyString(String str, int time) {
 		StringBuffer copyString = new StringBuffer();
 		for (int i = 0; i < time; i++) {
