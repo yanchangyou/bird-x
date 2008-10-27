@@ -27,13 +27,26 @@ import org.software.bird.som.exception.InvalidDateException;
  */
 public class SQLDateParser extends DateParser {
 
+	/**
+	 * 构造方法
+	 * @param pattern 待参数的构造方法
+	 */
 	public SQLDateParser(String pattern) {
 		super(pattern);
 	}
+
+	/**
+	 * 不带参数的构造方法
+	 *
+	 */	
 	public SQLDateParser() {
 		super();
 	}
 
+	/**
+	 * 解析字符串成sql日期对象
+	 * @param 日期字符串
+	 */
 	public Object parse(String dateStr) throws InvalidDateException {
 		java.util.Date date = (java.util.Date)super.parse(dateStr);
 		return new java.sql.Date(date.getTime());

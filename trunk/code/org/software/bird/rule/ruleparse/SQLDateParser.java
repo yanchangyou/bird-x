@@ -27,6 +27,12 @@ import org.software.bird.rule.RuleBugException;
  */
 public class SQLDateParser extends DateParser {
 
+	/**
+	 * 解析成日期对象
+	 * 
+	 * @param dateStr 待解析的字符串
+	 * @return 日期对象
+	 */
 	public Object parse(String dateStr) throws RuleBugException {
 		java.util.Date date = (java.util.Date) super.parse(dateStr);
 		return new java.sql.Date(date.getTime());

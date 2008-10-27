@@ -36,8 +36,14 @@ import org.software.bird.som.util.ExcelParserUtil;
 public class ExcelDelegation {
 
 
+	/**
+	 * 命中工作表映射
+	 */
 	final private Map name_sheet_map = new HashMap();
 
+	/**
+	 * 工作薄
+	 */
 	public HSSFWorkbook workbook;
 
 	/**

@@ -30,7 +30,14 @@ import org.software.bird.som.exception.InvalidNumberException;
  */
 
 public class ShortParser extends NumberParser {
-
+	/**
+	 * 解析字符成Short类型
+	 * 
+	 * @param 待解析的字符串
+	 * 
+	 * @exception InvalidNumberException 无效的字符串
+	 * @exception OutOfRangeException超过Double类型的最大范围 Short.MIN_VALUE <= value && value <= Short.MAX_VALUE
+	 */
 	public Object parse(String str) throws InvalidNumberException, OutOfRangeException {
 		Number num = (Number) super.parse(str);
 		double value = num.doubleValue();

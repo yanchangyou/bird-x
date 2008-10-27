@@ -38,9 +38,13 @@ import org.software.bird.som.exception.SheetTitleNotFoundException;
  * @version $Id: ExcelParseProxy.java,v0.1 2007-12-8 下午01:43:43 cyyan Exp$
  */
 public class ExcelIODelegation {
-	
+	/**
+	 * 工作表没有发现异常
+	 */
 	public static String sheet_not_found_exception_message = "请检查是否是正确的模板，表单的名字是否被改动";
-	
+	/**
+	 * excel代理
+	 */
 	private ExcelDelegation excelDelegation;
 
 	/**

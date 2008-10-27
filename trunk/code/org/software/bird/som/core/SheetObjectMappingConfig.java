@@ -18,8 +18,6 @@
 package org.software.bird.som.core;
 
 
-
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.HashMap;
@@ -46,7 +44,7 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 /**
- * 将配置文件处理成对象
+ * 将配置文件转换成对象
  * 
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
  * @version $Id: SheetObjectConfig.java,v0.1 2007-12-5 下午09:39:11 cyyan Exp$
@@ -79,8 +77,8 @@ public class SheetObjectMappingConfig {
 	
 	/**
 	 * 按名提取一个som
-	 * @param objClass
-	 * @return
+	 * @param objClass 
+	 * @return 
 	 */
 	public static SheetObjectMapping getSOM(Class objClass) {
 		

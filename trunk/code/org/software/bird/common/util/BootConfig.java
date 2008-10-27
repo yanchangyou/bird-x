@@ -21,13 +21,16 @@ import java.io.InputStream;
 import java.util.Properties;
 
 /**
- * 处理根配置文件
+ * 处理核心配置文件，其它的配置文件路径都在此文件中进行配置，程序就针对此文件进行处理，一个统一的入口
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
  * @version $Id: BootConfig.java,v0.1 2008-9-28 上午09:07:22 cyyan Exp$
  */
 public class BootConfig {
 
+	/**
+	 * 核心配置文件路径
+	 */
 	final public static String bootPropertiesPath = "ether.properties";
 	final private static Properties bootProperties = new Properties();
 	static {

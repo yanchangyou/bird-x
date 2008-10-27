@@ -17,7 +17,7 @@
 
 package org.software.bird.rule;
 /**
- * Class description goes here.
+ *  规则本身的异常
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
  * @version $Id: RuleBugException.java,v0.1 2007-12-16 下午05:11:31 cyyan Exp$
@@ -25,7 +25,10 @@ package org.software.bird.rule;
 public class RuleBugException extends Exception {
 
 	private static final long serialVersionUID = -8876172406935676701L;
-	
+	/**
+	 * 规则本身的异常
+	 * @param message
+	 */
 	public RuleBugException(String message) {
 		super(message);
 	}

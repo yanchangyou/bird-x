@@ -29,6 +29,10 @@ import org.software.bird.rule.RuleBugException;
 
 public class LongParser extends NumberParser {
 
+	/**
+	 * 把字符串解析成Long对象
+	 * @param 待解析的字符串
+	 */
 	public Object parse(String str) throws RuleBugException {
 		Number num = (Number) super.parse(str);
 		if (!isInRange(num)) {
@@ -42,6 +46,10 @@ public class LongParser extends NumberParser {
 		return "[" + Long.MIN_VALUE + ", " + Long.MAX_VALUE + "]";
 	}
 
+	/**
+	 * 获取范围
+	 * @return 范围字符串
+	 */
 	public boolean isInRange(Number num) {
 		return Long.MIN_VALUE <= num.doubleValue()&& num.doubleValue() <= Long.MAX_VALUE;
 	}

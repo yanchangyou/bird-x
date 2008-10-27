@@ -30,6 +30,10 @@ import org.software.bird.som.exception.InvalidNumberException;
 
 public class ByteParser extends NumberParser {
 
+	/**
+	 * 解析字符串成字节类型
+	 * @param string 要解析的字符串
+	 */
 	public Object parse(String str) throws InvalidNumberException, OutOfRangeException {
 		Number num = (Number) super.parse(str);
 		double value = num.doubleValue();

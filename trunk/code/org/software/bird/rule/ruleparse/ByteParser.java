@@ -28,6 +28,10 @@ import org.software.bird.rule.RuleBugException;
 
 public class ByteParser extends NumberParser {
 
+	/**
+	 * 待规则校验的把字符串解析成Byte类型
+	 * @exception 规则异常
+	 */
 	public Object parse(String str) throws RuleBugException {
 		Number num = (Number) super.parse(str);
 		if (!isInRange(num)) {
@@ -38,10 +42,16 @@ public class ByteParser extends NumberParser {
 		return byteVar;
 	}
 
+	/**
+	 * 获取字符的范围
+	 */
 	public String getRange() {
 		return "[" + Byte.MIN_VALUE + "," + Byte.MAX_VALUE + "]";
 	}
 
+	/**
+	 * 判断是否在Byte范围内
+	 */
 	public boolean isInRange(Number num) {
 		return Byte.MIN_VALUE <= num.doubleValue()
 				&& num.doubleValue() <= Byte.MAX_VALUE;

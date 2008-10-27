@@ -19,13 +19,16 @@ package org.software.bird.common;
 
 
 /**
- * Class description goes here.
+ * bird常量类
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
  * @version $Id: BridConstant.java,v0.1 2007-12-16 下午03:02:25 cyyan Exp$
  */
 public class BirdConstant {
 	
+	/**
+	 * 路径分割符，使用|能在配置文件中统一分割符
+	 */
 	public final static char separator_char_in_config_file = '|';
 	
 }

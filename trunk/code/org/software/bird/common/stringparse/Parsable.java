@@ -23,8 +23,27 @@ package org.software.bird.common.stringparse;
  * @version $Id: Parsable.java,v0.1 2007-12-7 下午04:34:24 cyyan Exp$
  */
 public interface Parsable {
-
+ 
+	/**
+	 * 把字符串的解析成对象
+	 * @param str 待解析的字符串
+	 * @return 返回解析后的对象
+	 * @throws Exception 解析过程的异常
+	 */
 	Object parse(String str) throws Exception;
+	
+	/**
+	 * 把字符串解析成对象并对它指定参数
+	 * @param str 待解析的字符串
+	 * @param pattern 样式
+	 * @return 返回解析后的对象
+	 * @throws Exception 解析过程的异常
+	 */
 	Object parse(String str, String pattern) throws Exception;
+	
+	/**
+	 * 设置样式
+	 * @param pattern
+	 */
 	void setPattern(String pattern);
 }

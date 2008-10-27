@@ -27,6 +27,10 @@ public class ConfigFileNotFoundException extends Exception {
 
 	private static final long serialVersionUID = -5499846709748480844L;
 
+	/**
+	 * 构造方法
+	 * @param string 异常信息
+	 */
 	public ConfigFileNotFoundException(String string) {
 		super(string);
 	}

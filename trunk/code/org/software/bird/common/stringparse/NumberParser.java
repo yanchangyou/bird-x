@@ -27,7 +27,7 @@ import org.software.bird.som.exception.InvalidNumberException;
 
 
 /**
- * 对Number类型的解析类
+ * 对Number基本类型的解析类
  * 
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
  * @version $Id: NumberParsor.java,v0.1 2007-12-7 下午04:35:28 cyyan Exp$
@@ -35,7 +35,15 @@ import org.software.bird.som.exception.InvalidNumberException;
 public class NumberParser extends Parser {
 
 	final static DecimalFormat aDecimalFormat = new DecimalFormat();
-
+	/**
+	 * 解析字符成基本类型，如果解析的结果是BigDecimal，BigInteger将导致范围异常
+	 * 
+	 * @param 待解析的字符串
+	 * 
+	 * @exception InvalidNumberException 无效的字符串
+	 * @exception OutOfRangeException超过BigInteger，BigDecimal
+	 * 
+	 */
 	public Object parse(String str) throws InvalidNumberException, OutOfRangeException {
 		if (str == null || str.trim().equals("")) {
 			throw new InvalidNumberException("empty exception");
@@ -52,10 +60,19 @@ public class NumberParser extends Parser {
 		return num;
 	}
 
+	/**
+	 * 不使用此方法
+	 * 
+	 * @deprecated
+	 */
 	public Object parse(String str, String pattern) throws Exception {
 		return parse(str);
 	}
-
+	/**
+	 * 不使用此方法
+	 * 
+	 * @deprecated
+	 */
 	public void setPattern(String pattern) {
 	}
 }

@@ -34,19 +34,40 @@ import org.software.bird.som.exception.InvalidDateException;
  */
 public class DateParser extends Parser {
 
+	/**
+	 * 日前格式 yyyy-MM-dd
+	 */
 	final private String DATE_PATTERN = "yyyy-MM-dd"; 
+	/**
+	 * 日前格式对象用于格式日前
+	 */
 	public static SimpleDateFormat DATE_FORMAT;
 
+	/**
+	 * 日前格式样式
+	 */
 	private String pattern;
+	
+	/**
+	 * 日前格式解析类构造方法---指定样式
+	 * @param pattern 格式样式
+	 */
 	public DateParser(String pattern) {
 		this.pattern = pattern;
 		DATE_FORMAT = new SimpleDateFormat(pattern);
 	}
-	
+	/**
+	 * 日前格式解析类构造方法---使用缺省的日前样式 yyyy-MM-dd
+	 *
+	 */
 	public DateParser() {
 		DATE_FORMAT = new SimpleDateFormat(DATE_PATTERN);
 	}
 
+	/**
+	 * 解析日前字符串
+	 * @param dateStr 要解析的日前字符串
+	 */
 	public Object parse(String dateStr) throws InvalidDateException {
 		Date date = null;
 		try {
@@ -57,14 +78,27 @@ public class DateParser extends Parser {
 		return date;
 	}
 
+	/**
+	 * 获取样式
+	 * @return 日前样式字符串
+	 */
 	public String getPattern() {
 		return pattern;
 	}
 
+	/**
+	 * 设置日前样式
+	 * @param pattern 样式
+	 */
 	public void setPattern(String pattern) {
 		this.pattern = pattern;
 	}
 
+	/**
+	 * 解析字符串指定样式
+	 * @param str 要解析的字符串
+	 * @param pattern 日前样式
+	 */
 	public Object parse(String str, String pattern) throws Exception {
 		return parse(str);
 	}

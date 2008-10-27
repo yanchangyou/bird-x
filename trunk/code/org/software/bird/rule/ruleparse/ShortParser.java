@@ -28,6 +28,11 @@ import org.software.bird.rule.RuleBugException;
  */
 
 public class ShortParser extends NumberParser {
+	
+	/**
+	 * 把字符串解析成Long对象
+	 * @param 待解析的字符串
+	 */
 	public Object parse(String str) throws RuleBugException {
 		Number num = (Number) super.parse(str);
 		if (!isInRange(num)) {
@@ -37,11 +42,19 @@ public class ShortParser extends NumberParser {
 		Short shortVar = new Short(num.shortValue());
 		return shortVar;
 	}
-
+	
+	/**
+	 * 是否在Short范围内部
+	 * @param Number
+	 */
 	public String getRange() {
 		return "[" + Short.MIN_VALUE + ", " + Short.MAX_VALUE + "]";
 	}
 
+	/**
+	 * 获取范围
+	 * @return 范围字符串
+	 */
 	public boolean isInRange(Number num) {
 		return Short.MIN_VALUE <= num.doubleValue()
 				&& num.doubleValue() <= Short.MAX_VALUE;
