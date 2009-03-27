@@ -105,3 +105,216 @@ spaceable
 
 
 
+
+
+outer
+inner
+
+=============layer0:原始数据=================
+
+=============layer1:字符串数组=================
+table
+{
+	{property[N]}，
+	{value[N]}，
+	{value[N]}，
+	{value[N]}
+}
+
+============layer2:对象==================
+
+由 layer1-->layer2
+经过 校验 和 转换
+
+规定 title必须转换位属性名称
+
+
+
+
+<table name="tableName">
+	<title>
+		<columnTitle>
+		</columnTitle>{N}
+	</title>{1}
+	<data>
+		<row>
+			<column>
+			</column>*
+		</row>*
+	</data>{N}
+</table>*
+
+public class Table {
+	
+	/**
+		the table name
+	*/
+	private String name;
+	
+	/**
+		the column title
+	*/
+	private String[] title;
+	
+	/**
+		the data
+	*/
+	private String[][] data;
+	
+}
+
+
+
+     
+<table-validation>
+   <global>
+      <CheckPoint name="int"
+				parents=""
+                 classname="org.apache.commons.dog.TestTypedog"
+                 method="validateInt"
+                 methodParams="java.lang.String"
+                 paramValue="IN"
+                 msg="errors.int"/>
+
+      <CheckPoint name="required"
+                 classname="org.apache.commons.dog.Testdog"
+                 method="validateRequired"
+                 methodParams="java.lang.Object,org.apache.commons.dog.Field"
+                 msg="errors.required"/>
+   </global>
+   <tableset>
+      <table name="ValidateBean">
+         <field name="firstName"  checks="required">
+         	   <arg key="nametable.firstname.displayname"/>
+         </field>
+         <field  name="lastName" checks="required">
+         	     <arg key="nametable.lastname.displayname"/>
+         </field>
+         <field  name="street1" checks="required">
+         	     <arg key="nametable.street1.displayname"/>
+         </field>
+         <field  name="state" checks="required">
+         	     <arg key="nametable.city.displayname"/>
+         </field>
+         <field  name="state" checks="required">
+         	     <arg key="nametable.state.displayname"/>
+         </field>
+         <field  name="postalCode" checks="required">
+         	     <arg key="nametable.postalCode.displayname"/>
+         </field>
+         <field  name="age" checks="required,int">
+         	     <arg key="nametable.age.displayname"/>
+         </field>
+
+      </table>
+   </tableset>   
+</table-validation>
+
+
+
+
+Table, CheckPoint, Dog, CheckTableResult
+
+CheckPoint from the config
+
+Table from the outer
+
+Dog the core of validator system
+
+after dog watch the data by the CheckPoint, it will tell us the result.
+
+dog.setCheckPoint();
+dog.check(table);
+
+CheckFieldResult
+CheckTableResult
+
+
+====支持两种结构=========
+Table
+具有Tree结构的Table（在某个字段具有Tree结构的含有，比如levelCode）
+
+===两种处理方式========
+输入
+输出
+
+
+输入 excel----转换封装----> table ----校验----> list
+输出 list ---转换封装----> table ----附加格式---> excel
+
+
+
+sheet2table(excel)
+
+
+数据类型的转换
+
+
+可以小心控制的错误
+
+
+
+规则驱动
+
+
+<soa>
+</soa>
+
+<pipeline name="add">
+	<step name="read a" needStore="true" globalName="a">
+		<algorithm class="test.TestPipeLine" method="readInt" params=""/>
+	</step>
+	<step name="read b" needStore="true" globalName="b">
+		<algorithm class="test.TestPipeLine" method="readInt"/>
+	</step>
+	
+	<step name="a + b">
+		<comment>
+		</comment>
+		<algorithm class="test.TestPipeLine" method="add"/>
+		<paramList>
+			<globalParam name="a" index="0"/>
+			<globalParam name="b" index="1"/>
+		</paramList>
+	</step>
+	<step name="print">
+		<comment>
+		</comment>
+		<algorithm class="test.TestPipeLine" method="println"/>
+	</step>
+</pipeline>
+
+
+宇宙.星系.银河系.太阳系统.地球系.地球.地。
+宇宙。物质。
+
+<宇宙>
+</
+
+
+<服务>
+	<静态服务>
+		方法调用
+	</静态服务>
+	<动态服务>
+		网络请求
+	</动态服务>
+</服务>
+<pipeline>
+	
+
+<service name="">
+	<static-server name="" className="" methodName="" params="">
+</service>
+
+<service name="">
+	<dynamic-server name="" protocol="" host="" port="" username="" password=""/>
+</service>
+
+<step name="a + b">
+	<comment></comment>
+	<request serviceName="" paramName=""/>
+	<response storeAsName="">
+</step>
+
+</pipeline>
