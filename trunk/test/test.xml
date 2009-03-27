@@ -1,5 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <all>
+
+
+	<test>
+		<type>
+			<功能>
+			</功能>
+			
+			outer
+			inner
+			
+			
+			使用
+			机理
+			
+			
+			组成
+			结构
+			机理
+			
+			原料
+			空间结构
+			时空结构
+			
+			
+			我不想知道它怎么完成，我只关心结果。
+			
+			如何与大脑进行协作
+			
+			工具协作我完成我的工作
+			
+			
+			
+			
+			<內部测试>
+			</內部测试>
+			
+		</type>
+	</test>
 	<message uri="excel">
 		<error_messge></error_messge>
 		<warning_message></warning_message>
@@ -8,18 +46,14 @@
 	<type>
 		<not_exist_excel></not_exist_excel>
 		<exist_excel>
-		
+
 			<not_exist_sheet_by_name></not_exist_sheet_by_name>
 		</exist_excel>
-		1, excel没找到
-		2, sheet没找到
-		3, title没找到
-		4, 属性值没找到
-		5, 属性值校验不通过
-		
+		1, excel没找到 2, sheet没找到 3, title没找到 4, 属性值没找到 5, 属性值校验不通过
+
 	</type>
-	
-	
+
+
 	<input context="page">
 		<type>文件</type>
 		<limit>后缀名为xsl的文件</limit>
@@ -27,7 +61,7 @@
 			<case index="1"></case>
 		</case-in-limit>
 	</input>
-	
+
 	<input context="action">
 		<type>文件</type>
 		<limit>后缀名为xsl的文件</limit>
@@ -42,7 +76,7 @@
 		<check index="2">som所有配置文件必须存在</check>
 		<check index="3">string_rule所有配置文件必须存在</check>
 	</SOM完整性检查>
-	
+
 	<模板文件完整性检查>
 		<check index="1">文件必须存在</check>
 		<check index="2">文件名必须存在</check>
@@ -51,7 +85,9 @@
 		<check index="5">文件内容必须是excel文件内容</check>
 		<check index="6">配置文件中的sheet存在</check>
 		<check index="7">配置文件中sheet的title必须存在</check>
-		<check index="8">配置文件中sheet的title必须在第一行, 如果配置文件有title位置的属性就必须是配置文件中指定的行位置</check>
+		<check index="8">
+			配置文件中sheet的title必须在第一行, 如果配置文件有title位置的属性就必须是配置文件中指定的行位置
+		</check>
 	</模板文件完整性检查>
 	<all-judge>
 		<judge index="1">文件必须存在</judge>
@@ -65,9 +101,15 @@
 	<all-judge>
 		<need-judge index="1">文件存在</need-judge>
 		<need-judge index="2">文件后缀名是xls</need-judge>
-		<need-judge index="3">文件中开头几个字节是D0, CF, 11, EO, A1, B1, 1A, E1</need-judge>
-		<not-need-judge index="4">存在workbook(excel本身已经校验)</not-need-judge>
-		<not-need-judge index="4">存在workbook(excel本身已经校验)</not-need-judge>
+		<need-judge index="3">
+			文件中开头几个字节是D0, CF, 11, EO, A1, B1, 1A, E1
+		</need-judge>
+		<not-need-judge index="4">
+			存在workbook(excel本身已经校验)
+		</not-need-judge>
+		<not-need-judge index="4">
+			存在workbook(excel本身已经校验)
+		</not-need-judge>
 		<not-need-judge index="5">存在sheet(excel本身已经校验)</not-need-judge>
 		<need-judge index="5">配置文件中的sheet存在</need-judge>
 		<need-judge index="5">配置文件中的sheet存在</need-judge>
