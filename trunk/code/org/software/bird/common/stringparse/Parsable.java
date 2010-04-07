@@ -17,32 +17,32 @@
 
 package org.software.bird.common.stringparse;
 /**
- * ½âÎö½Ó¿Ú
+ * ç‘™ï½†ç€½éºãƒ¥å½›
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: Parsable.java,v0.1 2007-12-7 ÏÂÎç04:34:24 cyyan Exp$
+ * @version $Id: Parsable.java,v0.1 2007-12-7 æ¶“å¬ªå´04:34:24 cyyan Exp$
  */
 public interface Parsable {
  
 	/**
-	 * °Ñ×Ö·û´®µÄ½âÎö³É¶ÔÏó
-	 * @param str ´ı½âÎöµÄ×Ö·û´®
-	 * @return ·µ»Ø½âÎöºóµÄ¶ÔÏó
-	 * @throws Exception ½âÎö¹ı³ÌµÄÒì³£
+	 * é¶å©‚ç“§ç»—ï¸¿è¦†é¨å‹®Ğ’é‹æ„­åšç€µç¡…è–„
+	 * @param str å¯°å‘°Ğ’é‹æ„®æ®‘ç€›æ¥ƒîƒæ¶“ï¿½
+	 * @return æ©æ–¿æ´–ç‘™ï½†ç€½éšåº£æ®‘ç€µç¡…è–„
+	 * @throws Exception ç‘™ï½†ç€½æ©å›©â–¼é¨å‹«ç´“ç”¯ï¿½
 	 */
 	Object parse(String str) throws Exception;
 	
 	/**
-	 * °Ñ×Ö·û´®½âÎö³É¶ÔÏó²¢¶ÔËüÖ¸¶¨²ÎÊı
-	 * @param str ´ı½âÎöµÄ×Ö·û´®
-	 * @param pattern ÑùÊ½
-	 * @return ·µ»Ø½âÎöºóµÄ¶ÔÏó
-	 * @throws Exception ½âÎö¹ı³ÌµÄÒì³£
+	 * é¶å©‚ç“§ç»—ï¸¿è¦†ç‘™ï½†ç€½é´æ„¬î‡®ç’â€³è‹Ÿç€µç‘°ç• é¸å›§ç•¾é™å‚›æšŸ
+	 * @param str å¯°å‘°Ğ’é‹æ„®æ®‘ç€›æ¥ƒîƒæ¶“ï¿½
+	 * @param pattern éå³°ç´¡
+	 * @return æ©æ–¿æ´–ç‘™ï½†ç€½éšåº£æ®‘ç€µç¡…è–„
+	 * @throws Exception ç‘™ï½†ç€½æ©å›©â–¼é¨å‹«ç´“ç”¯ï¿½
 	 */
 	Object parse(String str, String pattern) throws Exception;
 	
 	/**
-	 * ÉèÖÃÑùÊ½
+	 * ç’å‰§ç–†éå³°ç´¡
 	 * @param pattern
 	 */
 	void setPattern(String pattern);

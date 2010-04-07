@@ -17,10 +17,10 @@ package config.bird.rule;
 ==================================================================== */
 
 /**
- * ËùÓĞ¹æÔòµÄÃû×Ö, ±ãÓÚ¼ì²éÊÇ·ñÓĞÖØÃûµÄÇé¿ö
+ * æ‰€æœ‰è§„åˆ™çš„åå­—, ä¾¿äºæ£€æŸ¥æ˜¯å¦æœ‰é‡åçš„æƒ…å†µ
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: StringRuleNameConstant.java,v0.1 2007-12-14 ÏÂÎç06:31:29 cyyan Exp$
+ * @version $Id: StringRuleNameConstant.java,v0.1 2007-12-14 ä¸‹åˆ06:31:29 cyyan Exp$
  */
 public final class StringRuleNameConstant {
 	public final static String byte_type_string_rule = "byte_type_string_rule";

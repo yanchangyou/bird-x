@@ -24,30 +24,30 @@ import java.util.Date;
 import org.software.bird.rule.RuleBugException;
 
 /**
- * ¶ÔDateÀàĞÍµÄ½âÎöÀà
+ * ç€µç¬µateç»«è¯²ç€·é¨å‹®Ğ’é‹æ„®è¢«
  * 
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: DateParsor.java,v0.1 2007-12-7 ÏÂÎç05:24:04 cyyan Exp$
+ * @version $Id: DateParsor.java,v0.1 2007-12-7 æ¶“å¬ªå´05:24:04 cyyan Exp$
  */
 public class DateParser extends StringParser {
 
 	/**
-	 * Ä¬ÈÏÈÕÇ°¸ñÊ½
+	 * æ¦›æ¨¿î…»éƒãƒ¥å¢ éç…ç´¡
 	 */
 	final private String DATE_PATTERN = "yyyy-MM-dd";
 
 	/**
-	 * ÈÕÇ°¸ñÊ½ÀàĞÍ
+	 * éƒãƒ¥å¢ éç…ç´¡ç»«è¯²ç€·
 	 */
 	public static SimpleDateFormat DATE_FORMAT;
 
 	/**
-	 * ÈÕÇ°¸ñÊ½
+	 * éƒãƒ¥å¢ éç…ç´¡
 	 */
 	private String pattern;
 
 	/**
-	 * ¹¹Ôì·½·¨
+	 * é‹å‹¯ï¿½çŠ³æŸŸå¨‰ï¿½
 	 * @param pattern
 	 */
 	public DateParser(String pattern) {
@@ -56,15 +56,15 @@ public class DateParser extends StringParser {
 	}
 
 	/**
-	 * ¹¹Ôì·½·¨
+	 * é‹å‹¯ï¿½çŠ³æŸŸå¨‰ï¿½
 	 */
 	public DateParser() {
 		DATE_FORMAT = new SimpleDateFormat(DATE_PATTERN);
 	}
 
 	/**
-	 * ½âÎö×Ö·û´®³ÉÈÕÇ°¶ÔÏó
-	 * @param ´ı½âÎöµÄ×Ö·û´®
+	 * ç‘™ï½†ç€½ç€›æ¥ƒîƒæ¶“å‰åšéƒãƒ¥å¢ ç€µç¡…è–„
+	 * @param å¯°å‘°Ğ’é‹æ„®æ®‘ç€›æ¥ƒîƒæ¶“ï¿½
 	 */
 	public Object parse(String dateStr) throws RuleBugException {
 
@@ -94,15 +94,15 @@ public class DateParser extends StringParser {
 	}
 
 	/**
-	 * patternµÄgetter·½·¨
-	 * @return ÈÕÇ°¸ñÊ½
+	 * patterné¨åˆ§etteré‚è§„ç¡¶
+	 * @return éƒãƒ¥å¢ éç…ç´¡
 	 */
 	public String getPattern() {
 		return pattern;
 	}
 
 	/**
-	 * pattern µÄsetter·½·¨
+	 * pattern é¨å‰†etteré‚è§„ç¡¶
 	 * @param pattern
 	 */
 	public void setPattern(String pattern) {
@@ -110,7 +110,7 @@ public class DateParser extends StringParser {
 	}
 
 	/**
-	 * °´Ö¸¶¨¸ñÊ½½âÎöÈÕÇ°
+	 * é¸å¤‹å¯šç€¹æ°­ç‰¸å¯®å¿šĞ’é‹æ„­æ£©é“ï¿½
 	 * @param str
 	 * @param pattern
 	 * @return
@@ -121,7 +121,7 @@ public class DateParser extends StringParser {
 	}
 	
 	/**
-	 * ¹¹Ôì¹æÔò±¨¸æ
+	 * é‹å‹¯ï¿½çŠºîƒé’æ¬å§¤é›ï¿½
 	 * @param dateStr
 	 * @return
 	 */

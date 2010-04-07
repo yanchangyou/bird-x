@@ -17,16 +17,16 @@
 
 package org.software.bird.rule;
 /**
- *  ¹æÔò±¾ÉíµÄÒì³£
+ *  ç‘™å‹«å¯éˆî„ƒéŸ©é¨å‹«ç´“ç”¯ï¿½
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: RuleBugException.java,v0.1 2007-12-16 ÏÂÎç05:11:31 cyyan Exp$
+ * @version $Id: RuleBugException.java,v0.1 2007-12-16 æ¶“å¬ªå´05:11:31 cyyan Exp$
  */
 public class RuleBugException extends Exception {
 
 	private static final long serialVersionUID = -8876172406935676701L;
 	/**
-	 * ¹æÔò±¾ÉíµÄÒì³£
+	 * ç‘™å‹«å¯éˆî„ƒéŸ©é¨å‹«ç´“ç”¯ï¿½
 	 * @param message
 	 */
 	public RuleBugException(String message) {

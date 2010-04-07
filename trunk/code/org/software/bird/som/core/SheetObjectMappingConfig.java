@@ -44,19 +44,19 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 /**
- * ½«ÅäÖÃÎÄ¼ş×ª»»³É¶ÔÏó
+ * çå—›å¤ç¼ƒî†½æƒæµ æƒ°æµ†é¹ãˆ¡åšç€µç¡…è–„
  * 
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: SheetObjectConfig.java,v0.1 2007-12-5 ÏÂÎç09:39:11 cyyan Exp$
+ * @version $Id: SheetObjectConfig.java,v0.1 2007-12-5 æ¶“å¬ªå´09:39:11 cyyan Exp$
  */
 public class SheetObjectMappingConfig {
 
 	
-	//ÅäÖÃÎÄ¼şµÄÂ·¾¶
+	//é–°å¶‡ç–†é‚å›¦æ¬¢é¨å‹®çŸ¾å¯°ï¿½
 	final public static String som_config_file = ConfigUtil.getRealPath(BootConfig.getProperty("ether.anima.bird.som.boot.path"));
 	
 	/**
-	 * ÅäÖÃÎÄ¼şÖĞµÄ½ÚµãÃû³Æ
+	 * é–°å¶‡ç–†é‚å›¦æ¬¢æ¶“î… æ®‘é‘ºå‚œå£éšå¶‡Ğ
 	 */
 	final public static String som_tag_name = "som";
 	final public static String som_class_tag_name = "class";
@@ -76,7 +76,7 @@ public class SheetObjectMappingConfig {
 	private static Map class_som_map = new HashMap();	
 	
 	/**
-	 * °´ÃûÌáÈ¡Ò»¸ösom
+	 * é¸å¤Šæ‚•é»æ„¬å½‡æ¶“ï¿½æ¶“çŒ»om
 	 * @param objClass 
 	 * @return 
 	 */
@@ -85,7 +85,7 @@ public class SheetObjectMappingConfig {
 		if (CheckUtil.isEmptyMap(class_som_map)) {
 			try {
 				initConfig();
-				System.out.println("ËùÓĞµÄsom £º\n" + class_som_map);
+				System.out.println("éµï¿½éˆå¤Œæ®‘som é”›æ­•n" + class_som_map);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
@@ -94,7 +94,7 @@ public class SheetObjectMappingConfig {
 		return (SheetObjectMapping)class_som_map.get(objClass);
 	}
 	/**
-	 * ³õÊ¼»¯ ÅäÖÃ
+	 * é’æ¿†îŠé–ï¿½ é–°å¶‡ç–†
 	 * @throws ConfigFileNotFoundException
 	 * @throws FactoryConfigurationError
 	 * @throws ParserConfigurationException
@@ -109,7 +109,7 @@ public class SheetObjectMappingConfig {
 			+ ConfigUtil.getRealPath(som_config_file));
 			}
 		
-		// »ñÈ¡ÅäÖÃÎÄ¼ş
+		// é‘¾å³°å½‡é–°å¶‡ç–†é‚å›¦æ¬¢
 		Document xmlDocument = XMLUtil.getDocumentAtInputStream(configFileInputStream);
 		NodeList somNodeList = xmlDocument.getElementsByTagName(som_tag_name);
 		String[] somFileNameArray = XMLUtil.getAllPropertyValue(somNodeList, som_src_property_name);
@@ -124,7 +124,7 @@ public class SheetObjectMappingConfig {
 	}
 	
 	 /**
-	  * ÅäÖÃ title µ½ column µÄÓ³Éä
+	  * é–°å¶‡ç–† title é’ï¿½ column é¨å‹¬æ§§çï¿½
 	  * @param titleRow
 	  * @return
 	  */
@@ -142,7 +142,7 @@ public class SheetObjectMappingConfig {
 	}
 	
 	/**
-	 * ÅäÖÃ Ò»¸ösom ÎÄ¼ş ¿ÉÄÜÓĞ¶à¸ö som ÅäÖÃÔÚÀïÃæ
+	 * é–°å¶‡ç–† æ¶“ï¿½æ¶“çŒ»om é‚å›¦æ¬¢ é™îˆå…˜éˆå¤Šî™‹æ¶“ï¿½ som é–°å¶‡ç–†é¦ã„©å™·é—ˆï¿½
 	 * @param somFileName
 	 * @throws ConfigFileNotFoundException
 	 * @throws FactoryConfigurationError
@@ -166,7 +166,7 @@ public class SheetObjectMappingConfig {
 		configSOM(classNodeList, class_som_map);
 	}
 	/**
-	 * ÅäÖÃ classNodeList ¿ÉÄÜÓĞ¶à¸ö som ÅäÖÃÔÚÀïÃæ
+	 * é–°å¶‡ç–† classNodeList é™îˆå…˜éˆå¤Šî™‹æ¶“ï¿½ som é–°å¶‡ç–†é¦ã„©å™·é—ˆï¿½
 	 * @param classNodeList
 	 * @param class_som_map
 	 * @throws ClassNotFoundException
@@ -182,7 +182,7 @@ public class SheetObjectMappingConfig {
 		}
 	}
 	/**
-	 *  ÅäÖÃµ¥¸ösom
+	 *  é–°å¶‡ç–†é—æ›šé‡œsom
 	 * @param classNode
 	 * @return
 	 */

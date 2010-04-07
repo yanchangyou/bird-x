@@ -21,15 +21,15 @@ import java.io.File;
 import java.io.InputStream;
 
 /**
- * Ìá¹©Ò»Ğ©ºÜ³£ÓÃµÄ¹¦ÄÜ
+ * é»æ„ªç·µæ¶“ï¿½æµœæ¶˜ç·¢ç”¯å“¥æ•¤é¨å‹«å§›é‘³ï¿½
  * 
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: Common.java,v0.1 2007-12-6 ÏÂÎç01:46:27 cyyan Exp$
+ * @version $Id: Common.java,v0.1 2007-12-6 æ¶“å¬ªå´01:46:27 cyyan Exp$
  */
 public class CommonUtil {
 
 	/**
-	 * »ñÈ¡Àà²»°üº¬°üÃûµÄÀàÃû
+	 * é‘¾å³°å½‡ç»«è®³ç¬‰é–å‘­æƒˆé–å‘­æ‚•é¨å‹­è¢«éšï¿½
 	 * @param aClass
 	 * @return
 	 */
@@ -40,7 +40,7 @@ public class CommonUtil {
 	}
 
 	/**
-	 * »ñÈ¡°üÃû
+	 * é‘¾å³°å½‡é–å‘­æ‚•
 	 * @param aClass
 	 * @return
 	 */
@@ -49,7 +49,7 @@ public class CommonUtil {
 	}
 
 	/**
-	 * °Ñ°üÃû×ª»»ÎªÂ·¾¶¸ñÊ½
+	 * é¶å©‚å¯˜éšå¶ˆæµ†é¹î–è´Ÿç’ºîˆšç·éç…ç´¡
 	 * @param aClass
 	 * @return
 	 */
@@ -58,7 +58,7 @@ public class CommonUtil {
 	}
 
 	/**
-	 * »ñÈ¡ÊôĞÔµÄgetter·½·¨
+	 * é‘¾å³°å½‡çç‚´ï¿½Ñ…æ®‘getteré‚è§„ç¡¶
 	 * @param property
 	 * @return
 	 */
@@ -67,7 +67,7 @@ public class CommonUtil {
 	}
 
 	/**
-	 * »ñÈ¡ÊôĞÔµÄsetter·½·¨
+	 * é‘¾å³°å½‡çç‚´ï¿½Ñ…æ®‘setteré‚è§„ç¡¶
 	 * @param property
 	 * @return
 	 */
@@ -76,7 +76,7 @@ public class CommonUtil {
 	}
 
 	/**
-	 * ×Ö·û´®Ê××Ö´óĞ´
+	 * ç€›æ¥ƒîƒæ¶“æŸ¥îœšç€›æ¥€ã‡éï¿½
 	 * @param str
 	 * @return
 	 */
@@ -85,7 +85,7 @@ public class CommonUtil {
 	}
 
 	/**
-	 * »ñÈ¡µÚÒ»¸öµãºÅÖ®Ç°×Ö·û´®
+	 * é‘¾å³°å½‡ç»—îƒ¿ç«´æ¶“î†å£é™èœ‚ç®£é“å¶…ç“§ç»—ï¸¿è¦†
 	 * @param str
 	 * @return
 	 */
@@ -95,7 +95,7 @@ public class CommonUtil {
 	}
 
 	/**
-	 * °´Ãû»ñÈ¡×ÊÔ´
+	 * é¸å¤Šæ‚•é‘¾å³°å½‡ç’§å‹¬ç°®
 	 * @param sourceName
 	 * @return
 	 */
@@ -108,7 +108,7 @@ public class CommonUtil {
 	}
 	
 	/**
-	 * °´ÃûÔÚ°üÏÂÃæ»ñÈ¡×ÊÔ´
+	 * é¸å¤Šæ‚•é¦ã„¥å¯˜æ¶“å¬®æ½°é‘¾å³°å½‡ç’§å‹¬ç°®
 	 * @param sourceName
 	 * @param aClass
 	 * @return

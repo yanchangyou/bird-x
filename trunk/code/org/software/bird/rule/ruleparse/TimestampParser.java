@@ -23,18 +23,18 @@ import java.util.Date;
 import org.software.bird.rule.RuleBugException;
 
 /**
- * ¶ÔTimestampÀàĞÍµÄ½âÎöÀà
+ * ç€µç­imestampç»«è¯²ç€·é¨å‹®Ğ’é‹æ„®è¢«
  * 
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: TimestampParsor.java,v0.1 2007-12-7 ÏÂÎç05:54:50 cyyan Exp$
+ * @version $Id: TimestampParsor.java,v0.1 2007-12-7 æ¶“å¬ªå´05:54:50 cyyan Exp$
  */
 public class TimestampParser extends DateParser {
 
 	/**
-	 * °Ñ×Ö·û´®½âÎö³ÉTimestamp
+	 * é¶å©‚ç“§ç»—ï¸¿è¦†ç‘™ï½†ç€½é´æ€²imestamp
 	 * 
-	 * @param dateStr ´ı½âÎöµÄÈÕÆÚ×Ö·û´®
-	 * @return ·µ»ØTimestamp¶ÔÏó
+	 * @param dateStr å¯°å‘°Ğ’é‹æ„®æ®‘éƒãƒ¦æ¹¡ç€›æ¥ƒîƒæ¶“ï¿½
+	 * @return æ©æ–¿æ´–Timestampç€µç¡…è–„
 	 */
 	public Object parse(String dateStr) throws RuleBugException {
 		Date date = (Date) super.parse(dateStr);

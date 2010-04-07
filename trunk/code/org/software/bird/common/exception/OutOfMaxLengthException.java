@@ -17,18 +17,18 @@
 
 package org.software.bird.common.exception;
 /**
- * ³¬¹ı×î´óÖµÒì³£
+ * ç“’å‘°ç¹ƒéˆï¿½æ¾¶Ñƒï¿½ç…ç´“ç”¯ï¿½
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: OutOfMaxLengthException.java,v0.1 2007-12-7 ÏÂÎç04:49:26 cyyan Exp$
+ * @version $Id: OutOfMaxLengthException.java,v0.1 2007-12-7 æ¶“å¬ªå´04:49:26 cyyan Exp$
  */
 public class OutOfMaxLengthException extends Exception {
 
 	private static final long serialVersionUID = 4729422591227219038L;
 	
 	/**
-	 * ¹¹Ôì·½·¨
-	 * @param string Òì³£ĞÅÏ¢
+	 * é‹å‹¯ï¿½çŠ³æŸŸå¨‰ï¿½
+	 * @param string å¯®å‚šçˆ¶æ·‡â„ƒä¼…
 	 */
 	public OutOfMaxLengthException(String string) {
 		super(string);

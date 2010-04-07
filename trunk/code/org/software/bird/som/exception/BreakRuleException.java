@@ -17,10 +17,10 @@
 
 package org.software.bird.som.exception;
 /**
- * ÆÆ»µ¹æÔòµÄÒì³£
+ * é®æ‘æ½–ç‘™å‹«å¯é¨å‹«ç´“ç”¯ï¿½
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: BreakRuleException.java,v0.1 2007-12-7 ÏÂÎç07:31:03 cyyan Exp$
+ * @version $Id: BreakRuleException.java,v0.1 2007-12-7 æ¶“å¬ªå´07:31:03 cyyan Exp$
  */
 public class BreakRuleException extends Exception {
 

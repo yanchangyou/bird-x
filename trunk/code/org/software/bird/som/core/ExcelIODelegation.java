@@ -31,24 +31,24 @@ import org.software.bird.som.exception.SheetNotFoundException;
 import org.software.bird.som.exception.SheetTitleNotFoundException;
 
 /**
- * ½Ó¿ÚExcelIOµÄÄÚ²¿´úÀí, ExcelIOËùÓĞ¹¦ÄÜ¶¼ÊÇµ÷ÓÃExcelIODelegation
- * Ê¹ÓÃ´úÀíÔö¼ÓÁËÁé»îĞÔ
+ * éºãƒ¥å½›ExcelIOé¨å‹«å”´é–®ã„¤å”¬éï¿½, ExcelIOéµï¿½éˆå¤Šå§›é‘³ä»‹å…˜é„îˆçšŸé¢â€¥xcelIODelegation
+ * æµ£è·¨æ•¤æµ ï½‡æ‚Šæ¾§ç‚²å§æµœå—™ä¼’å¨²ç»˜ï¿½ï¿½
  * 
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: ExcelParseProxy.java,v0.1 2007-12-8 ÏÂÎç01:43:43 cyyan Exp$
+ * @version $Id: ExcelParseProxy.java,v0.1 2007-12-8 æ¶“å¬ªå´01:43:43 cyyan Exp$
  */
 public class ExcelIODelegation {
 	/**
-	 * ¹¤×÷±íÃ»ÓĞ·¢ÏÖÒì³£
+	 * å®¸ãƒ¤ç¶”ç›ã„¦ç—…éˆå¤Šå½‚éœæ¿ç´“ç”¯ï¿½
 	 */
-	public static String sheet_not_found_exception_message = "Çë¼ì²éÊÇ·ñÊÇÕıÈ·µÄÄ£°å£¬±íµ¥µÄÃû×ÖÊÇ·ñ±»¸Ä¶¯";
+	public static String sheet_not_found_exception_message = "ç’‡é”‹î—‘éŒãƒ¦æ§¸éšï¸½æ§¸å§ï½‡â€˜é¨å‹¬Äé‰åŒ¡ç´ç›ã„¥å´Ÿé¨å‹«æ‚•ç€›æ¥æ§¸éšï¹î–†é€ç‘°å§©";
 	/**
-	 * excel´úÀí
+	 * excelæµ ï½‡æ‚Š
 	 */
 	private ExcelDelegation excelDelegation;
 
 	/**
-	 * ¹¹Ôìº¯Êı
+	 * é‹å‹¯ï¿½çŠ²åš±éï¿½
 	 * @param stream
 	 * @throws FileNotFoundException
 	 * @throws IOException
@@ -60,7 +60,7 @@ public class ExcelIODelegation {
 	
 	
 	/**
-	 * ½âÎöÖ¸sheet³Élist
+	 * ç‘™ï½†ç€½é¸å™‘heeté´æ–ist
 	 * @param sheetName
 	 * @param objClass
 	 * @return
@@ -72,11 +72,11 @@ public class ExcelIODelegation {
 		List list = null;
 		SheetObjectMapping som = SheetObjectMappingConfig.getSOM(objClass);
 		if (som == null) {
-			throw new RuntimeException("Ã»ÓĞÕÒµ½" + objClass + "ÀàµÄsom¶ÔÏó£¬ È·±£somÎÄ¼ş´æÔÚ£¬²¢ÇÒ±»¼ÓÔØµ½ÁËsheet_object_config.xmlÎÄ¼şÖĞ");
+			throw new RuntimeException("å¨Œâ„ƒæ¹éµæƒ§åŸŒ" + objClass + "ç»«è¤æ®‘somç€µç¡…è–„é”›ï¿½ çº­î†»ç¹šsomé‚å›¦æ¬¢ç€›æ¨ºæ¹ªé”›å±½è‹Ÿæ¶“æ—‡î–†é”çŠºæµ‡é’é¢ç°¡sheet_object_config.xmlé‚å›¦æ¬¢æ¶“ï¿½");
 		}
-		if (sheetName == null || sheetName.trim().equals("")) {//Èç¹ûÃ»ÓĞÖ¸¶¨sheetÃû¾ÍÊ¹ÓÃÅäÖÃÎÄ¼şÖĞµÄ
+		if (sheetName == null || sheetName.trim().equals("")) {//æ¿¡å‚›ç‰å¨Œâ„ƒæ¹é¸å›§ç•¾sheetéšå¶…æ°¨æµ£è·¨æ•¤é–°å¶‡ç–†é‚å›¦æ¬¢æ¶“î… æ®‘
 			sheetName = som.getSheetName();
-		} else {		//Èç¹ûÖ¸¶¨sheetÃû¾Í½«somµÄsheetÃû¸³ÖµÎ» Ö¸¶¨µÄ sheetÃû
+		} else {		//æ¿¡å‚›ç‰é¸å›§ç•¾sheetéšå¶…æ°¨çå”–omé¨å‰†heetéšå¶ˆç¥´éŠé—´ç¶… é¸å›§ç•¾é¨ï¿½ sheetéšï¿½
 			som.setSheetName(sheetName);
 		}
 		HSSFSheet sheet = excelDelegation.getSheet(som.getSheetName());
@@ -86,17 +86,17 @@ public class ExcelIODelegation {
 		som.excelReference.setSheet(sheet);
 		
 		if (sheet == null) {
-			throw new SheetNotFoundException("±íµ¥£º[" + sheetName + "]²»´æÔÚ£¬" + sheet_not_found_exception_message);
+			throw new SheetNotFoundException("ç›ã„¥å´Ÿé”›æ­”" + sheetName + "]æ¶“å¶…ç“¨é¦îŸ’ç´" + sheet_not_found_exception_message);
 		}
 		Map titleColumnMap = SheetObjectMappingConfig.configTitleColumnMap(sheet.getRow(som.getTitleRowIndex()));
 		som.setTitleColumnMap(titleColumnMap);
-		som.configPropertyColumnMap();  //¶ÔĞÂµÄexcel½øĞĞtitle--columnÅäÖÃ
+		som.configPropertyColumnMap();  //ç€µè§„æŸŠé¨åˆ¥xcelæ©æ¶œî”‘title--columné–°å¶‡ç–†
 		list = CoreParseUtil.sheet2List(sheet, som);
 		return list;
 	}
 
 	/**
-	 * Î´ÊµÏÖ
+	 * éˆî„ç–„éœï¿½
 	 * @param obj
 	 * @return
 	 */
@@ -105,7 +105,7 @@ public class ExcelIODelegation {
 	}
 
 	/**
-	 * Î´ÊµÏÖ
+	 * éˆî„ç–„éœï¿½
 	 * @param obj
 	 * @return
 	 */

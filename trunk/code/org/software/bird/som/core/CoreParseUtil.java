@@ -37,18 +37,18 @@ import org.software.bird.som.util.BasicObjectParseUtil;
 import org.software.bird.som.util.ExcelUtil;
 
 /**
- * ºËĞÄ½âÎöÀà, ÓÃÓÚ sheet-->list, cell-->propertyµÄ½âÎö,
- * ²¢ÔÚ½âÎöÖĞ½øĞĞĞ£Ñé
+ * éç¨¿ç¸¾ç‘™ï½†ç€½ç»«ï¿½, é¢ã„¤ç°¬ sheet-->list, cell-->propertyé¨å‹®Ğ’é‹ï¿½,
+ * éªè·ºæ¹ªç‘™ï½†ç€½æ¶“î…¡ç¹˜ç›å±¾ç‰æ¥ ï¿½
  * 
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: CoreParseUtil.java,v0.1 2007-12-7 ÏÂÎç02:17:22 cyyan Exp$
+ * @version $Id: CoreParseUtil.java,v0.1 2007-12-7 æ¶“å¬ªå´02:17:22 cyyan Exp$
  */
 public class CoreParseUtil {
 
-	final static String sheet_title_not_found_exception = "ÇëÓÃÕıÈ·µÄÄ£°åµ¼Èë";  
+	final static String sheet_title_not_found_exception = "ç’‡é£æ•¤å§ï½‡â€˜é¨å‹¬Äé‰å®î‡±éï¿½";  
 	
 	/**
-	 * ±ísheet½âÎö³Élist
+	 * ç›â•¯heetç‘™ï½†ç€½é´æ–ist
 	 * @param sheet
 	 * @param som
 	 * @return
@@ -62,7 +62,7 @@ public class CoreParseUtil {
 		
 		StringBuffer errorMsg = new StringBuffer("");
 
-		// Êı¾İĞĞ¿ªÊ¼½âÎö
+		// éç‰ˆåµç›å±½ç´‘æ¿®å¬­Ğ’é‹ï¿½
 		for (int i = 0; i < som.getFirstDataRowIndex(); i++) {
 			if (iterator.hasNext()) {
 				iterator.next();
@@ -74,7 +74,7 @@ public class CoreParseUtil {
 		int dataCount = 0;
 		while (iterator.hasNext()) {
 			
-			if (dataRowMaxNumber > -1 && dataCount >= dataRowMaxNumber) { //³¬¹ı×î´óÖ¸¶¨ĞĞÊı¾ÍÌø³ö
+			if (dataRowMaxNumber > -1 && dataCount >= dataRowMaxNumber) { //ç“’å‘°ç¹ƒéˆï¿½æ¾¶Ñ„å¯šç€¹æ°³î”‘éæ¿æ°¨ç’ºå†²åš­
 				break;
 			}
 			dataCount ++;
@@ -94,10 +94,10 @@ public class CoreParseUtil {
 					obj = row2obj(row, som);
 				}
 			} catch (BreakStringRuleException e) {
-				errorMsg.append("µÚ" + rowCount + "ĞĞ" + e.getMessage() + "<BR>");
+				errorMsg.append("ç»—ï¿½" + rowCount + "ç›ï¿½" + e.getMessage() + "<BR>");
 				//e.printStackTrace();
 			}
-			// È¥µô²»ºÍÂß¼­µÄÇé¿ö
+			// é˜ç»˜å¸€æ¶“å¶…æ‹°é–«æ˜ç·«é¨å‹¬å„éï¿½
 			if (obj != null) {
 				list.add(obj);				
 			}
@@ -105,14 +105,14 @@ public class CoreParseUtil {
 			rowCount++;
 		}
 		if (!errorMsg.toString().equals("")) {
-			throw new BreakStringRuleException( "ÔÚ±íµ¥[" + som.getSheetName() + "]ÖĞ³öÏÖÏÂÁĞ´íÎó"  + "<BR>" + errorMsg.toString() + "<BR>");
+			throw new BreakStringRuleException( "é¦ã„¨ã€ƒé—æ˜œ" + som.getSheetName() + "]æ¶“î…åš­éœé¢ç¬…é’æ¥…æ•Šç’‡ï¿½"  + "<BR>" + errorMsg.toString() + "<BR>");
 		}
 		return list;
 	}
 
 	/**
 	 * 
-	 * ½«row½âÎö³É¶ÔÏó
+	 * çå”•owç‘™ï½†ç€½é´æ„¬î‡®ç’ï¿½
 	 * 
 	 * @param row
 	 * @param som
@@ -148,7 +148,7 @@ public class CoreParseUtil {
 			String property = (String) propertyIt.next();
 			Short columnShort = (Short) propertyColumnMap.get(property);
 			if (columnShort == null) {
-				throw new SheetTitleNotFoundException("[" + som.getPropertyTitleMap().get(property) +"]Ã»ÓĞÕÒµ½£¬" + sheet_title_not_found_exception);
+				throw new SheetTitleNotFoundException("[" + som.getPropertyTitleMap().get(property) +"]å¨Œâ„ƒæ¹éµæƒ§åŸŒé”›ï¿½" + sheet_title_not_found_exception);
 			}
 			short column = columnShort.shortValue();
 			
@@ -159,7 +159,7 @@ public class CoreParseUtil {
 				try {
 					stringRule.test(cellStr);
 				} catch(BreakStringRuleException e) {
-					errorMsg.append("[" + som.getPropertyTitleMap().get(property) +"]ÊäÈë²»ºÏ·¨£¬" + stringRule.getMessage() + "Êµ¼ÊÊäÈëÊÇ£º" + cellStr + "<BR>");
+					errorMsg.append("[" + som.getPropertyTitleMap().get(property) +"]æˆæ’³å†æ¶“å¶…æ‚å¨‰æ›ªç´" + stringRule.getMessage() + "ç€¹ç‚ºæª¯æˆæ’³å†é„îˆ¤ç´°" + cellStr + "<BR>");
 					continue;
 				}
 			}
@@ -183,9 +183,9 @@ public class CoreParseUtil {
 				} catch(RuleBugException e) {
 					e.printStackTrace();
 					if (CheckUtil.isNotNull(stringRule)) {
-						errorMsg.append("ÔÚ[" + som.getPropertyTitleMap().get(property) +"]ÓĞÊäÈë´íÎó £º" + stringRule.getMessage() + "<BR>");
+						errorMsg.append("é¦â•—" + som.getPropertyTitleMap().get(property) +"]éˆå¤ç·­éãƒ©æ•Šç’‡ï¿½ é”›ï¿½" + stringRule.getMessage() + "<BR>");
 					} else {
-						errorMsg.append("ÔÚ[" + som.getPropertyTitleMap().get(property) +"]ÓĞÊäÈë´íÎó£ºÇë¼ì²é<BR>");
+						errorMsg.append("é¦â•—" + som.getPropertyTitleMap().get(property) +"]éˆå¤ç·­éãƒ©æ•Šç’‡îˆ¤ç´°ç’‡é”‹î—‘éŒï¿½<BR>");
 					}
 					continue;
 				}

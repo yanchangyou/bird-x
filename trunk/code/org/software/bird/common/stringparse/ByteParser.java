@@ -22,17 +22,17 @@ import org.software.bird.common.exception.OutOfRangeException;
 import org.software.bird.som.exception.InvalidNumberException;
 
 /**
- * ¶ÔByteÀàĞÍµÄ½âÎöÀà
+ * ç€µç¬²yteç»«è¯²ç€·é¨å‹®Ğ’é‹æ„®è¢«
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: t.java,v0.1 2007-12-7 ÏÂÎç05:44:50 cyyan Exp$
+ * @version $Id: t.java,v0.1 2007-12-7 æ¶“å¬ªå´05:44:50 cyyan Exp$
  */
 
 public class ByteParser extends NumberParser {
 
 	/**
-	 * ½âÎö×Ö·û´®³É×Ö½ÚÀàĞÍ
-	 * @param string Òª½âÎöµÄ×Ö·û´®
+	 * ç‘™ï½†ç€½ç€›æ¥ƒîƒæ¶“å‰åšç€›æ¥„å¦­ç»«è¯²ç€·
+	 * @param string ç‘•ä½½Ğ’é‹æ„®æ®‘ç€›æ¥ƒîƒæ¶“ï¿½
 	 */
 	public Object parse(String str) throws InvalidNumberException, OutOfRangeException {
 		Number num = (Number) super.parse(str);

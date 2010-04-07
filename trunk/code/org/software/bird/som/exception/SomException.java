@@ -17,10 +17,10 @@
 
 package org.software.bird.som.exception;
 /**
- * SOMÒì³£
+ * SOMå¯®å‚šçˆ¶
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: SomException.java,v0.1 2007-12-17 ÉÏÎç10:01:57 cyyan Exp$
+ * @version $Id: SomException.java,v0.1 2007-12-17 æ¶“å©‚å´10:01:57 cyyan Exp$
  */
 public class SomException extends Exception {
 	private static final long serialVersionUID = 3703477277286248666L;

@@ -28,26 +28,26 @@ import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.software.bird.som.util.ExcelParserUtil;
 
 /**
- * excelÎÄ¼ş¶ÔÓ¦µÄ¶ÔÏó, ´úÀíexcelÎÄ¼ş, ÕâÑù¸ü¾ßÓĞÁé»îĞÔ
+ * excelé‚å›¦æ¬¢ç€µç‘°ç°²é¨å‹«î‡®ç’ï¿½, æµ ï½‡æ‚Šexcelé‚å›¦æ¬¢, æ©æ¬ç‰±é‡æ‘å¿éˆå¤Œä¼’å¨²ç»˜ï¿½ï¿½
  * 
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: ExcelDelegation.java,v0.1 2007-12-15 ÏÂÎç04:00:56 cyyan Exp$
+ * @version $Id: ExcelDelegation.java,v0.1 2007-12-15 æ¶“å¬ªå´04:00:56 cyyan Exp$
  */
 public class ExcelDelegation {
 
 
 	/**
-	 * ÃüÖĞ¹¤×÷±íÓ³Éä
+	 * é›æˆ’è…‘å®¸ãƒ¤ç¶”ç›ã„¦æ§§çï¿½
 	 */
 	final private Map name_sheet_map = new HashMap();
 
 	/**
-	 * ¹¤×÷±¡
+	 * å®¸ãƒ¤ç¶”é’–ï¿½
 	 */
 	public HSSFWorkbook workbook;
 
 	/**
-	 * ¹¹Ôìº¯Êı
+	 * é‹å‹¯ï¿½çŠ²åš±éï¿½
 	 * @param stream
 	 * @throws FileNotFoundException
 	 * @throws IOException
@@ -60,7 +60,7 @@ public class ExcelDelegation {
 
 	/**
 	 * 
-	 * ÅäÖÃÃû³Æµ½sheetµÄÓ³Éä
+	 * é–°å¶‡ç–†éšå¶‡Ğé’çšŠheeté¨å‹¬æ§§çï¿½
 	 * 
 	 * @param stream
 	 * @throws FileNotFoundException
@@ -86,7 +86,7 @@ public class ExcelDelegation {
 
 	/**
 	 * 
-	 * °´Ãû»ñÈ¡poiµÄ±íµ¥
+	 * é¸å¤Šæ‚•é‘¾å³°å½‡poié¨å‹®ã€ƒé—ï¿½
 	 * 
 	 * @param sheetName
 	 * @return
@@ -96,7 +96,7 @@ public class ExcelDelegation {
 	}
 
 	/**
-	 * »ñÈ¡¹¤×÷±¡
+	 * é‘¾å³°å½‡å®¸ãƒ¤ç¶”é’–ï¿½
 	 * @return
 	 */
 	public HSSFWorkbook getWorkbook() {
@@ -104,7 +104,7 @@ public class ExcelDelegation {
 	}
 
 	/**
-	 * ÉèÖÃ¹¤×÷±¡
+	 * ç’å‰§ç–†å®¸ãƒ¤ç¶”é’–ï¿½
 	 * @param workbook
 	 */
 	public void setWorkbook(HSSFWorkbook workbook) {

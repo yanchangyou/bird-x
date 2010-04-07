@@ -20,23 +20,23 @@ package org.software.bird.common.stringparse;
 import org.software.bird.som.exception.InvalidDateException;
 
 /**
- * ¶ÔSQLDateÀàĞÍµÄ½âÎöÀà
+ * ç€µç­QLDateç»«è¯²ç€·é¨å‹®Ğ’é‹æ„®è¢«
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: SQLDateParsor.java,v0.1 2007-12-7 ÏÂÎç05:54:32 cyyan Exp$
+ * @version $Id: SQLDateParsor.java,v0.1 2007-12-7 æ¶“å¬ªå´05:54:32 cyyan Exp$
  */
 public class SQLDateParser extends DateParser {
 
 	/**
-	 * ¹¹Ôì·½·¨
-	 * @param pattern ´ı²ÎÊıµÄ¹¹Ôì·½·¨
+	 * é‹å‹¯ï¿½çŠ³æŸŸå¨‰ï¿½
+	 * @param pattern å¯°å‘­å¼¬éæ‰®æ®‘é‹å‹¯ï¿½çŠ³æŸŸå¨‰ï¿½
 	 */
 	public SQLDateParser(String pattern) {
 		super(pattern);
 	}
 
 	/**
-	 * ²»´ø²ÎÊıµÄ¹¹Ôì·½·¨
+	 * æ¶“å¶…ç”«é™å‚›æšŸé¨å‹¬ç€¯é–«çŠ³æŸŸå¨‰ï¿½
 	 *
 	 */	
 	public SQLDateParser() {
@@ -44,8 +44,8 @@ public class SQLDateParser extends DateParser {
 	}
 
 	/**
-	 * ½âÎö×Ö·û´®³ÉsqlÈÕÆÚ¶ÔÏó
-	 * @param ÈÕÆÚ×Ö·û´®
+	 * ç‘™ï½†ç€½ç€›æ¥ƒîƒæ¶“å‰åšsqléƒãƒ¦æ¹¡ç€µç¡…è–„
+	 * @param éƒãƒ¦æ¹¡ç€›æ¥ƒîƒæ¶“ï¿½
 	 */
 	public Object parse(String dateStr) throws InvalidDateException {
 		java.util.Date date = (java.util.Date)super.parse(dateStr);

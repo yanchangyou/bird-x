@@ -32,17 +32,17 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 /**
- * ¶Ôexcel½âÎöµÄÒ»Ğ©³£ÓÃ·½·¨
+ * ç€µç­«xcelç‘™ï½†ç€½é¨å‹ªç«´æµœæ¶˜çˆ¶é¢ã„¦æŸŸå¨‰ï¿½
  * 
- * ´ËÀàÔÚËùÓĞ·½·¨,»ùÓÚÅäÖÃÎÄ¼ş
+ * å§ã‚‡è¢«é¦ã„¦å¢éˆå¤‹æŸŸå¨‰ï¿½,é©è½°ç°¬é–°å¶‡ç–†é‚å›¦æ¬¢
  * 
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: Excel2ObjectUtil.java,v0.1 2007-12-6 ÏÂÎç01:55:32 cyyan Exp$
+ * @version $Id: Excel2ObjectUtil.java,v0.1 2007-12-6 æ¶“å¬ªå´01:55:32 cyyan Exp$
  */
 public class ExcelParserUtil {
 
 	/**
-	 * °´Ãû»ñÈ¡±íµ¥Ãû³Æ, ÕâĞ©¶ÔÓ¦¹ØÏµÊÇÔÚÅäÖÃÎÄ¼şÅäÖÃµÄ
+	 * é¸å¤Šæ‚•é‘¾å³°å½‡ç›ã„¥å´Ÿéšå¶‡Ğ, æ©æ¬ç°ºç€µç‘°ç°²éå´‡éƒ´é„îˆšæ¹ªé–°å¶‡ç–†é‚å›¦æ¬¢é–°å¶‡ç–†é¨ï¿½
 	 * @param xmlDocument
 	 * @param objClass
 	 * @return
@@ -63,7 +63,7 @@ public class ExcelParserUtil {
 
 	/**
 	 * 
-	 * °´Ãû»ñÈ¡ÅäÖÃÎÄ¼ş
+	 * é¸å¤Šæ‚•é‘¾å³°å½‡é–°å¶‡ç–†é‚å›¦æ¬¢
 	 * 
 	 * @param configFileName
 	 * @return
@@ -82,7 +82,7 @@ public class ExcelParserUtil {
 	}	
 
 	/**
-	 * »ñÈ¡ÊôĞÔÁĞ±í
+	 * é‘¾å³°å½‡çç‚´ï¿½Ñƒåªç›ï¿½
 	 * @param xmlDocument
 	 * @param objClass
 	 * @return
@@ -94,7 +94,7 @@ public class ExcelParserUtil {
 	}
 
 	/**
-	 * °´ÀàÃû»ñÈ¡ÊôĞÔÁĞ±í
+	 * é¸å¤Œè¢«éšå¶ˆå¹é™æ §ç˜é¬Ñƒåªç›ï¿½
 	 * @param xmlDocument
 	 * @param objClass
 	 * @return
@@ -110,7 +110,7 @@ public class ExcelParserUtil {
 	}
 
 	/**
-	 * ´ÓexcelÁ÷ÖĞ½âÎö³ö¹¤×÷±¡
+	 * æµ å·ˆxcelå¨´ä½·è…‘ç‘™ï½†ç€½é‘å“„ä¼æµ£æ»†æ½
 	 * @param excelInputStream
 	 * @return
 	 * @throws FileNotFoundException
@@ -126,7 +126,7 @@ public class ExcelParserUtil {
 	}
 
 	/**
-	 * °´ÀàÔÚÅäÖÃÎÄ¼şÖĞ»ñÈ¡Àà½Úµã
+	 * é¸å¤Œè¢«é¦ã„©å¤ç¼ƒî†½æƒæµ æœµè…‘é‘¾å³°å½‡ç»«æ˜å¦­éï¿½
 	 * @param xmlDocument
 	 * @param objClass
 	 * @return

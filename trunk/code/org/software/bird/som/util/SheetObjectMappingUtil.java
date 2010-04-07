@@ -20,15 +20,15 @@ package org.software.bird.som.util;
 import org.w3c.dom.Node;
 
 /**
- * ÅäÖÃsomµÄÊ¹ÓÃÀà
+ * é–°å¶‡ç–†somé¨å‹ªå¨‡é¢ã„§è¢«
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: MappingUtil.java,v0.1 2007-12-6 ÏÂÎç02:17:30 cyyan Exp$
+ * @version $Id: MappingUtil.java,v0.1 2007-12-6 æ¶“å¬ªå´02:17:30 cyyan Exp$
  */
 public class SheetObjectMappingUtil {
 
 	/**
-	 * »ñÈ¡µÚÒ»¸öÊı¾İĞĞµÄÎ»ÖÃ
+	 * é‘¾å³°å½‡ç»—îƒ¿ç«´æ¶“î…æšŸé¹î†¿î”‘é¨å‹ªç¶…ç¼ƒï¿½
 	 * @param classNode
 	 * @return
 	 */
@@ -39,7 +39,7 @@ public class SheetObjectMappingUtil {
 	}
 
 	/**
-	 * »ñÈ¡±êÌâĞĞÎ»ÖÃ
+	 * é‘¾å³°å½‡éå›¬î•½ç›å±¼ç¶…ç¼ƒï¿½
 	 * @param classNode
 	 * @return
 	 */
@@ -50,7 +50,7 @@ public class SheetObjectMappingUtil {
 	}
 
 	/**
-	 * »ñÈ¡Êı¾İµÄ×î´óĞĞÊı
+	 * é‘¾å³°å½‡éç‰ˆåµé¨å‹¬æ¸¶æ¾¶Ñ†î”‘éï¿½
 	 * @param classNode
 	 * @return
 	 */

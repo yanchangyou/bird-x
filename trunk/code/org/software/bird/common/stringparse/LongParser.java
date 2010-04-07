@@ -23,20 +23,20 @@ import org.software.bird.som.exception.InvalidNumberException;
 
 
 /**
- * ¶ÔLongÀàĞÍµÄ½âÎöÀà
+ * ç€µç­ongç»«è¯²ç€·é¨å‹®Ğ’é‹æ„®è¢«
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: asdf.java,v0.1 2007-12-7 ÏÂÎç05:45:06 cyyan Exp$
+ * @version $Id: asdf.java,v0.1 2007-12-7 æ¶“å¬ªå´05:45:06 cyyan Exp$
  */
 
 public class LongParser extends NumberParser {
 	/**
-	 * ½âÎö×Ö·û³ÉLongÀàĞÍ
+	 * ç‘™ï½†ç€½ç€›æ¥ƒîƒé´æ€¢ongç»«è¯²ç€·
 	 * 
-	 * @param ´ı½âÎöµÄ×Ö·û´®
+	 * @param å¯°å‘°Ğ’é‹æ„®æ®‘ç€›æ¥ƒîƒæ¶“ï¿½
 	 * 
-	 * @exception InvalidNumberException ÎŞĞ§µÄ×Ö·û´®
-	 * @exception OutOfRangeException³¬¹ıDoubleÀàĞÍµÄ×î´ó·¶Î§ Long.MIN_VALUE <= value && value <= Long.MAX_VALUE
+	 * @exception InvalidNumberException éƒçŠ³æ™¥é¨å‹«ç“§ç»—ï¸¿è¦†
+	 * @exception OutOfRangeExceptionç“’å‘°ç¹ƒDoubleç»«è¯²ç€·é¨å‹¬æ¸¶æ¾¶Ñ†å¯–é¥ï¿½ Long.MIN_VALUE <= value && value <= Long.MAX_VALUE
 	 */
 	public Object parse(String str) throws InvalidNumberException, OutOfRangeException {
 		Number num = (Number) super.parse(str);

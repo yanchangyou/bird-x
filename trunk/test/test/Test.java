@@ -25,22 +25,22 @@ import org.software.bird.som.ExcelIO;
  * Class description goes here.
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: Test.java,v0.1 2008-9-26 ÏÂÎç04:52:07 cyyan Exp$
+ * @version $Id: Test.java,v0.1 2008-9-26 ä¸‹åˆ04:52:07 cyyan Exp$
  */
 public class Test {
 
 	public static void main(String[] args) throws Exception {
 
-		¼òµ¥²âÊÔ();
+		ç®€å•æµ‹è¯•();
 		
-//		String[] sheetNameArray = new String[]{"Ñ§ÉúĞÅÏ¢1000","Ñ§ÉúĞÅÏ¢4000","Ñ§ÉúĞÅÏ¢10000","Ñ§ÉúĞÅÏ¢40000"};
-//		ĞÔÄÜ²âÊÔ(sheetNameArray);
+//		String[] sheetNameArray = new String[]{"å­¦ç”Ÿä¿¡æ¯1000","å­¦ç”Ÿä¿¡æ¯4000","å­¦ç”Ÿä¿¡æ¯10000","å­¦ç”Ÿä¿¡æ¯40000"};
+//		æ€§èƒ½æµ‹è¯•(sheetNameArray);
 	}
 	
 	
-	public final static String fileName = "bin/Ñ§ÉúĞÅÏ¢²âÊÔ.xls";
+	public final static String fileName = "bin/å­¦ç”Ÿä¿¡æ¯æµ‹è¯•.xls";
 	
-	public static void ¼òµ¥²âÊÔ() throws Exception {
+	public static void ç®€å•æµ‹è¯•() throws Exception {
 				
 		ExcelIO aExcelIO = new ExcelIO(fileName);
 		
@@ -51,8 +51,8 @@ public class Test {
 	
 	
 	
-	public static void ĞÔÄÜ²âÊÔ(String[] sheetNameArray) throws Exception {
-		System.out.println("ĞÔÄÜ²âÊÔ");
+	public static void æ€§èƒ½æµ‹è¯•(String[] sheetNameArray) throws Exception {
+		System.out.println("æ€§èƒ½æµ‹è¯•");
 		
 		long time1 = 0;
 		long time2 = 0;
@@ -76,11 +76,11 @@ public class Test {
 			List list = aExcelIO.readAll(sheetNameArray[i], Student.class);
 			time3 = System.currentTimeMillis();
 
-			//System.out.println("¿ªÊ¼½âÎö sheet £º" + sheetNameArray[i]);
-			System.out.println(list.size() + "ĞĞ");
-			System.out.println("¶ÁÈ¡excel³Époi¶ÔÏó £º " + time1/1000.0 + "Ãë");
-			System.out.println("½âÎöpoi¶ÔÏó³Élist £º " + (time3 - time2)/1000.0 + "Ãë");
-			System.out.println("¶ÁÈ¡+½âÎö  £º " + (time3 - time2 + time1)/1000.0 + "Ãë");
+			//System.out.println("å¼€å§‹è§£æ sheet ï¼š" + sheetNameArray[i]);
+			System.out.println(list.size() + "è¡Œ");
+			System.out.println("è¯»å–excelæˆpoiå¯¹è±¡ ï¼š " + time1/1000.0 + "ç§’");
+			System.out.println("è§£æpoiå¯¹è±¡æˆlist ï¼š " + (time3 - time2)/1000.0 + "ç§’");
+			System.out.println("è¯»å–+è§£æ  ï¼š " + (time3 - time2 + time1)/1000.0 + "ç§’");
 			System.out.println();
 			
 		}

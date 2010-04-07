@@ -21,15 +21,15 @@ import java.util.Collection;
 import java.util.Map;
 
 /**
- * Ò»°ã¼ì²éµÄÊ¹ÓÃÀà
+ * æ¶“ï¿½é‘¸î„î—‘éŒãƒ§æ®‘æµ£è·¨æ•¤ç»«ï¿½
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: CheckUtil.java,v0.1 2007-12-16 ÏÂÎç03:10:08 cyyan Exp$
+ * @version $Id: CheckUtil.java,v0.1 2007-12-16 æ¶“å¬ªå´03:10:08 cyyan Exp$
  */
 public class CheckUtil {
 
 	/**
-	 * ÅĞ¶ÏÊÇ·ñÎª¿Õ
+	 * é’ã‚†æŸ‡é„îˆšæƒæ¶“è™¹â”–
 	 * @param str
 	 * @return
 	 */
@@ -38,7 +38,7 @@ public class CheckUtil {
 	}
 	
 	/**
-	 * ÅĞ¶ÏÊÇ²»Îª¿Õ
+	 * é’ã‚†æŸ‡é„îˆ™ç¬‰æ¶“è™¹â”–
 	 * @param str
 	 * @return
 	 */
@@ -47,7 +47,7 @@ public class CheckUtil {
 	}
 	
 	/**
-	 * ÅĞ¶ÏÊÇ·ñÊÇ¿Õ¼¯ºÏ
+	 * é’ã‚†æŸ‡é„îˆšæƒé„îˆœâ”–é—†å——æ‚
 	 * @param collection
 	 * @return
 	 */
@@ -56,7 +56,7 @@ public class CheckUtil {
 	}
 	
 	/**
-	 * ÅĞ¶ÏÊÇ·ñ²»ÊÇ¿Õ¼¯ºÏ
+	 * é’ã‚†æŸ‡é„îˆšæƒæ¶“å¶†æ§¸ç»Œæ´ªæ³¦éšï¿½
 	 * @param collection
 	 * @return
 	 */
@@ -65,7 +65,7 @@ public class CheckUtil {
 	}
 	
 	/**
-	 * ÅĞ¶ÏÊÇ·ñÊÇ¿ÕÓ³Éä
+	 * é’ã‚†æŸ‡é„îˆšæƒé„îˆœâ”–é„çŠ²çš 
 	 * @param map
 	 * @return
 	 */
@@ -74,7 +74,7 @@ public class CheckUtil {
 	}
 	
 	/**
-	 * ÅĞ¶ÏÊÇ·ñ²»ÊÇ¿ÕÓ³Éä
+	 * é’ã‚†æŸ‡é„îˆšæƒæ¶“å¶†æ§¸ç»Œçƒ˜æ§§çï¿½
 	 * @param map
 	 * @return
 	 */
@@ -83,7 +83,7 @@ public class CheckUtil {
 	}
 	
 	/**
-	 * ÅĞ¶Ï¶ÔÏóÊÇ·ñÎª¿Õ
+	 * é’ã‚†æŸ‡ç€µç¡…è–„é„îˆšæƒæ¶“è™¹â”–
 	 * @param obj
 	 * @return
 	 */
@@ -92,7 +92,7 @@ public class CheckUtil {
 	}
 	
 	/**
-	 * ÅĞ¶Ï¶ÔÏóÊÇ·ñ²»Îª¿Õ
+	 * é’ã‚†æŸ‡ç€µç¡…è–„é„îˆšæƒæ¶“å¶„è´Ÿç»Œï¿½
 	 * @param obj
 	 * @return
 	 */

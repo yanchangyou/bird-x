@@ -38,16 +38,16 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 /**
- * ½«¹æÔòÅäÖÃÎÄ¼ş´¦Àí³É¶ÔÏó
+ * çå—šîƒé’æ¬“å¤ç¼ƒî†½æƒæµ è·ºî˜µéå—˜åšç€µç¡…è–„
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: StringRuleConfig.java,v0.1 2007-12-14 ÉÏÎç09:21:08 cyyan Exp$
+ * @version $Id: StringRuleConfig.java,v0.1 2007-12-14 æ¶“å©‚å´09:21:08 cyyan Exp$
  */
 public final class StringRuleConfig {
 
-	// ÅäÖÃÎÄ¼şµÄ¹Ì¶¨Î»ÖÃ
+	// é–°å¶‡ç–†é‚å›¦æ¬¢é¨å‹«æµç€¹æ°«ç¶…ç¼ƒï¿½
 	private final static String string_rule_config = ConfigUtil.getRealPath(BootConfig.getProperty("ether.anima.bird.rule.boot.path"));
 
-	// ÅäÖÃÎÄ¼şÖĞµÄ±êÇ©
+	// é–°å¶‡ç–†é‚å›¦æ¬¢æ¶“î… æ®‘éå›©î„·
 
 	public final static String string_rule_tag_name = "string_rule";
 	
@@ -68,7 +68,7 @@ public final class StringRuleConfig {
 
 	public final static String string_rule_import_src_property_name = "src";
 
-	// ´æ´¢ÅäÖÃÎÄ¼şÀïµÄËùÒÔ¹æÔò
+	// ç€›æ¨ºåé–°å¶‡ç–†é‚å›¦æ¬¢é–²å²€æ®‘éµï¿½æµ ãƒ¨îƒé’ï¿½
 	private static Map string_rule_map;
 
 	
@@ -79,12 +79,12 @@ public final class StringRuleConfig {
 			
 			e.printStackTrace();
 		}
-		System.out.println("\nËùÓĞµÄ×Ö·û¹æÔò£º\n" + string_rule_map);
+		System.out.println("\néµï¿½éˆå¤Œæ®‘ç€›æ¥ƒîƒç‘™å‹«å¯é”›æ­•n" + string_rule_map);
 	}
 	
 	
 	/**
-	 * °´¹æÔòÃû×Ö»ñÈ¡¹æÔò
+	 * é¸å¤îƒé’æ¬æ‚•ç€›æ¥„å¹é™æ ¬îƒé’ï¿½
 	 * 
 	 * @param stringRuleName
 	 * @return
@@ -101,7 +101,7 @@ public final class StringRuleConfig {
 	}
 
 	/**
-	 * ÅäÖÃ
+	 * é–°å¶‡ç–†
 	 * 
 	 * @throws ConfigFileNotFoundException
 	 * @throws FactoryConfigurationError
@@ -120,7 +120,7 @@ public final class StringRuleConfig {
 	
 
 	/**
-	 * ³õÊ¼»¯ÅäÖÃ
+	 * é’æ¿†îŠé–æ ­å¤ç¼ƒï¿½
 	 * 
 	 * @throws ConfigFileNotFoundException
 	 * @throws FactoryConfigurationError
@@ -138,18 +138,18 @@ public final class StringRuleConfig {
 			throw new ConfigFileNotFoundException("can't find "
 					+ string_rule_config + " file");
 		}
-		// »ñÈ¡ÅäÖÃÎÄ¼ş
+		// é‘¾å³°å½‡é–°å¶‡ç–†é‚å›¦æ¬¢
 		Document xmlDocument = XMLUtil
 				.getDocumentAtInputStream(configFileInputStream);
 
-		// ÏÈ³õÊ¼»¯µ¼ÈëÅäÖÃÎÄ¼ş
+		// éå åµæ¿®å¬ªå¯²ç€µç…å†é–°å¶‡ç–†é‚å›¦æ¬¢
 		NodeList stringRuleImportNodeList = xmlDocument
 				.getElementsByTagName(string_rule_import_tag_name);
 		String[] importFileNameArray = XMLUtil.getAllPropertyValue(
 				stringRuleImportNodeList, string_rule_import_src_property_name);
 		initImportConfig(importFileNameArray);
 
-		// ÔÙ³õÊ¼»¯±¾ÅäÖÃÎÄ¼ş
+		// éå¶…åµæ¿®å¬ªå¯²éˆî„„å¤ç¼ƒî†½æƒæµ ï¿½
 		NodeList stringRuleNodeList = xmlDocument
 				.getElementsByTagName(string_rule_tag_name);
 		configStringRuleMap(stringRuleNodeList, string_rule_map);
@@ -159,7 +159,7 @@ public final class StringRuleConfig {
 	}
 
 	/**
-	 * ³õÊ¼»¯µ¼ÈëÎÄ¼şµÄÅäÖÃ
+	 * é’æ¿†îŠé–æ §î‡±éãƒ¦æƒæµ å‰æ®‘é–°å¶‡ç–†
 	 * 
 	 * @throws ConfigFileNotFoundException
 	 * @throws FactoryConfigurationError
@@ -193,7 +193,7 @@ public final class StringRuleConfig {
 	}
 
 	/**
-	 * ¹¹Ôì×Ö·û´®¹æÔòÓ³Éä
+	 * é‹å‹¯ï¿½çŠ²ç“§ç»—ï¸¿è¦†ç‘™å‹«å¯é„çŠ²çš 
 	 * 
 	 * @param stringRuleNodeList
 	 * @param string_rule_map
@@ -210,7 +210,7 @@ public final class StringRuleConfig {
 	}
 
 	/**
-	 * ¹¹Ôìµ¥¸ö¹æÔò
+	 * é‹å‹¯ï¿½çŠ²å´Ÿæ¶“î‡îƒé’ï¿½
 	 * 
 	 * @param stringRuleNode
 	 * @return

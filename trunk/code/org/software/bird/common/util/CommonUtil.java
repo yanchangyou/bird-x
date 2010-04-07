@@ -21,15 +21,15 @@ import java.io.File;
 import java.io.InputStream;
 
 /**
- * Ò»°ãµÄ³£ÓÃº¯Êı
+ * æ¶“ï¿½é‘¸î„‚æ®‘ç”¯å“¥æ•¤é‘èŠ¥æšŸ
  * 
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: Common.java,v0.1 2007-12-6 ÏÂÎç01:46:27 cyyan Exp$
+ * @version $Id: Common.java,v0.1 2007-12-6 æ¶“å¬ªå´01:46:27 cyyan Exp$
  */
 public class CommonUtil {
 
 	/**
-	 * »ñÈ¡Àà²»°üº¬°üÃûµÄÀàÃû
+	 * é‘¾å³°å½‡ç»«è®³ç¬‰é–å‘­æƒˆé–å‘­æ‚•é¨å‹­è¢«éšï¿½
 	 * @param aClass
 	 * @return
 	 */
@@ -40,7 +40,7 @@ public class CommonUtil {
 	}
 
 	/**
-	 *  »ñÈ¡°üÃû
+	 *  é‘¾å³°å½‡é–å‘­æ‚•
 	 * @param aClass
 	 * @return
 	 */
@@ -49,7 +49,7 @@ public class CommonUtil {
 	}
 
 	/**
-	 *  °Ñ°üÃû×ª»»ÎªÂ·¾¶¸ñÊ½
+	 *  é¶å©‚å¯˜éšå¶ˆæµ†é¹î–è´Ÿç’ºîˆšç·éç…ç´¡
 	 * @param aClass
 	 * @return
 	 */
@@ -58,7 +58,7 @@ public class CommonUtil {
 	}
 
 	/**
-	 * getter·½·¨
+	 * getteré‚è§„ç¡¶
 	 * @param property
 	 * @return
 	 */
@@ -67,7 +67,7 @@ public class CommonUtil {
 	}
 
 	/**
-	 * setter·½·¨
+	 * setteré‚è§„ç¡¶
 	 * @param property
 	 * @return
 	 */
@@ -76,7 +76,7 @@ public class CommonUtil {
 	}
 
 	/**
-	 * ×Ö·û´®Ê××Ö´óĞ´
+	 * ç€›æ¥ƒîƒæ¶“æŸ¥îœšç€›æ¥€ã‡éï¿½
 	 * @param str
 	 * @return
 	 */
@@ -85,7 +85,7 @@ public class CommonUtil {
 	}
 
 	/**
-	 * »ñÈ¡µÚÒ»¸öµãºÅÖ®Ç°×Ö·û´®
+	 * é‘¾å³°å½‡ç»—îƒ¿ç«´æ¶“î†å£é™èœ‚ç®£é“å¶…ç“§ç»—ï¸¿è¦†
 	 * @param str
 	 * @return
 	 */
@@ -95,7 +95,7 @@ public class CommonUtil {
 	}
 
 	/**
-	 * »ñÈ¡Àà¸ùÂ·¾¶ÏÂµÄ×ÊÔ´Á÷
+	 * é‘¾å³°å½‡ç»«ç»˜ç‰´ç’ºîˆšç·æ¶“å¬¬æ®‘ç’§å‹¬ç°®å¨´ï¿½
 	 * @param sourceName
 	 * @return
 	 */
@@ -109,7 +109,7 @@ public class CommonUtil {
 	
 	/**
 	 * 
-	 * »ñÈ¡ÓëÀàÏÂÃæµÄÍ¬Â·¾¶µÄ×ÊÔ´
+	 * é‘¾å³°å½‡æ¶“åº£è¢«æ¶“å¬®æ½°é¨å‹«æ‚“ç’ºîˆšç·é¨å‹®ç¥«å©§ï¿½
 	 * 
 	 * @param sourceName
 	 * @param aClass
@@ -124,10 +124,10 @@ public class CommonUtil {
 	}
 	
 	/**
-	 * »ñÈ¡ÖØ¸´µÄ×Ö·û´®
-	 * @param str »ù±¾×Ö·û´®
-	 * @param time ÖØ¸´µÄ´ÎÊı
-	 * @return ×Ö·û´®
+	 * é‘¾å³°å½‡é–²å¶…î˜¾é¨å‹«ç“§ç»—ï¸¿è¦†
+	 * @param str é©çƒ˜æ¹°ç€›æ¥ƒîƒæ¶“ï¿½
+	 * @param time é–²å¶…î˜¾é¨å‹¬î‚¼éï¿½
+	 * @return ç€›æ¥ƒîƒæ¶“ï¿½
 	 */
 	public static String getCopyString(String str, int time) {
 		StringBuffer copyString = new StringBuffer();

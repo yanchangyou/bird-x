@@ -23,7 +23,7 @@ import java.util.Date;
  * Class description goes here.
  * 
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: typeTest.java,v0.1 2008-1-16 ÏÂÎç07:21:22 cyyan Exp$
+ * @version $Id: typeTest.java,v0.1 2008-1-16 ä¸‹åˆ07:21:22 cyyan Exp$
  */
 public class Student {
 
@@ -78,7 +78,7 @@ public class Student {
 	}
 
 	/*
-	 * ±ãÓÚÊä³ö²âÊÔ
+	 * ä¾¿äºè¾“å‡ºæµ‹è¯•
 	 * (non-Javadoc)
 	 * @see java.lang.Object#toString()
 	 */

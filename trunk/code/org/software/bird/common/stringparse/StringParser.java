@@ -20,27 +20,27 @@ package org.software.bird.common.stringparse;
 import org.software.bird.som.exception.EmptyException;
 
 /**
- * ¶ÔStringÀàĞÍµÄ½âÎöÀà
+ * ç€µç­tringç»«è¯²ç€·é¨å‹®Ğ’é‹æ„®è¢«
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: StringParsor.java,v0.1 2007-12-7 ÏÂÎç05:24:57 cyyan Exp$
+ * @version $Id: StringParsor.java,v0.1 2007-12-7 æ¶“å¬ªå´05:24:57 cyyan Exp$
  */
 public class StringParser  extends Parser {
 
 	/**
-	 * ½âÎö×Ö·û´®£¬²»ÄÜÎª¿Õ
-	 * @param Òª½âÎö×Ö·û´®
-	 * @exception ¶ÔÓÚnullºÍ¿Õ°××Ö·û´®¶¼ÈÏÎªÊÇÒì³£
+	 * ç‘™ï½†ç€½ç€›æ¥ƒîƒæ¶“è¯§ç´æ¶“å¶ˆå…˜æ¶“è™¹â”–
+	 * @param ç‘•ä½½Ğ’é‹æ„¬ç“§ç»—ï¸¿è¦†
+	 * @exception ç€µé€›ç°¬nulléœå²€â”–é§è—‰ç“§ç»—ï¸¿è¦†é–®å€Ÿî…»æ¶“çƒ˜æ§¸å¯®å‚šçˆ¶
 	 */
 	public Object parse(String str) throws Exception {
 		if (str == null || str.trim().equals("")) {
-			throw new EmptyException("¿Õ°××Ö·û´®Òì³£");
+			throw new EmptyException("ç»Œè™¹æ«§ç€›æ¥ƒîƒæ¶“æ’ç´“ç”¯ï¿½");
 		}
 		return str;
 	}
 
 	/**
-	 * ²»Òª´Ë·½·¨
+	 * æ¶“å¶ˆîœ…å§ã‚†æŸŸå¨‰ï¿½
 	 * @deprecated
 	 */
 	public Object parse(String str, String pattern) throws Exception {
@@ -48,7 +48,7 @@ public class StringParser  extends Parser {
 	}
 
 	/**
-	 * ²»Òª´Ë·½·¨
+	 * æ¶“å¶ˆîœ…å§ã‚†æŸŸå¨‰ï¿½
 	 * 
 	 * @deprecated
 	 */

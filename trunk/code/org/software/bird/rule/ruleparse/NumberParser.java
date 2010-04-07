@@ -23,22 +23,22 @@ import java.text.ParseException;
 import org.software.bird.rule.RuleBugException;
 
 /**
- * ¶ÔNumberÀàĞÍµÄ½âÎöÀà
+ * ç€µç­ƒumberç»«è¯²ç€·é¨å‹®Ğ’é‹æ„®è¢«
  * 
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: NumberParsor.java,v0.1 2007-12-7 ÏÂÎç04:35:28 cyyan Exp$
+ * @version $Id: NumberParsor.java,v0.1 2007-12-7 æ¶“å¬ªå´04:35:28 cyyan Exp$
  */
 public abstract class NumberParser extends StringParser {
 
 	/**
-	 * Ê®½øÖÆ¸ñÊ½¶ÔÏó
+	 * é—ä½½ç¹˜é’èˆµç‰¸å¯®å¿“î‡®ç’ï¿½
 	 */
 	final static DecimalFormat aDecimalFormat = new DecimalFormat();
 
 	/**
-	 * °Ñ×Ö·û´®½âÎö³ÉNumber
-	 * @param ´ı½âÎöµÄ×Ö·û´®
-	 * @return NumberÊµÀı
+	 * é¶å©‚ç“§ç»—ï¸¿è¦†ç‘™ï½†ç€½é´æ€¤umber
+	 * @param å¯°å‘°Ğ’é‹æ„®æ®‘ç€›æ¥ƒîƒæ¶“ï¿½
+	 * @return Numberç€¹ç‚°ç·¥
 	 */
 	public Object parse(String str) throws RuleBugException {
 		Number num = null;
@@ -54,23 +54,23 @@ public abstract class NumberParser extends StringParser {
 	}
 	
 	/**
-	 * ÅĞ¶ÁNumberÊÇ·ñÔÚÆä·¶Î§ÄÚ²¿£¬ ÕâÊÇ³éÏó·½·¨£¬ ¾ßÌå·¶Î§ÓĞÆä×ÓÀàÌá¹©
+	 * é’ã‚ˆî‡°Numberé„îˆšæƒé¦ã„¥å¾é‘¼å†¨æ´¿éå‘´å„´é”›ï¿½ æ©æ¬æ§¸é¶å€Ÿè–„é‚è§„ç¡¶é”›ï¿½ éèœ‚ç¶‹é‘¼å†¨æ´¿éˆå¤Šå¾ç€›æ„®è¢«é»æ„ªç·µ
 	 * @param num
 	 * @return
 	 */
 	public abstract boolean isInRange(Number num);
 	
 	/**
-	 * »ñÈ¡·¶Î§
-	 * @return ¶ÔNumber·¶Î§µÄÃèÊö
+	 * é‘¾å³°å½‡é‘¼å†¨æ´¿
+	 * @return ç€µç­ƒumberé‘¼å†¨æ´¿é¨å‹¬å¼¿æ©ï¿½
 	 */
 	public abstract String getRange();
 	
 	/**
-	 * ¹¹Ôì¹æÔò±¨¸æ
+	 * é‹å‹¯ï¿½çŠºîƒé’æ¬å§¤é›ï¿½
 	 * @param num
 	 * @param type
-	 * @return ±¨¸æµÄ×Ö·û´®
+	 * @return é¶ãƒ¥æ†¡é¨å‹«ç“§ç»—ï¸¿è¦†
 	 */
 	public String constructNumberRuleBugReport(Number num, String type) {
 		return RuleBugException.rule_bug_report_pre + num.doubleValue() + " out " + type + " range " + getRange();

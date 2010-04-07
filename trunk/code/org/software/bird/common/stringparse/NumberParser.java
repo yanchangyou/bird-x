@@ -27,21 +27,21 @@ import org.software.bird.som.exception.InvalidNumberException;
 
 
 /**
- * ¶ÔNumber»ù±¾ÀàĞÍµÄ½âÎöÀà
+ * ç€µç­ƒumberé©çƒ˜æ¹°ç»«è¯²ç€·é¨å‹®Ğ’é‹æ„®è¢«
  * 
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: NumberParsor.java,v0.1 2007-12-7 ÏÂÎç04:35:28 cyyan Exp$
+ * @version $Id: NumberParsor.java,v0.1 2007-12-7 æ¶“å¬ªå´04:35:28 cyyan Exp$
  */
 public class NumberParser extends Parser {
 
 	final static DecimalFormat aDecimalFormat = new DecimalFormat();
 	/**
-	 * ½âÎö×Ö·û³É»ù±¾ÀàĞÍ£¬Èç¹û½âÎöµÄ½á¹ûÊÇBigDecimal£¬BigInteger½«µ¼ÖÂ·¶Î§Òì³£
+	 * ç‘™ï½†ç€½ç€›æ¥ƒîƒé´æ„¬ç†€éˆî„‚è¢«é¨å¬¶ç´æ¿¡å‚›ç‰ç‘™ï½†ç€½é¨å‹­ç²¨é‹æ»„æ§¸BigDecimalé”›å­ŠigIntegerçå——î‡±é‘·ç£‹å¯–é¥æ‘ç´“ç”¯ï¿½
 	 * 
-	 * @param ´ı½âÎöµÄ×Ö·û´®
+	 * @param å¯°å‘°Ğ’é‹æ„®æ®‘ç€›æ¥ƒîƒæ¶“ï¿½
 	 * 
-	 * @exception InvalidNumberException ÎŞĞ§µÄ×Ö·û´®
-	 * @exception OutOfRangeException³¬¹ıBigInteger£¬BigDecimal
+	 * @exception InvalidNumberException éƒçŠ³æ™¥é¨å‹«ç“§ç»—ï¸¿è¦†
+	 * @exception OutOfRangeExceptionç“’å‘°ç¹ƒBigIntegeré”›å­ŠigDecimal
 	 * 
 	 */
 	public Object parse(String str) throws InvalidNumberException, OutOfRangeException {
@@ -61,7 +61,7 @@ public class NumberParser extends Parser {
 	}
 
 	/**
-	 * ²»Ê¹ÓÃ´Ë·½·¨
+	 * æ¶“å¶„å¨‡é¢ã„¦î„é‚è§„ç¡¶
 	 * 
 	 * @deprecated
 	 */
@@ -69,7 +69,7 @@ public class NumberParser extends Parser {
 		return parse(str);
 	}
 	/**
-	 * ²»Ê¹ÓÃ´Ë·½·¨
+	 * æ¶“å¶„å¨‡é¢ã„¦î„é‚è§„ç¡¶
 	 * 
 	 * @deprecated
 	 */

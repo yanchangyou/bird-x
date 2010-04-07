@@ -27,95 +27,95 @@ import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 
 /**
- * ¶ÔÓ¦ÅäÖÃÎÄ¼şµÄÀà<br>
+ * ç€µç‘°ç°²é–°å¶‡ç–†é‚å›¦æ¬¢é¨å‹­è¢«<br>
  * 
- * Ã¿¸ösom±êÇ©¶¼±»½âÎö³ÉÒ»¸öSheetObjectMappingÊµÀı£¬È»ºó³ÌĞò¸ù¾İsom½âÎöexcel¡£<br>
- * ÏÂÒ»°æÖĞ½«Ê¹ÓÃproterptyÀà´úÌæMap
+ * å§£å¿é‡œsoméå›©î„·é–®å€Ÿî–†ç‘™ï½†ç€½é´æ„ªç«´æ¶“çŒ„heetObjectMappingç€¹ç‚°ç·¥é”›å²€åŠ§éšåº£â–¼æ´å¿”ç‰´é¹ç•‡omç‘™ï½†ç€½exceléŠ†ï¿½<br>
+ * æ¶“å¬©ç«´é—å œè…‘çå—•å¨‡é¢â•¬roterptyç»«è®³å”¬é‡ç¸ˆap
  * 
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: SheetObjectMapping.java,v0.1 2007-12-5 ÏÂÎç03:42:01 cyyan Exp$
+ * @version $Id: SheetObjectMapping.java,v0.1 2007-12-5 æ¶“å¬ªå´03:42:01 cyyan Exp$
  */
 public class SheetObjectMapping {
 
 	/**
-	 * ¶ÔexcelµÄÒıÓÃ, ÓÉÓÚexcelµÄ·½³Ì£¬ÑùÊ½µÈÓÉworkbookÒıÓÃ, ´Ë±äÁ¿×÷ÓÃ¾ÍÊÇÓÃÓÚÈ«¾ÖÒıÓÃµÄ
-	 * £¨Õâ²»ÊÇÒ»ÖÖºÜºÃµÄ´¦Àí·½Ê½£¬ÓĞ´ı¸ÄÉÆ£¬ËüÓëÕâ¸öÀàµÄÖ°Ôğ²»Æ¥Åä£©
+	 * ç€µç­«xcelé¨å‹«ç´©é¢ï¿½, é¢å˜ç°¬excelé¨å‹¬æŸŸç»‹å¬¶ç´éå³°ç´¡ç»›å¤Œæ•±workbookå¯®æ› æ•¤, å§ã‚…å½‰é–²å¿ç¶”é¢ã„¥æ°¨é„îˆœæ•¤æµœåº¡åçï¿½å¯®æ› æ•¤é¨ï¿½
+	 * é”›å £ç¹–æ¶“å¶†æ§¸æ¶“ï¿½ç»‰å¶…ç·¢æ¿‚ç•Œæ®‘æ¾¶å‹­æ‚Šé‚ç‘°ç´¡é”›å±¾æ¹å¯°å‘®æ•¼é å‹¶ç´ç€¹å†§ç¬Œæ©æ¬é‡œç»«è¤æ®‘é‘±å²ƒçŸ—æ¶“å¶…å°®é–°å¶ç´š
 	 */
 	public ExcelReference excelReference = new ExcelReference();
 
 	/**
-	 * ÒªÓ³ÉäµÄÀà
+	 * ç‘•ä½¹æ§§çå‹­æ®‘ç»«ï¿½
 	 */
 	private Class objClass;	
 
 	/**
-	 * ¹¤×÷±íÃû
+	 * å®¸ãƒ¤ç¶”ç›ã„¥æ‚•
 	 */
 	private String sheetName;
 
 	/**
-	 * ÔÚ¹¤×÷±íÖĞ±êÌâĞĞµÄĞĞºÅ 1-based£¬ÒÔ1¿ªÊ¼¼ÆÊı
+	 * é¦ã„¥ä¼æµ£æ»†ã€ƒæ¶“î…Ÿçˆ£æ£°æ¨¿î”‘é¨å‹®î”‘é™ï¿½ 1-basedé”›å±¼äº’1å¯®ï¿½æ¿®å¬­î…¸éï¿½
 	 */
 	private int titleRowIndex = 0;
 
 	/**
-	 * ÔÚ¹¤×÷±íÖĞµÚÒ»ÌõÊı¾İĞĞ£¬ 1-based£¬ÒÔ1¿ªÊ¼¼ÆÊı
+	 * é¦ã„¥ä¼æµ£æ»†ã€ƒæ¶“î… îƒ‡æ¶“ï¿½é‰â„ƒæšŸé¹î†¿î”‘é”›ï¿½ 1-basedé”›å±¼äº’1å¯®ï¿½æ¿®å¬­î…¸éï¿½
 	 */
 	private int firstDataRowIndex = 1;
 
 	/**
-	 * ÔÚ¹¤×÷±íÖĞÊı¾İ¶ÁÈ¡µÄ×î¶àĞĞÊı
+	 * é¦ã„¥ä¼æµ£æ»†ã€ƒæ¶“î…ŸæšŸé¹î†¿î‡°é™æ «æ®‘éˆï¿½æ¾¶æ°³î”‘éï¿½
 	 */
 	private int dataRowMaxNumber = -1;
 
 	/**
-	 * ¶ÔÏóµÄÊôĞÔµ½¹¤×÷±íµÄÁĞÍ·µÄÓ³Éä
+	 * ç€µç¡…è–„é¨å‹«ç˜é¬ÑƒåŸŒå®¸ãƒ¤ç¶”ç›ã„§æ®‘é’æ¥€ã”é¨å‹¬æ§§çï¿½
 	 */
 	private Map propertyTitleMap;
 
 	/**
-	 * ¹¤×÷±íÁĞÍ·µ½¹¤×÷±íÁĞµÄÓ³Éä
+	 * å®¸ãƒ¤ç¶”ç›ã„¥åªæ¾¶æ‘åŸŒå®¸ãƒ¤ç¶”ç›ã„¥åªé¨å‹¬æ§§çï¿½
 	 */
 	private Map titleColumnMap;
 
 	/**
-	 * ¶ÔÏóÊôĞÔµ½¹¤×÷±íÁĞµÄÓ³Éä
+	 * ç€µç¡…è–„çç‚´ï¿½ÑƒåŸŒå®¸ãƒ¤ç¶”ç›ã„¥åªé¨å‹¬æ§§çï¿½
 	 */
 	private Map propertyColumnMap;
 
 	/**
-	 * ÊôĞÔµÄ×Ö·û¹æÔòÓ³Éä
+	 * çç‚´ï¿½Ñ…æ®‘ç€›æ¥ƒîƒç‘™å‹«å¯é„çŠ²çš 
 	 */
 	private Map propertyStringRuleMap;
 
 	/**
-	 * »ñÈ¡¶ÔÏóµÄClass
+	 * é‘¾å³°å½‡ç€µç¡…è–„é¨å‡œlass
 	 * 
-	 * @return ·µ»Ø¶ÔÏóµÄClass
+	 * @return æ©æ–¿æ´–ç€µç¡…è–„é¨å‡œlass
 	 */
 	public Class getObjClass() {
 		return objClass;
 	}
 
 	/**
-	 * ÉèÖÃ¶ÔÏóµÄClass
+	 * ç’å‰§ç–†ç€µç¡…è–„é¨å‡œlass
 	 * 
-	 * @param objClass ÒªÉèÖÃµÄClass
+	 * @param objClass ç‘•ä½½î†•ç¼ƒî†¾æ®‘Class
 	 */
 	public void setObjClass(Class objClass) {
 		this.objClass = objClass;
 	}
 
 	/**
-	 * »ñÈ¡¶ÔÏóÊôĞÔ£¨property£©µ½¹¤×÷±íÁĞÍ·µÄÓ³Éä
-	 * @return ·µ»ØÓ³Éä
+	 * é‘¾å³°å½‡ç€µç¡…è–„çç‚´ï¿½Ñç´™propertyé”›å¤ŠåŸŒå®¸ãƒ¤ç¶”ç›ã„¥åªæ¾¶å¯¸æ®‘é„çŠ²çš 
+	 * @return æ©æ–¿æ´–é„çŠ²çš 
 	 */
 	public Map getPropertyTitleMap() {
 		return propertyTitleMap;
 	}
 
 	/**
-	 * ÉèÖÃ¶ÔÏóÊôĞÔµ½¹¤×÷±íÁĞÍ·µÄÓ³Éä
+	 * ç’å‰§ç–†ç€µç¡…è–„çç‚´ï¿½ÑƒåŸŒå®¸ãƒ¤ç¶”ç›ã„¥åªæ¾¶å¯¸æ®‘é„çŠ²çš 
 	 * @param propertyTitleMap
 	 */
 	public void setPropertyTitleMap(Map propertyTitleMap) {
@@ -123,39 +123,39 @@ public class SheetObjectMapping {
 	}
 
 	/**
-	 * »ñÈ¡¹¤×÷±íµÄÃû³Æ
-	 * @return ¹¤×÷±íµÄÃû³Æ
+	 * é‘¾å³°å½‡å®¸ãƒ¤ç¶”ç›ã„§æ®‘éšå¶‡Ğ
+	 * @return å®¸ãƒ¤ç¶”ç›ã„§æ®‘éšå¶‡Ğ
 	 */
 	public String getSheetName() {
 		return sheetName;
 	}
 
 	/**
-	 * ÉèÖÃ¹¤×÷±íµÄÃû³Æ
-	 * @param sheetName ¹¤×÷±íµÄÃû³Æ
+	 * ç’å‰§ç–†å®¸ãƒ¤ç¶”ç›ã„§æ®‘éšå¶‡Ğ
+	 * @param sheetName å®¸ãƒ¤ç¶”ç›ã„§æ®‘éšå¶‡Ğ
 	 */
 	public void setSheetName(String sheetName) {
 		this.sheetName = sheetName;
 	}
 
 	/**
-	 * »ñÈ¡¹¤×÷±íÁĞÍ·µ½ÁĞµÄÓ³Éä
-	 * @return ¹¤×÷±íÁĞÍ·µ½ÁĞµÄÓ³Éä
+	 * é‘¾å³°å½‡å®¸ãƒ¤ç¶”ç›ã„¥åªæ¾¶æ‘åŸŒé’æ¥ƒæ®‘é„çŠ²çš 
+	 * @return å®¸ãƒ¤ç¶”ç›ã„¥åªæ¾¶æ‘åŸŒé’æ¥ƒæ®‘é„çŠ²çš 
 	 */
 	public Map getTitleColumnMap() {
 		return titleColumnMap;
 	}
 
 	/**
-	 * ÉèÖÃ¹¤×÷±íÁĞÍ·µ½ÁĞµÄÓ³Éä
-	 * @param titleColumnMap ¹¤×÷±íÁĞÍ·µ½ÁĞµÄÓ³Éä
+	 * ç’å‰§ç–†å®¸ãƒ¤ç¶”ç›ã„¥åªæ¾¶æ‘åŸŒé’æ¥ƒæ®‘é„çŠ²çš 
+	 * @param titleColumnMap å®¸ãƒ¤ç¶”ç›ã„¥åªæ¾¶æ‘åŸŒé’æ¥ƒæ®‘é„çŠ²çš 
 	 */
 	public void setTitleColumnMap(Map titleColumnMap) {
 		this.titleColumnMap = titleColumnMap;
 	}
 
 	/**
-	 * ×ª»»Î»×Ö·û´®
+	 * æî„å´²æµ£å¶…ç“§ç»—ï¸¿è¦†
 	 */
 	public String toString() {
 		return sheetName + ":\n" + titleColumnMap + "\n" + objClass + ":\n"
@@ -163,7 +163,7 @@ public class SheetObjectMapping {
 	}
 
 	/**
-	 * »ñÈ¡ÊôĞÔÁĞµÄÓ³Éä
+	 * é‘¾å³°å½‡çç‚´ï¿½Ñƒåªé¨å‹¬æ§§çï¿½
 	 * @return
 	 */
 	public Map getPropertyColumnMap() {
@@ -174,7 +174,7 @@ public class SheetObjectMapping {
 	}
 
 	/**
-	 * ÅäÖÃÊôĞÔµ½ÁĞµÄÓ³Éä
+	 * é–°å¶‡ç–†çç‚´ï¿½ÑƒåŸŒé’æ¥ƒæ®‘é„çŠ²çš 
 	 *
 	 */
 	public void configPropertyColumnMap() {
@@ -189,15 +189,15 @@ public class SheetObjectMapping {
 	}
 
 	/**
-	 * »ñÈ¡µÚÒ»ĞĞÊı¾İÔÚ¹¤×÷±íµÄĞĞÊı
-	 * @return ĞĞÊı
+	 * é‘¾å³°å½‡ç»—îƒ¿ç«´ç›å±¾æšŸé¹î†¼æ¹ªå®¸ãƒ¤ç¶”ç›ã„§æ®‘ç›å±¾æšŸ
+	 * @return ç›å±¾æšŸ
 	 */
 	public int getFirstDataRowIndex() {
 		return firstDataRowIndex;
 	}
 
 	/**
-	 * ÉèÖÃµÚÒ»¸öÊı¾İĞĞÎ»ÖÃ
+	 * ç’å‰§ç–†ç»—îƒ¿ç«´æ¶“î…æšŸé¹î†¿î”‘æµ£å¶‡ç–†
 	 * @param firstDataRowIndex
 	 */
 	public void setFirstDataRowIndex(int firstDataRowIndex) {
@@ -205,85 +205,85 @@ public class SheetObjectMapping {
 	}
 
 	/**
-	 * »ñÈ¡¹¤×÷±íÁĞÍ·ĞĞÎ»ÖÃ
-	 * @return ¹¤×÷±í±êÌâĞĞÎ»ÖÃ
+	 * é‘¾å³°å½‡å®¸ãƒ¤ç¶”ç›ã„¥åªæ¾¶ç£‹î”‘æµ£å¶‡ç–†
+	 * @return å®¸ãƒ¤ç¶”ç›ã„¦çˆ£æ£°æ¨¿î”‘æµ£å¶‡ç–†
 	 */
 	public int getTitleRowIndex() {
 		return titleRowIndex;
 	}
 
 	/**
-	 * ÉèÖÃ¹¤×÷±íÖĞÁĞÍ·ĞĞµÄÎ»ÖÃ
-	 * @param titleRowIndex ÁĞÍ·ĞĞµÄÎ»ÖÃ
+	 * ç’å‰§ç–†å®¸ãƒ¤ç¶”ç›ã„¤è…‘é’æ¥€ã”ç›å²€æ®‘æµ£å¶‡ç–†
+	 * @param titleRowIndex é’æ¥€ã”ç›å²€æ®‘æµ£å¶‡ç–†
 	 */
 	public void setTitleRowIndex(int titleRowIndex) {
 		this.titleRowIndex = titleRowIndex;
 	}
 
 	/**
-	 * »ñÈ¡ÊôĞÔ×Ö·û¹æÔòÓ³Éämap
-	 * @return ÊôĞÔ×Ö·û¹æÔòÓ³Éämap
+	 * é‘¾å³°å½‡çç‚´ï¿½Ñƒç“§ç»—ï¹îƒé’æ¬æ§§çåˆ´ap
+	 * @return çç‚´ï¿½Ñƒç“§ç»—ï¹îƒé’æ¬æ§§çåˆ´ap
 	 */
 	public Map getPropertyStringRuleMap() {
 		return propertyStringRuleMap;
 	}
 
 	/**
-	 * ÉèÖÃÊôĞÔ×Ö·û¹æÔòÓ³Éämap
-	 * @param propertyStringRuleMap ÊôĞÔ×Ö·û¹æÔòÓ³Éämap
+	 * ç’å‰§ç–†çç‚´ï¿½Ñƒç“§ç»—ï¹îƒé’æ¬æ§§çåˆ´ap
+	 * @param propertyStringRuleMap çç‚´ï¿½Ñƒç“§ç»—ï¹îƒé’æ¬æ§§çåˆ´ap
 	 */
 	public void setPropertyStringRuleMap(Map propertyStringRuleMap) {
 		this.propertyStringRuleMap = propertyStringRuleMap;
 	}
 	
 	/**
-	 * ÉèÖÃ¶ÔÏóÊôĞÔµ½¹¤×÷±íÁĞµÄÓ³Éä
-	 * @param propertyColumnMap ¶ÔÏóÊôĞÔµ½¹¤×÷±íÁĞµÄÓ³Éä
+	 * ç’å‰§ç–†ç€µç¡…è–„çç‚´ï¿½ÑƒåŸŒå®¸ãƒ¤ç¶”ç›ã„¥åªé¨å‹¬æ§§çï¿½
+	 * @param propertyColumnMap ç€µç¡…è–„çç‚´ï¿½ÑƒåŸŒå®¸ãƒ¤ç¶”ç›ã„¥åªé¨å‹¬æ§§çï¿½
 	 */
 	public void setPropertyColumnMap(Map propertyColumnMap) {
 		this.propertyColumnMap = propertyColumnMap;
 	}
 
 	/**
-	 * »ñÈ¡Ö¸¶¨ÄÜ»ñÈ¡µÄ×î´óÊı¾İĞĞÊı
-	 * @return ×î´óĞĞÊı
+	 * é‘¾å³°å½‡é¸å›§ç•¾é‘³å€Ÿå¹é™æ «æ®‘éˆï¿½æ¾¶Ñ„æšŸé¹î†¿î”‘éï¿½
+	 * @return éˆï¿½æ¾¶Ñ†î”‘éï¿½
 	 */
 	public int getDataRowMaxNumber() {
 		return dataRowMaxNumber;
 	}
 
 	/**
-	 * ÉèÖÃÖ¸¶¨ÄÜ»ñÈ¡µÄ×î´óÊı¾İĞĞÊı
-	 * @param dataRowMaxNumber Ö¸¶¨ÄÜ»ñÈ¡µÄ×î´óÊı¾İĞĞÊı
+	 * ç’å‰§ç–†é¸å›§ç•¾é‘³å€Ÿå¹é™æ «æ®‘éˆï¿½æ¾¶Ñ„æšŸé¹î†¿î”‘éï¿½
+	 * @param dataRowMaxNumber é¸å›§ç•¾é‘³å€Ÿå¹é™æ «æ®‘éˆï¿½æ¾¶Ñ„æšŸé¹î†¿î”‘éï¿½
  	 */
 	public void setDataRowMaxNumber(int dataRowMaxNumber) {
 		this.dataRowMaxNumber = dataRowMaxNumber;
 	}
 
 	/**
-	 * Ìá¹©excelµÄÈ«¾ÖÒıÓÃ, ´¦Àíº¯ÊıµÈÖ»ÄÜÊÇÒ»¸öexcelÄÚ²¿Ê¹ÓÃ
+	 * é»æ„ªç·µexcelé¨å‹«åçï¿½å¯®æ› æ•¤, æ¾¶å‹­æ‚Šé‘èŠ¥æšŸç»›å¤Šå½§é‘³èŠ¥æ§¸æ¶“ï¿½æ¶“çŒ xceléå‘´å„´æµ£è·¨æ•¤
 	 * @author cyyan
 	 *
 	 */
 	class ExcelReference {
 
 		/**
-		 * poiÖĞ¹¤×÷±¡¶ÔÏó
+		 * poiæ¶“î…ä¼æµ£æ»†æ½ç€µç¡…è–„
 		 */
 		public HSSFWorkbook workbook;
 
 		/**
-		 * poiÖĞ¹¤×÷±¡¶ÔÏó
+		 * poiæ¶“î…ä¼æµ£æ»†æ½ç€µç¡…è–„
 		 */
 		public HSSFSheet sheet;
 
 		/**
-		 * poiÖĞĞĞ¶ÔÏó
+		 * poiæ¶“î…¡î”‘ç€µç¡…è–„
 		 */
 		public HSSFRow row;
 
 		/**
-		 * »ñÈ¡poiĞĞ¶ÔÏó
+		 * é‘¾å³°å½‡poiç›å±½î‡®ç’ï¿½
 		 * @return
 		 */
 		public HSSFRow getRow() {
@@ -291,40 +291,40 @@ public class SheetObjectMapping {
 		}
 
 		/**
-		 * ÉèÖÃpoiĞĞ¶ÔÏó
-		 * @param row poiĞĞ¶ÔÏó
+		 * ç’å‰§ç–†poiç›å±½î‡®ç’ï¿½
+		 * @param row poiç›å±½î‡®ç’ï¿½
 		 */
 		public void setRow(HSSFRow row) {
 			this.row = row;
 		}
 
 		/**
-		 * »ñÈ¡poi¹¤×÷±í¶ÔÏó
-		 * @return poi¹¤×÷±¡¶ÔÏó
+		 * é‘¾å³°å½‡poiå®¸ãƒ¤ç¶”ç›ã„¥î‡®ç’ï¿½
+		 * @return poiå®¸ãƒ¤ç¶”é’–å‹«î‡®ç’ï¿½
 		 */
 		public HSSFSheet getSheet() {
 			return sheet;
 		}
 
 		/**
-		 * ÉèÖÃpoi¹¤×÷±¡¶ÔÏó
-		 * @param sheet poi¹¤×÷±¡¶ÔÏó
+		 * ç’å‰§ç–†poiå®¸ãƒ¤ç¶”é’–å‹«î‡®ç’ï¿½
+		 * @param sheet poiå®¸ãƒ¤ç¶”é’–å‹«î‡®ç’ï¿½
 		 */
 		public void setSheet(HSSFSheet sheet) {
 			this.sheet = sheet;
 		}
 
 		/**
-		 * »ñÈ¡poi¹¤×÷±¡¶ÔÏó
-		 * @return poi¹¤×÷±¡¶ÔÏó
+		 * é‘¾å³°å½‡poiå®¸ãƒ¤ç¶”é’–å‹«î‡®ç’ï¿½
+		 * @return poiå®¸ãƒ¤ç¶”é’–å‹«î‡®ç’ï¿½
 		 */
 		public HSSFWorkbook getWorkbook() {
 			return workbook;
 		}
 
 		/**
-		 * ÉèÖÃpoi¹¤×÷±¡¶ÔÏó
-		 * @param workbook poi¹¤×÷±¡¶ÔÏó
+		 * ç’å‰§ç–†poiå®¸ãƒ¤ç¶”é’–å‹«î‡®ç’ï¿½
+		 * @param workbook poiå®¸ãƒ¤ç¶”é’–å‹«î‡®ç’ï¿½
 		 */
 		public void setWorkbook(HSSFWorkbook workbook) {
 			this.workbook = workbook;

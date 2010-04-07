@@ -19,10 +19,10 @@ package org.software.bird.som.exception;
 
 
 /**
- * ÎŞĞ§ÊıÒì³£
+ * éƒçŠ³æ™¥éæ¿ç´“ç”¯ï¿½
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: DateParseException.java,v0.1 2007-12-7 ÏÂÎç04:47:38 cyyan Exp$
+ * @version $Id: DateParseException.java,v0.1 2007-12-7 æ¶“å¬ªå´04:47:38 cyyan Exp$
  */
 public class InvalidDateException extends BreakRuleException {
 

@@ -20,17 +20,17 @@ package org.software.bird.rule.ruleparse;
 import org.software.bird.rule.RuleBugException;
 
 /**
- * ¶ÔByteÀàĞÍµÄ½âÎöÀà
+ * ç€µç¬²yteç»«è¯²ç€·é¨å‹®Ğ’é‹æ„®è¢«
  * 
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: t.java,v0.1 2007-12-7 ÏÂÎç05:44:50 cyyan Exp$
+ * @version $Id: t.java,v0.1 2007-12-7 æ¶“å¬ªå´05:44:50 cyyan Exp$
  */
 
 public class ByteParser extends NumberParser {
 
 	/**
-	 * ´ı¹æÔòĞ£ÑéµÄ°Ñ×Ö·û´®½âÎö³ÉByteÀàĞÍ
-	 * @exception ¹æÔòÒì³£
+	 * å¯°å‘°îƒé’æ¬ç‰æ¥ å²€æ®‘é¶å©‚ç“§ç»—ï¸¿è¦†ç‘™ï½†ç€½é´æ€‹yteç»«è¯²ç€·
+	 * @exception ç‘™å‹«å¯å¯®å‚šçˆ¶
 	 */
 	public Object parse(String str) throws RuleBugException {
 		Number num = (Number) super.parse(str);
@@ -43,14 +43,14 @@ public class ByteParser extends NumberParser {
 	}
 
 	/**
-	 * »ñÈ¡×Ö·ûµÄ·¶Î§
+	 * é‘¾å³°å½‡ç€›æ¥ƒîƒé¨å‹®å¯–é¥ï¿½
 	 */
 	public String getRange() {
 		return "[" + Byte.MIN_VALUE + "," + Byte.MAX_VALUE + "]";
 	}
 
 	/**
-	 * ÅĞ¶ÏÊÇ·ñÔÚByte·¶Î§ÄÚ
+	 * é’ã‚†æŸ‡é„îˆšæƒé¦Ë™yteé‘¼å†¨æ´¿éï¿½
 	 */
 	public boolean isInRange(Number num) {
 		return Byte.MIN_VALUE <= num.doubleValue()
