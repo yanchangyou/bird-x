@@ -17,10 +17,10 @@
 
 package org.software.bird.som.exception;
 /**
- * 瓒呭嚭鏈�澶ч暱搴﹀紓甯�
+ * 超出最大长度异常
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: OutOfMaxLengthException.java,v0.1 2007-12-7 涓嬪崍04:49:26 cyyan Exp$
+ * @version $Id: OutOfMaxLengthException.java,v0.1 2007-12-7 下午04:49:26 cyyan Exp$
  */
 public class OutOfMaxLengthException extends Exception {
 

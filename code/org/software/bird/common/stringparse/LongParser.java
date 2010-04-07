@@ -23,20 +23,20 @@ import org.software.bird.som.exception.InvalidNumberException;
 
 
 /**
- * 瀵筁ong绫诲瀷鐨勮В鏋愮被
+ * 对Long类型的解析类
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: asdf.java,v0.1 2007-12-7 涓嬪崍05:45:06 cyyan Exp$
+ * @version $Id: asdf.java,v0.1 2007-12-7 下午05:45:06 cyyan Exp$
  */
 
 public class LongParser extends NumberParser {
 	/**
-	 * 瑙ｆ瀽瀛楃鎴怢ong绫诲瀷
+	 * 解析字符成Long类型
 	 * 
-	 * @param 寰呰В鏋愮殑瀛楃涓�
+	 * @param 待解析的字符串
 	 * 
-	 * @exception InvalidNumberException 鏃犳晥鐨勫瓧绗︿覆
-	 * @exception OutOfRangeException瓒呰繃Double绫诲瀷鐨勬渶澶ц寖鍥� Long.MIN_VALUE <= value && value <= Long.MAX_VALUE
+	 * @exception InvalidNumberException 无效的字符串
+	 * @exception OutOfRangeException超过Double类型的最大范围 Long.MIN_VALUE <= value && value <= Long.MAX_VALUE
 	 */
 	public Object parse(String str) throws InvalidNumberException, OutOfRangeException {
 		Number num = (Number) super.parse(str);

@@ -17,10 +17,10 @@
 
 package org.software.bird.som.exception;
 /**
- * 涓嶆敮鎸佽В鏋愮殑寮傚父
+ * 不支持解析的异常
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: UnParseException.java,v0.1 2007-12-7 涓嬪崍06:16:47 cyyan Exp$
+ * @version $Id: UnParseException.java,v0.1 2007-12-7 下午06:16:47 cyyan Exp$
  */
 public class UnsupportedParseException extends UnsurportException {
 

@@ -17,10 +17,10 @@
 
 package org.software.bird.som.exception;
 /**
- * excel鏂囦欢娌℃湁鎵惧埌鐨勫紓甯�
+ * excel文件没有找到的异常
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: ExcelFileNotFoundException.java,v0.1 2007-12-8 涓嬪崍06:23:43 cyyan Exp$
+ * @version $Id: ExcelFileNotFoundException.java,v0.1 2007-12-8 下午06:23:43 cyyan Exp$
  */
 public class ExcelFileNotFoundException extends Exception {
 

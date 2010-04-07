@@ -21,15 +21,15 @@ import java.io.File;
 import java.io.InputStream;
 
 /**
- * 鎻愪緵涓�浜涘緢甯哥敤鐨勫姛鑳�
+ * 提供一些很常用的功能
  * 
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: Common.java,v0.1 2007-12-6 涓嬪崍01:46:27 cyyan Exp$
+ * @version $Id: Common.java,v0.1 2007-12-6 下午01:46:27 cyyan Exp$
  */
 public class CommonUtil {
 
 	/**
-	 * 鑾峰彇绫讳笉鍖呭惈鍖呭悕鐨勭被鍚�
+	 * 获取类不包含包名的类名
 	 * @param aClass
 	 * @return
 	 */
@@ -40,7 +40,7 @@ public class CommonUtil {
 	}
 
 	/**
-	 * 鑾峰彇鍖呭悕
+	 * 获取包名
 	 * @param aClass
 	 * @return
 	 */
@@ -49,7 +49,7 @@ public class CommonUtil {
 	}
 
 	/**
-	 * 鎶婂寘鍚嶈浆鎹负璺緞鏍煎紡
+	 * 把包名转换为路径格式
 	 * @param aClass
 	 * @return
 	 */
@@ -58,7 +58,7 @@ public class CommonUtil {
 	}
 
 	/**
-	 * 鑾峰彇灞炴�х殑getter鏂规硶
+	 * 获取属性的getter方法
 	 * @param property
 	 * @return
 	 */
@@ -67,7 +67,7 @@ public class CommonUtil {
 	}
 
 	/**
-	 * 鑾峰彇灞炴�х殑setter鏂规硶
+	 * 获取属性的setter方法
 	 * @param property
 	 * @return
 	 */
@@ -76,7 +76,7 @@ public class CommonUtil {
 	}
 
 	/**
-	 * 瀛楃涓查瀛楀ぇ鍐�
+	 * 字符串首字大写
 	 * @param str
 	 * @return
 	 */
@@ -85,7 +85,7 @@ public class CommonUtil {
 	}
 
 	/**
-	 * 鑾峰彇绗竴涓偣鍙蜂箣鍓嶅瓧绗︿覆
+	 * 获取第一个点号之前字符串
 	 * @param str
 	 * @return
 	 */
@@ -95,7 +95,7 @@ public class CommonUtil {
 	}
 
 	/**
-	 * 鎸夊悕鑾峰彇璧勬簮
+	 * 按名获取资源
 	 * @param sourceName
 	 * @return
 	 */
@@ -108,7 +108,7 @@ public class CommonUtil {
 	}
 	
 	/**
-	 * 鎸夊悕鍦ㄥ寘涓嬮潰鑾峰彇璧勬簮
+	 * 按名在包下面获取资源
 	 * @param sourceName
 	 * @param aClass
 	 * @return

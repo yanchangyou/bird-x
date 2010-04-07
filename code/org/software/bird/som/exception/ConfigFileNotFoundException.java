@@ -17,10 +17,10 @@
 
 package org.software.bird.som.exception;
 /**
- * 閰嶇疆鏂囦欢娌℃湁鎵惧埌鐨勫紓甯�
+ * 配置文件没有找到的异常
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: ConfigFileNotFoundException.java,v0.1 2007-12-8 涓嬪崍06:23:50 cyyan Exp$
+ * @version $Id: ConfigFileNotFoundException.java,v0.1 2007-12-8 下午06:23:50 cyyan Exp$
  */
 public class ConfigFileNotFoundException extends Exception {
 

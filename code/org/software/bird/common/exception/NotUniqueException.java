@@ -17,18 +17,18 @@
 
 package org.software.bird.common.exception;
 /**
- * 涓嶅敮涓�寮傚父
+ * 不唯一异常
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: NotUniqueException.java,v0.1 2007-12-8 涓婂崍11:58:36 cyyan Exp$
+ * @version $Id: NotUniqueException.java,v0.1 2007-12-8 上午11:58:36 cyyan Exp$
  */
 public class NotUniqueException  extends Exception {
 	
 	private static final long serialVersionUID = -4126768831286909445L;
 
 	/**
-	 * 鏋勯�犳柟娉�
-	 * @param string 寮傚父淇℃伅
+	 * 构造方法
+	 * @param string 异常信息
 	 */
 	public NotUniqueException(String string) {
 		super(string);

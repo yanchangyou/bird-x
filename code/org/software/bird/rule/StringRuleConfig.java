@@ -38,16 +38,16 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 /**
- * 灏嗚鍒欓厤缃枃浠跺鐞嗘垚瀵硅薄
+ * 将规则配置文件处理成对象
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: StringRuleConfig.java,v0.1 2007-12-14 涓婂崍09:21:08 cyyan Exp$
+ * @version $Id: StringRuleConfig.java,v0.1 2007-12-14 上午09:21:08 cyyan Exp$
  */
 public final class StringRuleConfig {
 
-	// 閰嶇疆鏂囦欢鐨勫浐瀹氫綅缃�
+	// 配置文件的固定位置
 	private final static String string_rule_config = ConfigUtil.getRealPath(BootConfig.getProperty("ether.anima.bird.rule.boot.path"));
 
-	// 閰嶇疆鏂囦欢涓殑鏍囩
+	// 配置文件中的标签
 
 	public final static String string_rule_tag_name = "string_rule";
 	
@@ -68,7 +68,7 @@ public final class StringRuleConfig {
 
 	public final static String string_rule_import_src_property_name = "src";
 
-	// 瀛樺偍閰嶇疆鏂囦欢閲岀殑鎵�浠ヨ鍒�
+	// 存储配置文件里的所以规则
 	private static Map string_rule_map;
 
 	
@@ -79,12 +79,12 @@ public final class StringRuleConfig {
 			
 			e.printStackTrace();
 		}
-		System.out.println("\n鎵�鏈夌殑瀛楃瑙勫垯锛歕n" + string_rule_map);
+		System.out.println("\n所有的字符规则：\n" + string_rule_map);
 	}
 	
 	
 	/**
-	 * 鎸夎鍒欏悕瀛楄幏鍙栬鍒�
+	 * 按规则名字获取规则
 	 * 
 	 * @param stringRuleName
 	 * @return
@@ -101,7 +101,7 @@ public final class StringRuleConfig {
 	}
 
 	/**
-	 * 閰嶇疆
+	 * 配置
 	 * 
 	 * @throws ConfigFileNotFoundException
 	 * @throws FactoryConfigurationError
@@ -120,7 +120,7 @@ public final class StringRuleConfig {
 	
 
 	/**
-	 * 鍒濆鍖栭厤缃�
+	 * 初始化配置
 	 * 
 	 * @throws ConfigFileNotFoundException
 	 * @throws FactoryConfigurationError
@@ -138,18 +138,18 @@ public final class StringRuleConfig {
 			throw new ConfigFileNotFoundException("can't find "
 					+ string_rule_config + " file");
 		}
-		// 鑾峰彇閰嶇疆鏂囦欢
+		// 获取配置文件
 		Document xmlDocument = XMLUtil
 				.getDocumentAtInputStream(configFileInputStream);
 
-		// 鍏堝垵濮嬪寲瀵煎叆閰嶇疆鏂囦欢
+		// 先初始化导入配置文件
 		NodeList stringRuleImportNodeList = xmlDocument
 				.getElementsByTagName(string_rule_import_tag_name);
 		String[] importFileNameArray = XMLUtil.getAllPropertyValue(
 				stringRuleImportNodeList, string_rule_import_src_property_name);
 		initImportConfig(importFileNameArray);
 
-		// 鍐嶅垵濮嬪寲鏈厤缃枃浠�
+		// 再初始化本配置文件
 		NodeList stringRuleNodeList = xmlDocument
 				.getElementsByTagName(string_rule_tag_name);
 		configStringRuleMap(stringRuleNodeList, string_rule_map);
@@ -159,7 +159,7 @@ public final class StringRuleConfig {
 	}
 
 	/**
-	 * 鍒濆鍖栧鍏ユ枃浠剁殑閰嶇疆
+	 * 初始化导入文件的配置
 	 * 
 	 * @throws ConfigFileNotFoundException
 	 * @throws FactoryConfigurationError
@@ -193,7 +193,7 @@ public final class StringRuleConfig {
 	}
 
 	/**
-	 * 鏋勯�犲瓧绗︿覆瑙勫垯鏄犲皠
+	 * 构造字符串规则映射
 	 * 
 	 * @param stringRuleNodeList
 	 * @param string_rule_map
@@ -210,7 +210,7 @@ public final class StringRuleConfig {
 	}
 
 	/**
-	 * 鏋勯�犲崟涓鍒�
+	 * 构造单个规则
 	 * 
 	 * @param stringRuleNode
 	 * @return

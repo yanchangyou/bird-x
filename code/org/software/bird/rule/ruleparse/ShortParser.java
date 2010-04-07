@@ -21,17 +21,17 @@ import org.software.bird.rule.RuleBugException;
 
 
 /**
- * 瀵筍hort绫诲瀷鐨勮В鏋愮被
+ * 对Short类型的解析类
  * 
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: safd.java,v0.1 2007-12-7 涓嬪崍05:45:02 cyyan Exp$
+ * @version $Id: safd.java,v0.1 2007-12-7 下午05:45:02 cyyan Exp$
  */
 
 public class ShortParser extends NumberParser {
 	
 	/**
-	 * 鎶婂瓧绗︿覆瑙ｆ瀽鎴怢ong瀵硅薄
-	 * @param 寰呰В鏋愮殑瀛楃涓�
+	 * 把字符串解析成Long对象
+	 * @param 待解析的字符串
 	 */
 	public Object parse(String str) throws RuleBugException {
 		Number num = (Number) super.parse(str);
@@ -44,7 +44,7 @@ public class ShortParser extends NumberParser {
 	}
 	
 	/**
-	 * 鏄惁鍦⊿hort鑼冨洿鍐呴儴
+	 * 是否在Short范围内部
 	 * @param Number
 	 */
 	public String getRange() {
@@ -52,8 +52,8 @@ public class ShortParser extends NumberParser {
 	}
 
 	/**
-	 * 鑾峰彇鑼冨洿
-	 * @return 鑼冨洿瀛楃涓�
+	 * 获取范围
+	 * @return 范围字符串
 	 */
 	public boolean isInRange(Number num) {
 		return Short.MIN_VALUE <= num.doubleValue()

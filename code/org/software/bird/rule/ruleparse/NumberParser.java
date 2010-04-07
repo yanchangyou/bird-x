@@ -23,22 +23,22 @@ import java.text.ParseException;
 import org.software.bird.rule.RuleBugException;
 
 /**
- * 瀵筃umber绫诲瀷鐨勮В鏋愮被
+ * 对Number类型的解析类
  * 
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: NumberParsor.java,v0.1 2007-12-7 涓嬪崍04:35:28 cyyan Exp$
+ * @version $Id: NumberParsor.java,v0.1 2007-12-7 下午04:35:28 cyyan Exp$
  */
 public abstract class NumberParser extends StringParser {
 
 	/**
-	 * 鍗佽繘鍒舵牸寮忓璞�
+	 * 十进制格式对象
 	 */
 	final static DecimalFormat aDecimalFormat = new DecimalFormat();
 
 	/**
-	 * 鎶婂瓧绗︿覆瑙ｆ瀽鎴怤umber
-	 * @param 寰呰В鏋愮殑瀛楃涓�
-	 * @return Number瀹炰緥
+	 * 把字符串解析成Number
+	 * @param 待解析的字符串
+	 * @return Number实例
 	 */
 	public Object parse(String str) throws RuleBugException {
 		Number num = null;
@@ -54,23 +54,23 @@ public abstract class NumberParser extends StringParser {
 	}
 	
 	/**
-	 * 鍒よNumber鏄惁鍦ㄥ叾鑼冨洿鍐呴儴锛� 杩欐槸鎶借薄鏂规硶锛� 鍏蜂綋鑼冨洿鏈夊叾瀛愮被鎻愪緵
+	 * 判读Number是否在其范围内部， 这是抽象方法， 具体范围有其子类提供
 	 * @param num
 	 * @return
 	 */
 	public abstract boolean isInRange(Number num);
 	
 	/**
-	 * 鑾峰彇鑼冨洿
-	 * @return 瀵筃umber鑼冨洿鐨勬弿杩�
+	 * 获取范围
+	 * @return 对Number范围的描述
 	 */
 	public abstract String getRange();
 	
 	/**
-	 * 鏋勯�犺鍒欐姤鍛�
+	 * 构造规则报告
 	 * @param num
 	 * @param type
-	 * @return 鎶ュ憡鐨勫瓧绗︿覆
+	 * @return 报告的字符串
 	 */
 	public String constructNumberRuleBugReport(Number num, String type) {
 		return RuleBugException.rule_bug_report_pre + num.doubleValue() + " out " + type + " range " + getRange();

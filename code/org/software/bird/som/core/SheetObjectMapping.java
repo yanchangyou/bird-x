@@ -27,95 +27,95 @@ import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 
 /**
- * 瀵瑰簲閰嶇疆鏂囦欢鐨勭被<br>
+ * 对应配置文件的类<br>
  * 
- * 姣忎釜som鏍囩閮借瑙ｆ瀽鎴愪竴涓猄heetObjectMapping瀹炰緥锛岀劧鍚庣▼搴忔牴鎹畇om瑙ｆ瀽excel銆�<br>
- * 涓嬩竴鐗堜腑灏嗕娇鐢╬roterpty绫讳唬鏇縈ap
+ * 每个som标签都被解析成一个SheetObjectMapping实例，然后程序根据som解析excel。<br>
+ * 下一版中将使用proterpty类代替Map
  * 
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: SheetObjectMapping.java,v0.1 2007-12-5 涓嬪崍03:42:01 cyyan Exp$
+ * @version $Id: SheetObjectMapping.java,v0.1 2007-12-5 下午03:42:01 cyyan Exp$
  */
 public class SheetObjectMapping {
 
 	/**
-	 * 瀵筫xcel鐨勫紩鐢�, 鐢变簬excel鐨勬柟绋嬶紝鏍峰紡绛夌敱workbook寮曠敤, 姝ゅ彉閲忎綔鐢ㄥ氨鏄敤浜庡叏灞�寮曠敤鐨�
-	 * 锛堣繖涓嶆槸涓�绉嶅緢濂界殑澶勭悊鏂瑰紡锛屾湁寰呮敼鍠勶紝瀹冧笌杩欎釜绫荤殑鑱岃矗涓嶅尮閰嶏級
+	 * 对excel的引用, 由于excel的方程，样式等由workbook引用, 此变量作用就是用于全局引用的
+	 * （这不是一种很好的处理方式，有待改善，它与这个类的职责不匹配）
 	 */
 	public ExcelReference excelReference = new ExcelReference();
 
 	/**
-	 * 瑕佹槧灏勭殑绫�
+	 * 要映射的类
 	 */
 	private Class objClass;	
 
 	/**
-	 * 宸ヤ綔琛ㄥ悕
+	 * 工作表名
 	 */
 	private String sheetName;
 
 	/**
-	 * 鍦ㄥ伐浣滆〃涓爣棰樿鐨勮鍙� 1-based锛屼互1寮�濮嬭鏁�
+	 * 在工作表中标题行的行号 1-based，以1开始计数
 	 */
 	private int titleRowIndex = 0;
 
 	/**
-	 * 鍦ㄥ伐浣滆〃涓涓�鏉℃暟鎹锛� 1-based锛屼互1寮�濮嬭鏁�
+	 * 在工作表中第一条数据行， 1-based，以1开始计数
 	 */
 	private int firstDataRowIndex = 1;
 
 	/**
-	 * 鍦ㄥ伐浣滆〃涓暟鎹鍙栫殑鏈�澶氳鏁�
+	 * 在工作表中数据读取的最多行数
 	 */
 	private int dataRowMaxNumber = -1;
 
 	/**
-	 * 瀵硅薄鐨勫睘鎬у埌宸ヤ綔琛ㄧ殑鍒楀ご鐨勬槧灏�
+	 * 对象的属性到工作表的列头的映射
 	 */
 	private Map propertyTitleMap;
 
 	/**
-	 * 宸ヤ綔琛ㄥ垪澶村埌宸ヤ綔琛ㄥ垪鐨勬槧灏�
+	 * 工作表列头到工作表列的映射
 	 */
 	private Map titleColumnMap;
 
 	/**
-	 * 瀵硅薄灞炴�у埌宸ヤ綔琛ㄥ垪鐨勬槧灏�
+	 * 对象属性到工作表列的映射
 	 */
 	private Map propertyColumnMap;
 
 	/**
-	 * 灞炴�х殑瀛楃瑙勫垯鏄犲皠
+	 * 属性的字符规则映射
 	 */
 	private Map propertyStringRuleMap;
 
 	/**
-	 * 鑾峰彇瀵硅薄鐨凜lass
+	 * 获取对象的Class
 	 * 
-	 * @return 杩斿洖瀵硅薄鐨凜lass
+	 * @return 返回对象的Class
 	 */
 	public Class getObjClass() {
 		return objClass;
 	}
 
 	/**
-	 * 璁剧疆瀵硅薄鐨凜lass
+	 * 设置对象的Class
 	 * 
-	 * @param objClass 瑕佽缃殑Class
+	 * @param objClass 要设置的Class
 	 */
 	public void setObjClass(Class objClass) {
 		this.objClass = objClass;
 	}
 
 	/**
-	 * 鑾峰彇瀵硅薄灞炴�э紙property锛夊埌宸ヤ綔琛ㄥ垪澶寸殑鏄犲皠
-	 * @return 杩斿洖鏄犲皠
+	 * 获取对象属性（property）到工作表列头的映射
+	 * @return 返回映射
 	 */
 	public Map getPropertyTitleMap() {
 		return propertyTitleMap;
 	}
 
 	/**
-	 * 璁剧疆瀵硅薄灞炴�у埌宸ヤ綔琛ㄥ垪澶寸殑鏄犲皠
+	 * 设置对象属性到工作表列头的映射
 	 * @param propertyTitleMap
 	 */
 	public void setPropertyTitleMap(Map propertyTitleMap) {
@@ -123,39 +123,39 @@ public class SheetObjectMapping {
 	}
 
 	/**
-	 * 鑾峰彇宸ヤ綔琛ㄧ殑鍚嶇О
-	 * @return 宸ヤ綔琛ㄧ殑鍚嶇О
+	 * 获取工作表的名称
+	 * @return 工作表的名称
 	 */
 	public String getSheetName() {
 		return sheetName;
 	}
 
 	/**
-	 * 璁剧疆宸ヤ綔琛ㄧ殑鍚嶇О
-	 * @param sheetName 宸ヤ綔琛ㄧ殑鍚嶇О
+	 * 设置工作表的名称
+	 * @param sheetName 工作表的名称
 	 */
 	public void setSheetName(String sheetName) {
 		this.sheetName = sheetName;
 	}
 
 	/**
-	 * 鑾峰彇宸ヤ綔琛ㄥ垪澶村埌鍒楃殑鏄犲皠
-	 * @return 宸ヤ綔琛ㄥ垪澶村埌鍒楃殑鏄犲皠
+	 * 获取工作表列头到列的映射
+	 * @return 工作表列头到列的映射
 	 */
 	public Map getTitleColumnMap() {
 		return titleColumnMap;
 	}
 
 	/**
-	 * 璁剧疆宸ヤ綔琛ㄥ垪澶村埌鍒楃殑鏄犲皠
-	 * @param titleColumnMap 宸ヤ綔琛ㄥ垪澶村埌鍒楃殑鏄犲皠
+	 * 设置工作表列头到列的映射
+	 * @param titleColumnMap 工作表列头到列的映射
 	 */
 	public void setTitleColumnMap(Map titleColumnMap) {
 		this.titleColumnMap = titleColumnMap;
 	}
 
 	/**
-	 * 杞崲浣嶅瓧绗︿覆
+	 * 转换位字符串
 	 */
 	public String toString() {
 		return sheetName + ":\n" + titleColumnMap + "\n" + objClass + ":\n"
@@ -163,7 +163,7 @@ public class SheetObjectMapping {
 	}
 
 	/**
-	 * 鑾峰彇灞炴�у垪鐨勬槧灏�
+	 * 获取属性列的映射
 	 * @return
 	 */
 	public Map getPropertyColumnMap() {
@@ -174,7 +174,7 @@ public class SheetObjectMapping {
 	}
 
 	/**
-	 * 閰嶇疆灞炴�у埌鍒楃殑鏄犲皠
+	 * 配置属性到列的映射
 	 *
 	 */
 	public void configPropertyColumnMap() {
@@ -189,15 +189,15 @@ public class SheetObjectMapping {
 	}
 
 	/**
-	 * 鑾峰彇绗竴琛屾暟鎹湪宸ヤ綔琛ㄧ殑琛屾暟
-	 * @return 琛屾暟
+	 * 获取第一行数据在工作表的行数
+	 * @return 行数
 	 */
 	public int getFirstDataRowIndex() {
 		return firstDataRowIndex;
 	}
 
 	/**
-	 * 璁剧疆绗竴涓暟鎹浣嶇疆
+	 * 设置第一个数据行位置
 	 * @param firstDataRowIndex
 	 */
 	public void setFirstDataRowIndex(int firstDataRowIndex) {
@@ -205,85 +205,85 @@ public class SheetObjectMapping {
 	}
 
 	/**
-	 * 鑾峰彇宸ヤ綔琛ㄥ垪澶磋浣嶇疆
-	 * @return 宸ヤ綔琛ㄦ爣棰樿浣嶇疆
+	 * 获取工作表列头行位置
+	 * @return 工作表标题行位置
 	 */
 	public int getTitleRowIndex() {
 		return titleRowIndex;
 	}
 
 	/**
-	 * 璁剧疆宸ヤ綔琛ㄤ腑鍒楀ご琛岀殑浣嶇疆
-	 * @param titleRowIndex 鍒楀ご琛岀殑浣嶇疆
+	 * 设置工作表中列头行的位置
+	 * @param titleRowIndex 列头行的位置
 	 */
 	public void setTitleRowIndex(int titleRowIndex) {
 		this.titleRowIndex = titleRowIndex;
 	}
 
 	/**
-	 * 鑾峰彇灞炴�у瓧绗﹁鍒欐槧灏刴ap
-	 * @return 灞炴�у瓧绗﹁鍒欐槧灏刴ap
+	 * 获取属性字符规则映射map
+	 * @return 属性字符规则映射map
 	 */
 	public Map getPropertyStringRuleMap() {
 		return propertyStringRuleMap;
 	}
 
 	/**
-	 * 璁剧疆灞炴�у瓧绗﹁鍒欐槧灏刴ap
-	 * @param propertyStringRuleMap 灞炴�у瓧绗﹁鍒欐槧灏刴ap
+	 * 设置属性字符规则映射map
+	 * @param propertyStringRuleMap 属性字符规则映射map
 	 */
 	public void setPropertyStringRuleMap(Map propertyStringRuleMap) {
 		this.propertyStringRuleMap = propertyStringRuleMap;
 	}
 	
 	/**
-	 * 璁剧疆瀵硅薄灞炴�у埌宸ヤ綔琛ㄥ垪鐨勬槧灏�
-	 * @param propertyColumnMap 瀵硅薄灞炴�у埌宸ヤ綔琛ㄥ垪鐨勬槧灏�
+	 * 设置对象属性到工作表列的映射
+	 * @param propertyColumnMap 对象属性到工作表列的映射
 	 */
 	public void setPropertyColumnMap(Map propertyColumnMap) {
 		this.propertyColumnMap = propertyColumnMap;
 	}
 
 	/**
-	 * 鑾峰彇鎸囧畾鑳借幏鍙栫殑鏈�澶ф暟鎹鏁�
-	 * @return 鏈�澶ц鏁�
+	 * 获取指定能获取的最大数据行数
+	 * @return 最大行数
 	 */
 	public int getDataRowMaxNumber() {
 		return dataRowMaxNumber;
 	}
 
 	/**
-	 * 璁剧疆鎸囧畾鑳借幏鍙栫殑鏈�澶ф暟鎹鏁�
-	 * @param dataRowMaxNumber 鎸囧畾鑳借幏鍙栫殑鏈�澶ф暟鎹鏁�
+	 * 设置指定能获取的最大数据行数
+	 * @param dataRowMaxNumber 指定能获取的最大数据行数
  	 */
 	public void setDataRowMaxNumber(int dataRowMaxNumber) {
 		this.dataRowMaxNumber = dataRowMaxNumber;
 	}
 
 	/**
-	 * 鎻愪緵excel鐨勫叏灞�寮曠敤, 澶勭悊鍑芥暟绛夊彧鑳芥槸涓�涓猠xcel鍐呴儴浣跨敤
+	 * 提供excel的全局引用, 处理函数等只能是一个excel内部使用
 	 * @author cyyan
 	 *
 	 */
 	class ExcelReference {
 
 		/**
-		 * poi涓伐浣滆杽瀵硅薄
+		 * poi中工作薄对象
 		 */
 		public HSSFWorkbook workbook;
 
 		/**
-		 * poi涓伐浣滆杽瀵硅薄
+		 * poi中工作薄对象
 		 */
 		public HSSFSheet sheet;
 
 		/**
-		 * poi涓瀵硅薄
+		 * poi中行对象
 		 */
 		public HSSFRow row;
 
 		/**
-		 * 鑾峰彇poi琛屽璞�
+		 * 获取poi行对象
 		 * @return
 		 */
 		public HSSFRow getRow() {
@@ -291,40 +291,40 @@ public class SheetObjectMapping {
 		}
 
 		/**
-		 * 璁剧疆poi琛屽璞�
-		 * @param row poi琛屽璞�
+		 * 设置poi行对象
+		 * @param row poi行对象
 		 */
 		public void setRow(HSSFRow row) {
 			this.row = row;
 		}
 
 		/**
-		 * 鑾峰彇poi宸ヤ綔琛ㄥ璞�
-		 * @return poi宸ヤ綔钖勫璞�
+		 * 获取poi工作表对象
+		 * @return poi工作薄对象
 		 */
 		public HSSFSheet getSheet() {
 			return sheet;
 		}
 
 		/**
-		 * 璁剧疆poi宸ヤ綔钖勫璞�
-		 * @param sheet poi宸ヤ綔钖勫璞�
+		 * 设置poi工作薄对象
+		 * @param sheet poi工作薄对象
 		 */
 		public void setSheet(HSSFSheet sheet) {
 			this.sheet = sheet;
 		}
 
 		/**
-		 * 鑾峰彇poi宸ヤ綔钖勫璞�
-		 * @return poi宸ヤ綔钖勫璞�
+		 * 获取poi工作薄对象
+		 * @return poi工作薄对象
 		 */
 		public HSSFWorkbook getWorkbook() {
 			return workbook;
 		}
 
 		/**
-		 * 璁剧疆poi宸ヤ綔钖勫璞�
-		 * @param workbook poi宸ヤ綔钖勫璞�
+		 * 设置poi工作薄对象
+		 * @param workbook poi工作薄对象
 		 */
 		public void setWorkbook(HSSFWorkbook workbook) {
 			this.workbook = workbook;

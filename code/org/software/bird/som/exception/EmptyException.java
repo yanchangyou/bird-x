@@ -17,10 +17,10 @@
 
 package org.software.bird.som.exception;
 /**
- * 绌哄紓甯�
+ * 空异常
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: EmptyException.java,v0.1 2007-12-7 涓嬪崍04:48:51 cyyan Exp$
+ * @version $Id: EmptyException.java,v0.1 2007-12-7 下午04:48:51 cyyan Exp$
  */
 public class EmptyException extends Exception {
 

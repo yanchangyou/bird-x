@@ -17,10 +17,10 @@
 
 package org.software.bird.som.exception;
 /**
- * 鐮村潖瑙勫垯鐨勫紓甯�
+ * 破坏规则的异常
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: BreakRuleException.java,v0.1 2007-12-7 涓嬪崍07:31:03 cyyan Exp$
+ * @version $Id: BreakRuleException.java,v0.1 2007-12-7 下午07:31:03 cyyan Exp$
  */
 public class BreakRuleException extends Exception {
 

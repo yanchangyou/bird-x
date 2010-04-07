@@ -34,15 +34,15 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 /**
- * 瑙ｆ瀽xml鏂囦欢鐨勫父鐢ㄥ嚱鏁�
+ * 解析xml文件的常用函数
  * 
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: XMLUtil.java,v0.1 2007-12-6 涓嬪崍01:46:58 cyyan Exp$
+ * @version $Id: XMLUtil.java,v0.1 2007-12-6 下午01:46:58 cyyan Exp$
  */
 public class XMLUtil {
 
 	/**
-	 * 鎸夊悕鑾峰彇鑺傜偣
+	 * 按名获取节点
 	 * @param xmlDocument
 	 * @param tagName
 	 * @param nodeNameValue
@@ -64,7 +64,7 @@ public class XMLUtil {
 	}
 
 	/**
-	 * 鑾峰彇鏍囩涓殑绗竴涓妭鐐�
+	 * 获取标签中的第一个节点
 	 * @param parentNode
 	 * @param tagName
 	 * @return
@@ -90,7 +90,7 @@ public class XMLUtil {
 	}
 
 	/**
-	 * 鑾峰彇鏌愭爣绛剧殑鎵�鏈夎妭鐐�
+	 * 获取某标签的所有节点
 	 * @param parentNode
 	 * @param tagName
 	 * @return
@@ -117,7 +117,7 @@ public class XMLUtil {
 	}
 	
 	/**
-	 * 鑾峰彇鑺傜偣鏂囨湰
+	 * 获取节点文本
 	 * @param node
 	 * @return
 	 */
@@ -140,7 +140,7 @@ public class XMLUtil {
 	}
 
 	/**
-	 * 鑾峰彇鑺傜偣鐨勫睘鎬у��
+	 * 获取节点的属性值
 	 * @param node
 	 * @param propertyName
 	 * @return
@@ -162,7 +162,7 @@ public class XMLUtil {
 	}
 
 	/**
-	 * 浠庢祦涓幏鍙杙oi瀵硅薄鐨凞ocument瀵硅薄
+	 * 从流中获取poi对象的Document对象
 	 * @param inputStream
 	 * @return
 	 * @throws FactoryConfigurationError
@@ -182,7 +182,7 @@ public class XMLUtil {
 	}
 
 	/**
-	 * 鑾峰彇鎵�鏈夌殑鑺傜偣鍊�
+	 * 获取所有的节点值
 	 * @param nodeList
 	 * @param propertyName
 	 * @return

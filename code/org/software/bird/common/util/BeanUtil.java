@@ -20,15 +20,15 @@ package org.software.bird.common.util;
 import java.lang.reflect.Method;
 
 /**
- * 澶勭悊bean鐨勪娇鐢ㄧ被
+ * 处理bean的使用类
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: BeanUtil.java,v0.1 2007-12-14 涓嬪崍05:35:29 cyyan Exp$
+ * @version $Id: BeanUtil.java,v0.1 2007-12-14 下午05:35:29 cyyan Exp$
  */
 public class BeanUtil {
 
 	/**
-	 * 璁剧疆bean鐨勫睘鎬у��
+	 * 设置bean的属性值
 	 * @param obj
 	 * @param property
 	 * @param value
@@ -47,7 +47,7 @@ public class BeanUtil {
 	}
 	
 	/**
-	 * 鑾峰彇bean灞炴�х殑绫荤被鍨�
+	 * 获取bean属性的类类型
 	 * @param obj
 	 * @param property
 	 * @return

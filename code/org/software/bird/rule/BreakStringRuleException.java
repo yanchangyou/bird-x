@@ -17,21 +17,21 @@
 
 package org.software.bird.rule;
 /**
- * 鐮村潖瑙勫垯鐨勫紓甯�
+ * 破坏规则的异常
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: BreakStringRuleException.java,v0.1 2007-12-14 涓婂崍08:57:03 cyyan Exp$
+ * @version $Id: BreakStringRuleException.java,v0.1 2007-12-14 上午08:57:03 cyyan Exp$
  */
 public class BreakStringRuleException extends Exception {
 	
 	private static final long serialVersionUID = -4115377227500062678L;
 	
 	/**
-	 * 瀛楃瑙勫垯
+	 * 字符规则
 	 */
 	private StringRule stringRule;
 	/**
-	 * getter鏂规硶
+	 * getter方法
 	 * @return
 	 */
 	public StringRule getStringRule() {
@@ -39,7 +39,7 @@ public class BreakStringRuleException extends Exception {
 	}
 
 	/**
-	 * setter鏂规硶
+	 * setter方法
 	 * @param stringRule
 	 */
 	public void setStringRule(StringRule stringRule) {
@@ -47,15 +47,15 @@ public class BreakStringRuleException extends Exception {
 	}
 
 	/**
-	 * 瑙勫垯寮傚父
-	 * @param msg 寮傚父娑堟伅
+	 * 规则异常
+	 * @param msg 异常消息
 	 */
 	public BreakStringRuleException(String msg) {
 		super(msg);
 	}
 	
 	/**
-	 * 瑙勫垯寮傚父
+	 * 规则异常
 	 * @param stringRule
 	 */
 	public BreakStringRuleException(StringRule stringRule) {

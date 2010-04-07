@@ -33,38 +33,38 @@ import org.software.bird.som.exception.SheetTitleNotFoundException;
 
 
 /**
- * SOM缁勪欢鐨勬帴鍙ｆ枃浠�, SOM鎵�鏈夊姛鑳介兘鍚屾绫昏皟鐢�<br>
- * 鐢ㄦ硶濡備笅锛�<br>
- * ExcelIO aExcelIO = new ExcelIO(excel鏂囦欢);<br>
- * 灏唀xcel鏂囦欢杞崲涓簆oi瀵硅薄,鏆傚瓨浜庡唴瀛樹腑绛夊緟瑙ｆ瀽<br>
+ * SOM组件的接口文件, SOM所有功能都同此类调用<br>
+ * 用法如下：<br>
+ * ExcelIO aExcelIO = new ExcelIO(excel文件);<br>
+ * 将excel文件转换为poi对象,暂存于内存中等待解析<br>
  * List list = aExcelIO.readAll(aClass);<br>
- * 瑙ｆ瀽excel,骞惰浆鎹负list<br>
+ * 解析excel,并转换为list<br>
  * 
- * 瀵逛簬鏂囦欢鐨勪紶鍏ユ柟寮忔湁:<br>
- * 1, 鏂囦欢鍚� excelFileName<br>
- * 2, 鏂囦欢瀵硅薄 excelFile<br>
- * 3, 鏂囦欢杈撳叆娴� excelInputStream<br>
+ * 对于文件的传入方式有:<br>
+ * 1, 文件名 excelFileName<br>
+ * 2, 文件对象 excelFile<br>
+ * 3, 文件输入流 excelInputStream<br>
  * 
- * 浠巈xcel涓鍙栧璞℃湁涓嬪垪鏂瑰紡锛�<br>
- * 1, 鎸夌被璇诲彇<br>
- * 2, 鎸夌被鍜宻heet鍚嶈鍙�<br>
+ * 从excel中读取对象有下列方式：<br>
+ * 1, 按类读取<br>
+ * 2, 按类和sheet名读取<br>
  * 
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: ConvertUtil.java,v0.1 2007-12-6 涓嬪崍01:47:14 cyyan Exp$
+ * @version $Id: ConvertUtil.java,v0.1 2007-12-6 下午01:47:14 cyyan Exp$
  */
 public class ExcelIO {
 
 	/**
-	 * excelIO浠ｇ悊绫伙紝 鎵�浠ョ殑鎿嶄綔閮借浆浜や釜excelIODelegation鏉ュ仛
+	 * excelIO代理类， 所以的操作都转交个excelIODelegation来做
 	 */
 	private ExcelIODelegation excelIODelegation;
 
 	/**
-	 * excel鐨勫紓甯镐俊鎭紝涓嬩竴鐗堜腑灏嗘敼杩�
+	 * excel的异常信息，下一版中将改进
 	 */
-	public static String excel_read_exception_message = "excel娌℃壘鍒版垨宸叉崯鍧�, 璇锋鏌�";
+	public static String excel_read_exception_message = "excel没找到或已损坏, 请检查";
 	/**
-	 * 閫氳繃鏂囦欢鍚嶄紶閫抏xcel鏂囦欢
+	 * 通过文件名传递excel文件
 	 * @param excelFileName
 	 * @throws Exception
 	 */
@@ -73,7 +73,7 @@ public class ExcelIO {
 	}
 
 	/**
-	 * 閫氳繃鏂囦欢瀵硅薄浼犻�抏xcel鏂囦欢
+	 * 通过文件对象传递excel文件
 	 * @param excelFile
 	 * @throws Exception
 	 */
@@ -82,7 +82,7 @@ public class ExcelIO {
 	}
 
 	/**
-	 * 閫氳繃娴佸璞″璞′紶閫抏xcel鏂囦欢, 鍦╳eb鐢ㄤ簬甯哥敤姝ゆ柟寮�
+	 * 通过流对象对象传递excel文件, 在web用于常用此方式
 	 * @param excelInputStream
 	 * @throws InvalidExcelFileException
 	 */
@@ -106,10 +106,10 @@ public class ExcelIO {
 	
 	/**
 	 * 
-	 * 瑙ｆ瀽excel鐨勬柟寮�1
-	 * 鍙娇鐢ㄧ被, 绫诲搴旂殑琛ㄥ崟鍦ㄩ厤缃枃浠朵腑
+	 * 解析excel的方式1
+	 * 只使用类, 类对应的表单在配置文件中
 	 * 
-	 * @param objClass 鐩爣瀵硅薄鐨勭被
+	 * @param objClass 目标对象的类
 	 * @return
 	 * @throws SheetNotFoundException
 	 * @throws BreakStringRuleException
@@ -122,8 +122,8 @@ public class ExcelIO {
 	}
 	
 	/**
-	 * 瑙ｆ瀽excel鐨勬柟寮�2
-	 * 鐩存帴鎸囧畾琛ㄥ崟鍚嶇О
+	 * 解析excel的方式2
+	 * 直接指定表单名称
 	 * 
 	 * @param sheetName
 	 * @param objClass
@@ -139,7 +139,7 @@ public class ExcelIO {
 	}
 
 	/**
-	 * 鏈疄鐜�
+	 * 未实现
 	 * @param obj
 	 * @return
 	 */
@@ -148,7 +148,7 @@ public class ExcelIO {
 	}
 
 	/**
-	 * 鏈疄鐜�
+	 * 未实现
 	 * @param obj
 	 * @return
 	 * @throws NotUniqueException
@@ -157,14 +157,14 @@ public class ExcelIO {
 		return null;
 	}
 	/**
-	 * 鏈疄鐜�
+	 * 未实现
 	 * @param objList
 	 */
 	public void write(List objList) {
 		
 	}
 	/**
-	 * 鏈疄鐜�
+	 * 未实现
 	 * @param obj
 	 */
 	public void write(Object obj) {

@@ -27,37 +27,37 @@ import org.software.bird.som.exception.InvalidDateException;
 
 
 /**
- * 瀵笵ate绫诲瀷鐨勮В鏋愮被
+ * 对Date类型的解析类
  * 
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: DateParsor.java,v0.1 2007-12-7 涓嬪崍05:24:04 cyyan Exp$
+ * @version $Id: DateParsor.java,v0.1 2007-12-7 下午05:24:04 cyyan Exp$
  */
 public class DateParser extends Parser {
 
 	/**
-	 * 鏃ュ墠鏍煎紡 yyyy-MM-dd
+	 * 日前格式 yyyy-MM-dd
 	 */
 	final private String DATE_PATTERN = "yyyy-MM-dd"; 
 	/**
-	 * 鏃ュ墠鏍煎紡瀵硅薄鐢ㄤ簬鏍煎紡鏃ュ墠
+	 * 日前格式对象用于格式日前
 	 */
 	public static SimpleDateFormat DATE_FORMAT;
 
 	/**
-	 * 鏃ュ墠鏍煎紡鏍峰紡
+	 * 日前格式样式
 	 */
 	private String pattern;
 	
 	/**
-	 * 鏃ュ墠鏍煎紡瑙ｆ瀽绫绘瀯閫犳柟娉�---鎸囧畾鏍峰紡
-	 * @param pattern 鏍煎紡鏍峰紡
+	 * 日前格式解析类构造方法---指定样式
+	 * @param pattern 格式样式
 	 */
 	public DateParser(String pattern) {
 		this.pattern = pattern;
 		DATE_FORMAT = new SimpleDateFormat(pattern);
 	}
 	/**
-	 * 鏃ュ墠鏍煎紡瑙ｆ瀽绫绘瀯閫犳柟娉�---浣跨敤缂虹渷鐨勬棩鍓嶆牱寮� yyyy-MM-dd
+	 * 日前格式解析类构造方法---使用缺省的日前样式 yyyy-MM-dd
 	 *
 	 */
 	public DateParser() {
@@ -65,8 +65,8 @@ public class DateParser extends Parser {
 	}
 
 	/**
-	 * 瑙ｆ瀽鏃ュ墠瀛楃涓�
-	 * @param dateStr 瑕佽В鏋愮殑鏃ュ墠瀛楃涓�
+	 * 解析日前字符串
+	 * @param dateStr 要解析的日前字符串
 	 */
 	public Object parse(String dateStr) throws InvalidDateException {
 		Date date = null;
@@ -79,25 +79,25 @@ public class DateParser extends Parser {
 	}
 
 	/**
-	 * 鑾峰彇鏍峰紡
-	 * @return 鏃ュ墠鏍峰紡瀛楃涓�
+	 * 获取样式
+	 * @return 日前样式字符串
 	 */
 	public String getPattern() {
 		return pattern;
 	}
 
 	/**
-	 * 璁剧疆鏃ュ墠鏍峰紡
-	 * @param pattern 鏍峰紡
+	 * 设置日前样式
+	 * @param pattern 样式
 	 */
 	public void setPattern(String pattern) {
 		this.pattern = pattern;
 	}
 
 	/**
-	 * 瑙ｆ瀽瀛楃涓叉寚瀹氭牱寮�
-	 * @param str 瑕佽В鏋愮殑瀛楃涓�
-	 * @param pattern 鏃ュ墠鏍峰紡
+	 * 解析字符串指定样式
+	 * @param str 要解析的字符串
+	 * @param pattern 日前样式
 	 */
 	public Object parse(String str, String pattern) throws Exception {
 		return parse(str);

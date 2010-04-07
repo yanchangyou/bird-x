@@ -21,15 +21,15 @@ import java.io.File;
 import java.io.InputStream;
 
 /**
- * 涓�鑸殑甯哥敤鍑芥暟
+ * 一般的常用函数
  * 
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: Common.java,v0.1 2007-12-6 涓嬪崍01:46:27 cyyan Exp$
+ * @version $Id: Common.java,v0.1 2007-12-6 下午01:46:27 cyyan Exp$
  */
 public class CommonUtil {
 
 	/**
-	 * 鑾峰彇绫讳笉鍖呭惈鍖呭悕鐨勭被鍚�
+	 * 获取类不包含包名的类名
 	 * @param aClass
 	 * @return
 	 */
@@ -40,7 +40,7 @@ public class CommonUtil {
 	}
 
 	/**
-	 *  鑾峰彇鍖呭悕
+	 *  获取包名
 	 * @param aClass
 	 * @return
 	 */
@@ -49,7 +49,7 @@ public class CommonUtil {
 	}
 
 	/**
-	 *  鎶婂寘鍚嶈浆鎹负璺緞鏍煎紡
+	 *  把包名转换为路径格式
 	 * @param aClass
 	 * @return
 	 */
@@ -58,7 +58,7 @@ public class CommonUtil {
 	}
 
 	/**
-	 * getter鏂规硶
+	 * getter方法
 	 * @param property
 	 * @return
 	 */
@@ -67,7 +67,7 @@ public class CommonUtil {
 	}
 
 	/**
-	 * setter鏂规硶
+	 * setter方法
 	 * @param property
 	 * @return
 	 */
@@ -76,7 +76,7 @@ public class CommonUtil {
 	}
 
 	/**
-	 * 瀛楃涓查瀛楀ぇ鍐�
+	 * 字符串首字大写
 	 * @param str
 	 * @return
 	 */
@@ -85,7 +85,7 @@ public class CommonUtil {
 	}
 
 	/**
-	 * 鑾峰彇绗竴涓偣鍙蜂箣鍓嶅瓧绗︿覆
+	 * 获取第一个点号之前字符串
 	 * @param str
 	 * @return
 	 */
@@ -95,7 +95,7 @@ public class CommonUtil {
 	}
 
 	/**
-	 * 鑾峰彇绫绘牴璺緞涓嬬殑璧勬簮娴�
+	 * 获取类根路径下的资源流
 	 * @param sourceName
 	 * @return
 	 */
@@ -109,7 +109,7 @@ public class CommonUtil {
 	
 	/**
 	 * 
-	 * 鑾峰彇涓庣被涓嬮潰鐨勫悓璺緞鐨勮祫婧�
+	 * 获取与类下面的同路径的资源
 	 * 
 	 * @param sourceName
 	 * @param aClass
@@ -124,10 +124,10 @@ public class CommonUtil {
 	}
 	
 	/**
-	 * 鑾峰彇閲嶅鐨勫瓧绗︿覆
-	 * @param str 鍩烘湰瀛楃涓�
-	 * @param time 閲嶅鐨勬鏁�
-	 * @return 瀛楃涓�
+	 * 获取重复的字符串
+	 * @param str 基本字符串
+	 * @param time 重复的次数
+	 * @return 字符串
 	 */
 	public static String getCopyString(String str, int time) {
 		StringBuffer copyString = new StringBuffer();

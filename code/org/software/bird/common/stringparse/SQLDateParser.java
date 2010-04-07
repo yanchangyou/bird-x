@@ -20,23 +20,23 @@ package org.software.bird.common.stringparse;
 import org.software.bird.som.exception.InvalidDateException;
 
 /**
- * 瀵筍QLDate绫诲瀷鐨勮В鏋愮被
+ * 对SQLDate类型的解析类
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: SQLDateParsor.java,v0.1 2007-12-7 涓嬪崍05:54:32 cyyan Exp$
+ * @version $Id: SQLDateParsor.java,v0.1 2007-12-7 下午05:54:32 cyyan Exp$
  */
 public class SQLDateParser extends DateParser {
 
 	/**
-	 * 鏋勯�犳柟娉�
-	 * @param pattern 寰呭弬鏁扮殑鏋勯�犳柟娉�
+	 * 构造方法
+	 * @param pattern 待参数的构造方法
 	 */
 	public SQLDateParser(String pattern) {
 		super(pattern);
 	}
 
 	/**
-	 * 涓嶅甫鍙傛暟鐨勬瀯閫犳柟娉�
+	 * 不带参数的构造方法
 	 *
 	 */	
 	public SQLDateParser() {
@@ -44,8 +44,8 @@ public class SQLDateParser extends DateParser {
 	}
 
 	/**
-	 * 瑙ｆ瀽瀛楃涓叉垚sql鏃ユ湡瀵硅薄
-	 * @param 鏃ユ湡瀛楃涓�
+	 * 解析字符串成sql日期对象
+	 * @param 日期字符串
 	 */
 	public Object parse(String dateStr) throws InvalidDateException {
 		java.util.Date date = (java.util.Date)super.parse(dateStr);

@@ -17,18 +17,18 @@
 
 package org.software.bird.common.exception;
 /**
- * 瓒呰繃鑼冨洿寮傚父
+ * 超过范围异常
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: OutOfRangeException.java,v0.1 2007-12-7 涓嬪崍05:36:29 cyyan Exp$
+ * @version $Id: OutOfRangeException.java,v0.1 2007-12-7 下午05:36:29 cyyan Exp$
  */
 public class OutOfRangeException extends Exception {
 	private static final long serialVersionUID = -9168063220958409888L;
 
 	
 	/**
-	 * 鏋勯�犳柟娉�
-	 * @param string 寮傚父淇℃伅
+	 * 构造方法
+	 * @param string 异常信息
 	 */
 	public OutOfRangeException(String string) {
 		super(string);

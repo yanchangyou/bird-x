@@ -17,10 +17,10 @@
 
 package org.software.bird.som.exception;
 /**
- * 涓嶅敮涓�寮傚父
+ * 不唯一异常
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: NotUniqueException.java,v0.1 2007-12-8 涓婂崍11:58:36 cyyan Exp$
+ * @version $Id: NotUniqueException.java,v0.1 2007-12-8 上午11:58:36 cyyan Exp$
  */
 public class NotUniqueException  extends Exception {
 	

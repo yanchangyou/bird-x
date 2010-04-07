@@ -17,10 +17,10 @@
 
 package org.software.bird.som.exception;
 /**
- * 涓嶆敮鎸佺殑寮傚父
+ * 不支持的异常
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: UnsurportException.java,v0.1 2007-12-7 涓嬪崍07:24:10 cyyan Exp$
+ * @version $Id: UnsurportException.java,v0.1 2007-12-7 下午07:24:10 cyyan Exp$
  */
 public class UnsurportException  extends Exception {
 	private static final long serialVersionUID = -6445777345232368100L;

@@ -17,18 +17,18 @@
 
 package org.software.bird.common.exception;
 /**
- * 瓒呰繃鏈�澶у�煎紓甯�
+ * 超过最大值异常
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: OutOfMaxLengthException.java,v0.1 2007-12-7 涓嬪崍04:49:26 cyyan Exp$
+ * @version $Id: OutOfMaxLengthException.java,v0.1 2007-12-7 下午04:49:26 cyyan Exp$
  */
 public class OutOfMaxLengthException extends Exception {
 
 	private static final long serialVersionUID = 4729422591227219038L;
 	
 	/**
-	 * 鏋勯�犳柟娉�
-	 * @param string 寮傚父淇℃伅
+	 * 构造方法
+	 * @param string 异常信息
 	 */
 	public OutOfMaxLengthException(String string) {
 		super(string);

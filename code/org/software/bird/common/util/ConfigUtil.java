@@ -22,16 +22,16 @@ import java.io.File;
 import org.software.bird.common.BirdConstant;
 
 /**
- * 鎵�鏈夐厤缃枃浠堕�氱敤鍑芥暟
+ * 所有配置文件通用函数
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: ConfigUtil.java,v0.1 2007-12-16 涓嬪崍03:06:16 cyyan Exp$
+ * @version $Id: ConfigUtil.java,v0.1 2007-12-16 下午03:06:16 cyyan Exp$
  */
 public class ConfigUtil {
 
 	/**
-	 * 鑾峰彇閰嶇疆鏂囦欢鐨勭湡瀹炶矾寰�
-	 * 閰嶇疆鏂囦欢鐨勮矾寰勫垎闅旂鏄綔锛屾鏂规硶灏卞皢锝滆浆鎹负瀵逛簬鎿嶄綔绯荤粺鐨勮矾寰勫垎闅旂
+	 * 获取配置文件的真实路径
+	 * 配置文件的路径分隔符是｜，此方法就将｜转换为对于操作系统的路径分隔符
 	 * @param path
 	 * @return
 	 */

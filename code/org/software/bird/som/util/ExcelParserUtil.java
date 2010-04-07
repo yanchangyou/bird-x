@@ -32,17 +32,17 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 /**
- * 瀵筫xcel瑙ｆ瀽鐨勪竴浜涘父鐢ㄦ柟娉�
+ * 对excel解析的一些常用方法
  * 
- * 姝ょ被鍦ㄦ墍鏈夋柟娉�,鍩轰簬閰嶇疆鏂囦欢
+ * 此类在所有方法,基于配置文件
  * 
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: Excel2ObjectUtil.java,v0.1 2007-12-6 涓嬪崍01:55:32 cyyan Exp$
+ * @version $Id: Excel2ObjectUtil.java,v0.1 2007-12-6 下午01:55:32 cyyan Exp$
  */
 public class ExcelParserUtil {
 
 	/**
-	 * 鎸夊悕鑾峰彇琛ㄥ崟鍚嶇О, 杩欎簺瀵瑰簲鍏崇郴鏄湪閰嶇疆鏂囦欢閰嶇疆鐨�
+	 * 按名获取表单名称, 这些对应关系是在配置文件配置的
 	 * @param xmlDocument
 	 * @param objClass
 	 * @return
@@ -63,7 +63,7 @@ public class ExcelParserUtil {
 
 	/**
 	 * 
-	 * 鎸夊悕鑾峰彇閰嶇疆鏂囦欢
+	 * 按名获取配置文件
 	 * 
 	 * @param configFileName
 	 * @return
@@ -82,7 +82,7 @@ public class ExcelParserUtil {
 	}	
 
 	/**
-	 * 鑾峰彇灞炴�у垪琛�
+	 * 获取属性列表
 	 * @param xmlDocument
 	 * @param objClass
 	 * @return
@@ -94,7 +94,7 @@ public class ExcelParserUtil {
 	}
 
 	/**
-	 * 鎸夌被鍚嶈幏鍙栧睘鎬у垪琛�
+	 * 按类名获取属性列表
 	 * @param xmlDocument
 	 * @param objClass
 	 * @return
@@ -110,7 +110,7 @@ public class ExcelParserUtil {
 	}
 
 	/**
-	 * 浠巈xcel娴佷腑瑙ｆ瀽鍑哄伐浣滆杽
+	 * 从excel流中解析出工作薄
 	 * @param excelInputStream
 	 * @return
 	 * @throws FileNotFoundException
@@ -126,7 +126,7 @@ public class ExcelParserUtil {
 	}
 
 	/**
-	 * 鎸夌被鍦ㄩ厤缃枃浠朵腑鑾峰彇绫昏妭鐐�
+	 * 按类在配置文件中获取类节点
 	 * @param xmlDocument
 	 * @param objClass
 	 * @return

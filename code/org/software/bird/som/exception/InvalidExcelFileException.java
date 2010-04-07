@@ -21,7 +21,7 @@ package org.software.bird.som.exception;
  * Class description goes here.
  * 
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: InValidExcelFileException.java,v0.1 2007-12-17 涓婂崍09:46:40 cyyan
+ * @version $Id: InValidExcelFileException.java,v0.1 2007-12-17 上午09:46:40 cyyan
  *          Exp$
  */
 public class InvalidExcelFileException extends Exception {

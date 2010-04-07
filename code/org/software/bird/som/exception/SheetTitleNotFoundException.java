@@ -17,10 +17,10 @@
 
 package org.software.bird.som.exception;
 /**
- * 鏍囬娌℃湁鎵惧埌寮傚父
+ * 标题没有找到异常
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: TitleNotFoundException.java,v0.1 2007-12-17 涓婂崍10:41:50 cyyan Exp$
+ * @version $Id: TitleNotFoundException.java,v0.1 2007-12-17 上午10:41:50 cyyan Exp$
  */
 public class SheetTitleNotFoundException extends Exception {
 	

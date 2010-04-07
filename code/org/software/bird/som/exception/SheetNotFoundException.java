@@ -17,10 +17,10 @@
 
 package org.software.bird.som.exception;
 /**
- * 琛ㄥ崟娌℃湁鎵惧埌寮傚父
+ * 表单没有找到异常
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: SheetNotExistException.java,v0.1 2007-12-17 涓婂崍09:21:04 cyyan Exp$
+ * @version $Id: SheetNotExistException.java,v0.1 2007-12-17 上午09:21:04 cyyan Exp$
  */
 public class SheetNotFoundException extends Exception {
 

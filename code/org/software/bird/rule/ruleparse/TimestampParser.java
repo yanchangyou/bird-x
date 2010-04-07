@@ -23,18 +23,18 @@ import java.util.Date;
 import org.software.bird.rule.RuleBugException;
 
 /**
- * 瀵筎imestamp绫诲瀷鐨勮В鏋愮被
+ * 对Timestamp类型的解析类
  * 
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: TimestampParsor.java,v0.1 2007-12-7 涓嬪崍05:54:50 cyyan Exp$
+ * @version $Id: TimestampParsor.java,v0.1 2007-12-7 下午05:54:50 cyyan Exp$
  */
 public class TimestampParser extends DateParser {
 
 	/**
-	 * 鎶婂瓧绗︿覆瑙ｆ瀽鎴怲imestamp
+	 * 把字符串解析成Timestamp
 	 * 
-	 * @param dateStr 寰呰В鏋愮殑鏃ユ湡瀛楃涓�
-	 * @return 杩斿洖Timestamp瀵硅薄
+	 * @param dateStr 待解析的日期字符串
+	 * @return 返回Timestamp对象
 	 */
 	public Object parse(String dateStr) throws RuleBugException {
 		Date date = (Date) super.parse(dateStr);
