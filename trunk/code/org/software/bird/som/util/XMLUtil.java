@@ -32,15 +32,15 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 /**
- * 瑙ｆ瀽xml鏂囦欢鐨勫父鐢ㄥ嚱鏁�
+ * 解析xml文件的常用函数
  * 
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: XMLUtil.java,v0.1 2007-12-6 涓嬪崍01:46:58 cyyan Exp$
+ * @version $Id: XMLUtil.java,v0.1 2007-12-6 下午01:46:58 cyyan Exp$
  */
 public class XMLUtil {
 
 	/**
-	 * 鎸夊悕鑾峰彇鑺傜偣
+	 * 按名获取节点
 	 * @param xmlDocument
 	 * @param tagName
 	 * @param nodeNameValue
@@ -62,7 +62,7 @@ public class XMLUtil {
 	}
 
 	/**
-	 * 鑾峰彇鑺傜偣鐨勫睘鎬у��
+	 * 获取节点的属性值
 	 * @param node
 	 * @param propertyName
 	 * @return
@@ -78,7 +78,7 @@ public class XMLUtil {
 	}
 
 	/**
-	 * 瑙ｆ瀽閰嶇疆娴佹垚poi鐨凞ocument瀵硅薄
+	 * 解析配置流成poi的Document对象
 	 * @param configFileInputStream
 	 * @return
 	 * @throws FactoryConfigurationError

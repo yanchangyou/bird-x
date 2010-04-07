@@ -23,19 +23,19 @@ import org.software.bird.som.exception.InvalidNumberException;
 
 
 /**
- * 瀵笽nteger绫诲瀷鐨勮В鏋愮被
+ * 对Integer类型的解析类
  * 
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: DoubleParsor.java,v0.1 2007-12-7 涓嬪崍04:38:28 cyyan Exp$
+ * @version $Id: DoubleParsor.java,v0.1 2007-12-7 下午04:38:28 cyyan Exp$
  */
 public class IntegerParser extends NumberParser {
 	/**
-	 * 瑙ｆ瀽瀛楃鎴怚nteger绫诲瀷
+	 * 解析字符成Integer类型
 	 * 
-	 * @param 寰呰В鏋愮殑瀛楃涓�
+	 * @param 待解析的字符串
 	 * 
-	 * @exception InvalidNumberException 鏃犳晥鐨勫瓧绗︿覆
-	 * @exception OutOfRangeException瓒呰繃Double绫诲瀷鐨勬渶澶ц寖鍥� Integer.MIN_VALUE <= value && value <= Integer.MAX_VALUE
+	 * @exception InvalidNumberException 无效的字符串
+	 * @exception OutOfRangeException超过Double类型的最大范围 Integer.MIN_VALUE <= value && value <= Integer.MAX_VALUE
 	 */
 	public Object parse(String str) throws InvalidNumberException,
 			OutOfRangeException {

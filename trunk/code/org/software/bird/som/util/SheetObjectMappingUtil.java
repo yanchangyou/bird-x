@@ -20,15 +20,15 @@ package org.software.bird.som.util;
 import org.w3c.dom.Node;
 
 /**
- * 閰嶇疆som鐨勪娇鐢ㄧ被
+ * 配置som的使用类
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: MappingUtil.java,v0.1 2007-12-6 涓嬪崍02:17:30 cyyan Exp$
+ * @version $Id: MappingUtil.java,v0.1 2007-12-6 下午02:17:30 cyyan Exp$
  */
 public class SheetObjectMappingUtil {
 
 	/**
-	 * 鑾峰彇绗竴涓暟鎹鐨勪綅缃�
+	 * 获取第一个数据行的位置
 	 * @param classNode
 	 * @return
 	 */
@@ -39,7 +39,7 @@ public class SheetObjectMappingUtil {
 	}
 
 	/**
-	 * 鑾峰彇鏍囬琛屼綅缃�
+	 * 获取标题行位置
 	 * @param classNode
 	 * @return
 	 */
@@ -50,7 +50,7 @@ public class SheetObjectMappingUtil {
 	}
 
 	/**
-	 * 鑾峰彇鏁版嵁鐨勬渶澶ц鏁�
+	 * 获取数据的最大行数
 	 * @param classNode
 	 * @return
 	 */

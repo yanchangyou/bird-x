@@ -31,24 +31,24 @@ import org.software.bird.som.exception.SheetNotFoundException;
 import org.software.bird.som.exception.SheetTitleNotFoundException;
 
 /**
- * 鎺ュ彛ExcelIO鐨勫唴閮ㄤ唬鐞�, ExcelIO鎵�鏈夊姛鑳介兘鏄皟鐢‥xcelIODelegation
- * 浣跨敤浠ｇ悊澧炲姞浜嗙伒娲绘��
+ * 接口ExcelIO的内部代理, ExcelIO所有功能都是调用ExcelIODelegation
+ * 使用代理增加了灵活性
  * 
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: ExcelParseProxy.java,v0.1 2007-12-8 涓嬪崍01:43:43 cyyan Exp$
+ * @version $Id: ExcelParseProxy.java,v0.1 2007-12-8 下午01:43:43 cyyan Exp$
  */
 public class ExcelIODelegation {
 	/**
-	 * 宸ヤ綔琛ㄦ病鏈夊彂鐜板紓甯�
+	 * 工作表没有发现异常
 	 */
-	public static String sheet_not_found_exception_message = "璇锋鏌ユ槸鍚︽槸姝ｇ‘鐨勬ā鏉匡紝琛ㄥ崟鐨勫悕瀛楁槸鍚﹁鏀瑰姩";
+	public static String sheet_not_found_exception_message = "请检查是否是正确的模板，表单的名字是否被改动";
 	/**
-	 * excel浠ｇ悊
+	 * excel代理
 	 */
 	private ExcelDelegation excelDelegation;
 
 	/**
-	 * 鏋勯�犲嚱鏁�
+	 * 构造函数
 	 * @param stream
 	 * @throws FileNotFoundException
 	 * @throws IOException
@@ -60,7 +60,7 @@ public class ExcelIODelegation {
 	
 	
 	/**
-	 * 瑙ｆ瀽鎸噑heet鎴恖ist
+	 * 解析指sheet成list
 	 * @param sheetName
 	 * @param objClass
 	 * @return
@@ -72,11 +72,11 @@ public class ExcelIODelegation {
 		List list = null;
 		SheetObjectMapping som = SheetObjectMappingConfig.getSOM(objClass);
 		if (som == null) {
-			throw new RuntimeException("娌℃湁鎵惧埌" + objClass + "绫荤殑som瀵硅薄锛� 纭繚som鏂囦欢瀛樺湪锛屽苟涓旇鍔犺浇鍒颁簡sheet_object_config.xml鏂囦欢涓�");
+			throw new RuntimeException("没有找到" + objClass + "类的som对象， 确保som文件存在，并且被加载到了sheet_object_config.xml文件中");
 		}
-		if (sheetName == null || sheetName.trim().equals("")) {//濡傛灉娌℃湁鎸囧畾sheet鍚嶅氨浣跨敤閰嶇疆鏂囦欢涓殑
+		if (sheetName == null || sheetName.trim().equals("")) {//如果没有指定sheet名就使用配置文件中的
 			sheetName = som.getSheetName();
-		} else {		//濡傛灉鎸囧畾sheet鍚嶅氨灏唖om鐨剆heet鍚嶈祴鍊间綅 鎸囧畾鐨� sheet鍚�
+		} else {		//如果指定sheet名就将som的sheet名赋值位 指定的 sheet名
 			som.setSheetName(sheetName);
 		}
 		HSSFSheet sheet = excelDelegation.getSheet(som.getSheetName());
@@ -86,17 +86,17 @@ public class ExcelIODelegation {
 		som.excelReference.setSheet(sheet);
 		
 		if (sheet == null) {
-			throw new SheetNotFoundException("琛ㄥ崟锛歔" + sheetName + "]涓嶅瓨鍦紝" + sheet_not_found_exception_message);
+			throw new SheetNotFoundException("表单：[" + sheetName + "]不存在，" + sheet_not_found_exception_message);
 		}
 		Map titleColumnMap = SheetObjectMappingConfig.configTitleColumnMap(sheet.getRow(som.getTitleRowIndex()));
 		som.setTitleColumnMap(titleColumnMap);
-		som.configPropertyColumnMap();  //瀵规柊鐨別xcel杩涜title--column閰嶇疆
+		som.configPropertyColumnMap();  //对新的excel进行title--column配置
 		list = CoreParseUtil.sheet2List(sheet, som);
 		return list;
 	}
 
 	/**
-	 * 鏈疄鐜�
+	 * 未实现
 	 * @param obj
 	 * @return
 	 */
@@ -105,7 +105,7 @@ public class ExcelIODelegation {
 	}
 
 	/**
-	 * 鏈疄鐜�
+	 * 未实现
 	 * @param obj
 	 * @return
 	 */

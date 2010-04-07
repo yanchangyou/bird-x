@@ -44,19 +44,19 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 /**
- * 灏嗛厤缃枃浠惰浆鎹㈡垚瀵硅薄
+ * 将配置文件转换成对象
  * 
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: SheetObjectConfig.java,v0.1 2007-12-5 涓嬪崍09:39:11 cyyan Exp$
+ * @version $Id: SheetObjectConfig.java,v0.1 2007-12-5 下午09:39:11 cyyan Exp$
  */
 public class SheetObjectMappingConfig {
 
 	
-	//閰嶇疆鏂囦欢鐨勮矾寰�
+	//配置文件的路径
 	final public static String som_config_file = ConfigUtil.getRealPath(BootConfig.getProperty("ether.anima.bird.som.boot.path"));
 	
 	/**
-	 * 閰嶇疆鏂囦欢涓殑鑺傜偣鍚嶇О
+	 * 配置文件中的节点名称
 	 */
 	final public static String som_tag_name = "som";
 	final public static String som_class_tag_name = "class";
@@ -76,7 +76,7 @@ public class SheetObjectMappingConfig {
 	private static Map class_som_map = new HashMap();	
 	
 	/**
-	 * 鎸夊悕鎻愬彇涓�涓猻om
+	 * 按名提取一个som
 	 * @param objClass 
 	 * @return 
 	 */
@@ -85,7 +85,7 @@ public class SheetObjectMappingConfig {
 		if (CheckUtil.isEmptyMap(class_som_map)) {
 			try {
 				initConfig();
-				System.out.println("鎵�鏈夌殑som 锛歕n" + class_som_map);
+				System.out.println("所有的som ：\n" + class_som_map);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
@@ -94,7 +94,7 @@ public class SheetObjectMappingConfig {
 		return (SheetObjectMapping)class_som_map.get(objClass);
 	}
 	/**
-	 * 鍒濆鍖� 閰嶇疆
+	 * 初始化 配置
 	 * @throws ConfigFileNotFoundException
 	 * @throws FactoryConfigurationError
 	 * @throws ParserConfigurationException
@@ -109,7 +109,7 @@ public class SheetObjectMappingConfig {
 			+ ConfigUtil.getRealPath(som_config_file));
 			}
 		
-		// 鑾峰彇閰嶇疆鏂囦欢
+		// 获取配置文件
 		Document xmlDocument = XMLUtil.getDocumentAtInputStream(configFileInputStream);
 		NodeList somNodeList = xmlDocument.getElementsByTagName(som_tag_name);
 		String[] somFileNameArray = XMLUtil.getAllPropertyValue(somNodeList, som_src_property_name);
@@ -124,7 +124,7 @@ public class SheetObjectMappingConfig {
 	}
 	
 	 /**
-	  * 閰嶇疆 title 鍒� column 鐨勬槧灏�
+	  * 配置 title 到 column 的映射
 	  * @param titleRow
 	  * @return
 	  */
@@ -142,7 +142,7 @@ public class SheetObjectMappingConfig {
 	}
 	
 	/**
-	 * 閰嶇疆 涓�涓猻om 鏂囦欢 鍙兘鏈夊涓� som 閰嶇疆鍦ㄩ噷闈�
+	 * 配置 一个som 文件 可能有多个 som 配置在里面
 	 * @param somFileName
 	 * @throws ConfigFileNotFoundException
 	 * @throws FactoryConfigurationError
@@ -166,7 +166,7 @@ public class SheetObjectMappingConfig {
 		configSOM(classNodeList, class_som_map);
 	}
 	/**
-	 * 閰嶇疆 classNodeList 鍙兘鏈夊涓� som 閰嶇疆鍦ㄩ噷闈�
+	 * 配置 classNodeList 可能有多个 som 配置在里面
 	 * @param classNodeList
 	 * @param class_som_map
 	 * @throws ClassNotFoundException
@@ -182,7 +182,7 @@ public class SheetObjectMappingConfig {
 		}
 	}
 	/**
-	 *  閰嶇疆鍗曚釜som
+	 *  配置单个som
 	 * @param classNode
 	 * @return
 	 */

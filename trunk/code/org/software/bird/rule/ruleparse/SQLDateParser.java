@@ -20,18 +20,18 @@ package org.software.bird.rule.ruleparse;
 import org.software.bird.rule.RuleBugException;
 
 /**
- * 瀵筍QL绫诲瀷鐨勮В鏋愮被
+ * 对SQL类型的解析类
  * 
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: SQLDateParsor.java,v0.1 2007-12-7 涓嬪崍05:54:32 cyyan Exp$
+ * @version $Id: SQLDateParsor.java,v0.1 2007-12-7 下午05:54:32 cyyan Exp$
  */
 public class SQLDateParser extends DateParser {
 
 	/**
-	 * 瑙ｆ瀽鎴愭棩鏈熷璞�
+	 * 解析成日期对象
 	 * 
-	 * @param dateStr 寰呰В鏋愮殑瀛楃涓�
-	 * @return 鏃ユ湡瀵硅薄
+	 * @param dateStr 待解析的字符串
+	 * @return 日期对象
 	 */
 	public Object parse(String dateStr) throws RuleBugException {
 		java.util.Date date = (java.util.Date) super.parse(dateStr);

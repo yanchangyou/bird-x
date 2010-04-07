@@ -21,21 +21,21 @@ import java.io.InputStream;
 import java.util.Properties;
 
 /**
- * 澶勭悊鏍稿績閰嶇疆鏂囦欢锛屽叾瀹冪殑閰嶇疆鏂囦欢璺緞閮藉湪姝ゆ枃浠朵腑杩涜閰嶇疆锛岀▼搴忓氨閽堝姝ゆ枃浠惰繘琛屽鐞嗭紝涓�涓粺涓�鐨勫叆鍙�
+ * 处理核心配置文件，其它的配置文件路径都在此文件中进行配置，程序就针对此文件进行处理，一个统一的入口
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: BootConfig.java,v0.1 2008-9-28 涓婂崍09:07:22 cyyan Exp$
+ * @version $Id: BootConfig.java,v0.1 2008-9-28 上午09:07:22 cyyan Exp$
  */
 public class BootConfig {
 
 	/**
-	 * 鏍稿績閰嶇疆鏂囦欢璺緞
+	 * 核心配置文件路径
 	 */
 	final public static String bootPropertiesPath = "ether.properties";
 	final private static Properties bootProperties = new Properties();
 	static {
 		/**
-		 * 鑷姩鍒濆鍖�, 鍔犺浇閰嶇疆鏂囦欢
+		 * 自动初始化, 加载配置文件
 		 */
 		try {
 			InputStream configFileInputStream = CommonUtil.getInputStreamBySourceName(bootPropertiesPath);
@@ -46,7 +46,7 @@ public class BootConfig {
 		}
 	}
 	/**
-	 * 鑾峰彇鏍归厤缃枃浠剁殑灞炴��
+	 * 获取根配置文件的属性
 	 * @param key
 	 * @return
 	 */
@@ -60,9 +60,9 @@ public class BootConfig {
 	}
 	
 	/**
-	 * 澶勭悊鍏煎鎬ч棶棰�, 1.5涔嬪墠浣跨敤鐨勯厤缃枃浠惰矾寰勪笉瑙勮寖, 浠�1.5涔嬪悗淇敼鎴� config/config/bird/som/som.xml 
-	 * 鍜� config/config/bird/rule/rule.xml 
-	 * 姝や唬鐮佽嚜鍔ㄥ鐞嗗鏋滄病鏈夋壘鍒� ether.properties鏂囦欢灏辫涓烘槸1.5涔嬪墠鐨�, 骞惰嚜鍔ㄦ浛鎹负浠ュ墠鐨勮矾寰�
+	 * 处理兼容性问题, 1.5之前使用的配置文件路径不规范, 从1.5之后修改成 config/config/bird/som/som.xml 
+	 * 和 config/config/bird/rule/rule.xml 
+	 * 此代码自动处理如果没有找到 ether.properties文件就认为是1.5之前的, 并自动替换为以前的路径
 	 * @param bootProperties
 	 */
 	private static void dealCompatibilityLE_1_5(Properties bootProperties) {

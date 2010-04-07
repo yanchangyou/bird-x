@@ -27,17 +27,17 @@ import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 /**
- * 澶勭悊excel鐨勭浉鍏冲嚱鏁�
+ * 处理excel的相关函数
  * 
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: ExcelUtil.java,v0.1 2007-12-6 涓嬪崍01:46:38 cyyan Exp$
+ * @version $Id: ExcelUtil.java,v0.1 2007-12-6 下午01:46:38 cyyan Exp$
  */
 public class ExcelUtil {
 
 	final public static SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 	
 	/**
-	 * 鑾峰彇琛ㄥ崟涓殑title 琛宲oi瀵硅薄
+	 * 获取表单中的title 行poi对象
 	 * @param sheet
 	 * @param titleRowIndex
 	 * @return
@@ -48,8 +48,8 @@ public class ExcelUtil {
 	
 	
 	/**
-	 * 鍒ゆ柇琛ㄥ崟涓竴琛屾槸鍚︿负绌�
-	 * 濡傛灉涓虹┖灏变笉鐢ㄨВ鏋�, 鐢ㄤ簬鎺掗櫎excel涓┖鐧借
+	 * 判断表单中一行是否为空
+	 * 如果为空就不用解析, 用于排除excel中空白行
 	 * @param row
 	 * @return
 	 */
@@ -70,7 +70,7 @@ public class ExcelUtil {
 	}
 
 	/**
-	 * 鍒ゆ柇鏄惁鏄┖鍗曞厓鏍�
+	 * 判断是否是空单元格
 	 * @param cell
 	 * @return
 	 */
@@ -81,7 +81,7 @@ public class ExcelUtil {
 	}
 
 	/**
-	 * 瀵瑰崟鍏冩牸鐨勬暟鎹浆鎹㈡垚瀛楃涓�, 浠ヤ究鍚庨潰缁熶竴澶勭悊
+	 * 对单元格的数据转换成字符串, 以便后面统一处理
 	 * 
 	 * @param cell
 	 * @return
@@ -104,21 +104,21 @@ public class ExcelUtil {
 				String numberStr = String.valueOf(cell.getNumericCellValue());
 				
 				//modify by cyyan 2008-09-23 19:17:28 
-				//excel涓暟鍊艰浆鎹㈣繃鏉ユ椂閲囩敤E璁℃暟娉�, 瀵艰嚧鍚庨潰鐨勮鍒欐牎楠屽け璐�;
-				//涓烘杩涜鎶奅璁℃暟娉曡浆鎹㈡櫘閫氳鏁版硶, 骞朵笖浣跨敤灏忔暟鐐瑰悗15浣�, (15浣嶆槸灏忔暟鐨勬渶澶х簿搴�, 鑳藉淇濊瘉闈炴湰缁勪欢甯︽潵鐨勮宸�)
-				// 浣跨敤15浣嶅皬鏁板悗, 浼氬甫鏉ュ涓湯灏剧殑0, 鐩搁偦鐨勪竴鏉¤鍙ユ槸鍘绘帀杩欎簺鏈熬0
+				//excel中数值转换过来时采用E计数法, 导致后面的规则校验失败;
+				//为此进行把E计数法转换普通计数法, 并且使用小数点后15位, (15位是小数的最大精度, 能够保证非本组件带来的误差)
+				// 使用15位小数后, 会带来多个末尾的0, 相邻的一条语句是去掉这些末尾0
 				str = "" + new BigDecimal(numberStr).setScale(15, BigDecimal.ROUND_HALF_UP);
 				
 				//modify yanchangyou 2008-09-26 18:01:43 
-				//鍘熸潵鐨勬儏鍐靛彧鑳藉幓鎺� .0000* 杩欑妯″紡, 淇敼鍚庤兘鍘绘帀鏈熬鐨�0, 濡傛灉鏈熬绱ц繛鎺�
+				//原来的情况只能去掉 .0000* 这种模式, 修改后能去掉末尾的0, 如果末尾紧连接
 				if (str.indexOf('.') != -1) {
 					str = str.replaceAll("(\\.)?0*$", "");
 				}				
 
 				/*
-				 * 蹇�熷幓鎺夊皬鏁扮偣鍚庢湯灏剧殑闆�, 鍜屽皬鏁扮偣鍚庡叏韬浂鐨勬儏鍐�
+				 * 快速去掉小数点后末尾的零, 和小数点后全身零的情况
 				 */
-//				if (str.indexOf('.') != -1) { //鍙鐞嗘湁灏忔暟鐐�
+//				if (str.indexOf('.') != -1) { //只处理有小数点
 //					int index = str.length();
 //					for (int i = str.length()-1; i > -1; i--) {
 //						if (str.charAt(i) == '0') {
@@ -159,7 +159,7 @@ public class ExcelUtil {
 
 
 	/**
-	 * 鑾峰彇excel涓殑鏂圭▼
+	 * 获取excel中的方程
 	 * @param sheet
 	 * @param workbook
 	 * @param row

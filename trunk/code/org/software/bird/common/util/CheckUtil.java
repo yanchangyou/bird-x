@@ -21,15 +21,15 @@ import java.util.Collection;
 import java.util.Map;
 
 /**
- * 涓�鑸鏌ョ殑浣跨敤绫�
+ * 一般检查的使用类
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: CheckUtil.java,v0.1 2007-12-16 涓嬪崍03:10:08 cyyan Exp$
+ * @version $Id: CheckUtil.java,v0.1 2007-12-16 下午03:10:08 cyyan Exp$
  */
 public class CheckUtil {
 
 	/**
-	 * 鍒ゆ柇鏄惁涓虹┖
+	 * 判断是否为空
 	 * @param str
 	 * @return
 	 */
@@ -38,7 +38,7 @@ public class CheckUtil {
 	}
 	
 	/**
-	 * 鍒ゆ柇鏄笉涓虹┖
+	 * 判断是不为空
 	 * @param str
 	 * @return
 	 */
@@ -47,7 +47,7 @@ public class CheckUtil {
 	}
 	
 	/**
-	 * 鍒ゆ柇鏄惁鏄┖闆嗗悎
+	 * 判断是否是空集合
 	 * @param collection
 	 * @return
 	 */
@@ -56,7 +56,7 @@ public class CheckUtil {
 	}
 	
 	/**
-	 * 鍒ゆ柇鏄惁涓嶆槸绌洪泦鍚�
+	 * 判断是否不是空集合
 	 * @param collection
 	 * @return
 	 */
@@ -65,7 +65,7 @@ public class CheckUtil {
 	}
 	
 	/**
-	 * 鍒ゆ柇鏄惁鏄┖鏄犲皠
+	 * 判断是否是空映射
 	 * @param map
 	 * @return
 	 */
@@ -74,7 +74,7 @@ public class CheckUtil {
 	}
 	
 	/**
-	 * 鍒ゆ柇鏄惁涓嶆槸绌烘槧灏�
+	 * 判断是否不是空映射
 	 * @param map
 	 * @return
 	 */
@@ -83,7 +83,7 @@ public class CheckUtil {
 	}
 	
 	/**
-	 * 鍒ゆ柇瀵硅薄鏄惁涓虹┖
+	 * 判断对象是否为空
 	 * @param obj
 	 * @return
 	 */
@@ -92,7 +92,7 @@ public class CheckUtil {
 	}
 	
 	/**
-	 * 鍒ゆ柇瀵硅薄鏄惁涓嶄负绌�
+	 * 判断对象是否不为空
 	 * @param obj
 	 * @return
 	 */

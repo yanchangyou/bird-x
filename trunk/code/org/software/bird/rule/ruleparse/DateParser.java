@@ -24,30 +24,30 @@ import java.util.Date;
 import org.software.bird.rule.RuleBugException;
 
 /**
- * 瀵笵ate绫诲瀷鐨勮В鏋愮被
+ * 对Date类型的解析类
  * 
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: DateParsor.java,v0.1 2007-12-7 涓嬪崍05:24:04 cyyan Exp$
+ * @version $Id: DateParsor.java,v0.1 2007-12-7 下午05:24:04 cyyan Exp$
  */
 public class DateParser extends StringParser {
 
 	/**
-	 * 榛樿鏃ュ墠鏍煎紡
+	 * 默认日前格式
 	 */
 	final private String DATE_PATTERN = "yyyy-MM-dd";
 
 	/**
-	 * 鏃ュ墠鏍煎紡绫诲瀷
+	 * 日前格式类型
 	 */
 	public static SimpleDateFormat DATE_FORMAT;
 
 	/**
-	 * 鏃ュ墠鏍煎紡
+	 * 日前格式
 	 */
 	private String pattern;
 
 	/**
-	 * 鏋勯�犳柟娉�
+	 * 构造方法
 	 * @param pattern
 	 */
 	public DateParser(String pattern) {
@@ -56,15 +56,15 @@ public class DateParser extends StringParser {
 	}
 
 	/**
-	 * 鏋勯�犳柟娉�
+	 * 构造方法
 	 */
 	public DateParser() {
 		DATE_FORMAT = new SimpleDateFormat(DATE_PATTERN);
 	}
 
 	/**
-	 * 瑙ｆ瀽瀛楃涓叉垚鏃ュ墠瀵硅薄
-	 * @param 寰呰В鏋愮殑瀛楃涓�
+	 * 解析字符串成日前对象
+	 * @param 待解析的字符串
 	 */
 	public Object parse(String dateStr) throws RuleBugException {
 
@@ -94,15 +94,15 @@ public class DateParser extends StringParser {
 	}
 
 	/**
-	 * pattern鐨刧etter鏂规硶
-	 * @return 鏃ュ墠鏍煎紡
+	 * pattern的getter方法
+	 * @return 日前格式
 	 */
 	public String getPattern() {
 		return pattern;
 	}
 
 	/**
-	 * pattern 鐨剆etter鏂规硶
+	 * pattern 的setter方法
 	 * @param pattern
 	 */
 	public void setPattern(String pattern) {
@@ -110,7 +110,7 @@ public class DateParser extends StringParser {
 	}
 
 	/**
-	 * 鎸夋寚瀹氭牸寮忚В鏋愭棩鍓�
+	 * 按指定格式解析日前
 	 * @param str
 	 * @param pattern
 	 * @return
@@ -121,7 +121,7 @@ public class DateParser extends StringParser {
 	}
 	
 	/**
-	 * 鏋勯�犺鍒欐姤鍛�
+	 * 构造规则报告
 	 * @param dateStr
 	 * @return
 	 */

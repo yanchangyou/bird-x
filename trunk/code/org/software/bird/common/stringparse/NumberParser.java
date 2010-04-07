@@ -27,21 +27,21 @@ import org.software.bird.som.exception.InvalidNumberException;
 
 
 /**
- * 瀵筃umber鍩烘湰绫诲瀷鐨勮В鏋愮被
+ * 对Number基本类型的解析类
  * 
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: NumberParsor.java,v0.1 2007-12-7 涓嬪崍04:35:28 cyyan Exp$
+ * @version $Id: NumberParsor.java,v0.1 2007-12-7 下午04:35:28 cyyan Exp$
  */
 public class NumberParser extends Parser {
 
 	final static DecimalFormat aDecimalFormat = new DecimalFormat();
 	/**
-	 * 瑙ｆ瀽瀛楃鎴愬熀鏈被鍨嬶紝濡傛灉瑙ｆ瀽鐨勭粨鏋滄槸BigDecimal锛孊igInteger灏嗗鑷磋寖鍥村紓甯�
+	 * 解析字符成基本类型，如果解析的结果是BigDecimal，BigInteger将导致范围异常
 	 * 
-	 * @param 寰呰В鏋愮殑瀛楃涓�
+	 * @param 待解析的字符串
 	 * 
-	 * @exception InvalidNumberException 鏃犳晥鐨勫瓧绗︿覆
-	 * @exception OutOfRangeException瓒呰繃BigInteger锛孊igDecimal
+	 * @exception InvalidNumberException 无效的字符串
+	 * @exception OutOfRangeException超过BigInteger，BigDecimal
 	 * 
 	 */
 	public Object parse(String str) throws InvalidNumberException, OutOfRangeException {
@@ -61,7 +61,7 @@ public class NumberParser extends Parser {
 	}
 
 	/**
-	 * 涓嶄娇鐢ㄦ鏂规硶
+	 * 不使用此方法
 	 * 
 	 * @deprecated
 	 */
@@ -69,7 +69,7 @@ public class NumberParser extends Parser {
 		return parse(str);
 	}
 	/**
-	 * 涓嶄娇鐢ㄦ鏂规硶
+	 * 不使用此方法
 	 * 
 	 * @deprecated
 	 */

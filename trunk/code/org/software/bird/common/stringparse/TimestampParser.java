@@ -26,17 +26,17 @@ import org.software.bird.som.exception.InvalidDateException;
 
 
 /**
- * 瀵筎imestamp绫诲瀷鐨勮В鏋愮被
+ * 对Timestamp类型的解析类
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: TimestampParsor.java,v0.1 2007-12-7 涓嬪崍05:54:50 cyyan Exp$
+ * @version $Id: TimestampParsor.java,v0.1 2007-12-7 下午05:54:50 cyyan Exp$
  */
 public class TimestampParser extends DateParser {
 
 	/**
-	 * 鎶婂瓧绗︿覆瑙ｆ瀽鎴怲imestampParser瀵硅薄
-	 * @param dateStr 寰呰В鏋愮殑瀛楃涓�
-	 * @exception 鏃犳晥鏃ユ湡寮傚父
+	 * 把字符串解析成TimestampParser对象
+	 * @param dateStr 待解析的字符串
+	 * @exception 无效日期异常
 	 */
 	public Object parse(String dateStr) throws InvalidDateException{
 		Date date = (Date)super.parse(dateStr);

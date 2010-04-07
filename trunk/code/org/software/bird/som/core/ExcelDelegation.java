@@ -28,26 +28,26 @@ import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.software.bird.som.util.ExcelParserUtil;
 
 /**
- * excel鏂囦欢瀵瑰簲鐨勫璞�, 浠ｇ悊excel鏂囦欢, 杩欐牱鏇村叿鏈夌伒娲绘��
+ * excel文件对应的对象, 代理excel文件, 这样更具有灵活性
  * 
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: ExcelDelegation.java,v0.1 2007-12-15 涓嬪崍04:00:56 cyyan Exp$
+ * @version $Id: ExcelDelegation.java,v0.1 2007-12-15 下午04:00:56 cyyan Exp$
  */
 public class ExcelDelegation {
 
 
 	/**
-	 * 鍛戒腑宸ヤ綔琛ㄦ槧灏�
+	 * 命中工作表映射
 	 */
 	final private Map name_sheet_map = new HashMap();
 
 	/**
-	 * 宸ヤ綔钖�
+	 * 工作薄
 	 */
 	public HSSFWorkbook workbook;
 
 	/**
-	 * 鏋勯�犲嚱鏁�
+	 * 构造函数
 	 * @param stream
 	 * @throws FileNotFoundException
 	 * @throws IOException
@@ -60,7 +60,7 @@ public class ExcelDelegation {
 
 	/**
 	 * 
-	 * 閰嶇疆鍚嶇О鍒皊heet鐨勬槧灏�
+	 * 配置名称到sheet的映射
 	 * 
 	 * @param stream
 	 * @throws FileNotFoundException
@@ -86,7 +86,7 @@ public class ExcelDelegation {
 
 	/**
 	 * 
-	 * 鎸夊悕鑾峰彇poi鐨勮〃鍗�
+	 * 按名获取poi的表单
 	 * 
 	 * @param sheetName
 	 * @return
@@ -96,7 +96,7 @@ public class ExcelDelegation {
 	}
 
 	/**
-	 * 鑾峰彇宸ヤ綔钖�
+	 * 获取工作薄
 	 * @return
 	 */
 	public HSSFWorkbook getWorkbook() {
@@ -104,7 +104,7 @@ public class ExcelDelegation {
 	}
 
 	/**
-	 * 璁剧疆宸ヤ綔钖�
+	 * 设置工作薄
 	 * @param workbook
 	 */
 	public void setWorkbook(HSSFWorkbook workbook) {

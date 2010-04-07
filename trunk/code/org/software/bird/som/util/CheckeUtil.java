@@ -17,15 +17,15 @@
 
 package org.software.bird.som.util;
 /**
- * 瀹炵幇鍩烘湰鐨勬鏌�
+ * 实现基本的检查
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: Checkor.java,v0.1 2007-12-7 涓嬪崍07:04:53 cyyan Exp$
+ * @version $Id: Checkor.java,v0.1 2007-12-7 下午07:04:53 cyyan Exp$
  */
 public class CheckeUtil {
 
 	/**
-	 * 鏄惁鏄┖瀛楃涓�
+	 * 是否是空字符串
 	 * @param string
 	 * @return
 	 */
@@ -34,7 +34,7 @@ public class CheckeUtil {
 	}
 	
 	/**
-	 * 鏄惁瓒呰繃鏈�澶ч暱搴�
+	 * 是否超过最大长度
 	 * @param string
 	 * @param length
 	 * @return

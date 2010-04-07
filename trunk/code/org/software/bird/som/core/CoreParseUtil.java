@@ -37,18 +37,18 @@ import org.software.bird.som.util.BasicObjectParseUtil;
 import org.software.bird.som.util.ExcelUtil;
 
 /**
- * 鏍稿績瑙ｆ瀽绫�, 鐢ㄤ簬 sheet-->list, cell-->property鐨勮В鏋�,
- * 骞跺湪瑙ｆ瀽涓繘琛屾牎楠�
+ * 核心解析类, 用于 sheet-->list, cell-->property的解析,
+ * 并在解析中进行校验
  * 
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: CoreParseUtil.java,v0.1 2007-12-7 涓嬪崍02:17:22 cyyan Exp$
+ * @version $Id: CoreParseUtil.java,v0.1 2007-12-7 下午02:17:22 cyyan Exp$
  */
 public class CoreParseUtil {
 
-	final static String sheet_title_not_found_exception = "璇风敤姝ｇ‘鐨勬ā鏉垮鍏�";  
+	final static String sheet_title_not_found_exception = "请用正确的模板导入";  
 	
 	/**
-	 * 琛╯heet瑙ｆ瀽鎴恖ist
+	 * 表sheet解析成list
 	 * @param sheet
 	 * @param som
 	 * @return
@@ -62,7 +62,7 @@ public class CoreParseUtil {
 		
 		StringBuffer errorMsg = new StringBuffer("");
 
-		// 鏁版嵁琛屽紑濮嬭В鏋�
+		// 数据行开始解析
 		for (int i = 0; i < som.getFirstDataRowIndex(); i++) {
 			if (iterator.hasNext()) {
 				iterator.next();
@@ -74,7 +74,7 @@ public class CoreParseUtil {
 		int dataCount = 0;
 		while (iterator.hasNext()) {
 			
-			if (dataRowMaxNumber > -1 && dataCount >= dataRowMaxNumber) { //瓒呰繃鏈�澶ф寚瀹氳鏁板氨璺冲嚭
+			if (dataRowMaxNumber > -1 && dataCount >= dataRowMaxNumber) { //超过最大指定行数就跳出
 				break;
 			}
 			dataCount ++;
@@ -94,10 +94,10 @@ public class CoreParseUtil {
 					obj = row2obj(row, som);
 				}
 			} catch (BreakStringRuleException e) {
-				errorMsg.append("绗�" + rowCount + "琛�" + e.getMessage() + "<BR>");
+				errorMsg.append("第" + rowCount + "行" + e.getMessage() + "<BR>");
 				//e.printStackTrace();
 			}
-			// 鍘绘帀涓嶅拰閫昏緫鐨勬儏鍐�
+			// 去掉不和逻辑的情况
 			if (obj != null) {
 				list.add(obj);				
 			}
@@ -105,14 +105,14 @@ public class CoreParseUtil {
 			rowCount++;
 		}
 		if (!errorMsg.toString().equals("")) {
-			throw new BreakStringRuleException( "鍦ㄨ〃鍗昜" + som.getSheetName() + "]涓嚭鐜颁笅鍒楅敊璇�"  + "<BR>" + errorMsg.toString() + "<BR>");
+			throw new BreakStringRuleException( "在表单[" + som.getSheetName() + "]中出现下列错误"  + "<BR>" + errorMsg.toString() + "<BR>");
 		}
 		return list;
 	}
 
 	/**
 	 * 
-	 * 灏唕ow瑙ｆ瀽鎴愬璞�
+	 * 将row解析成对象
 	 * 
 	 * @param row
 	 * @param som
@@ -148,7 +148,7 @@ public class CoreParseUtil {
 			String property = (String) propertyIt.next();
 			Short columnShort = (Short) propertyColumnMap.get(property);
 			if (columnShort == null) {
-				throw new SheetTitleNotFoundException("[" + som.getPropertyTitleMap().get(property) +"]娌℃湁鎵惧埌锛�" + sheet_title_not_found_exception);
+				throw new SheetTitleNotFoundException("[" + som.getPropertyTitleMap().get(property) +"]没有找到，" + sheet_title_not_found_exception);
 			}
 			short column = columnShort.shortValue();
 			
@@ -159,7 +159,7 @@ public class CoreParseUtil {
 				try {
 					stringRule.test(cellStr);
 				} catch(BreakStringRuleException e) {
-					errorMsg.append("[" + som.getPropertyTitleMap().get(property) +"]杈撳叆涓嶅悎娉曪紝" + stringRule.getMessage() + "瀹為檯杈撳叆鏄細" + cellStr + "<BR>");
+					errorMsg.append("[" + som.getPropertyTitleMap().get(property) +"]输入不合法，" + stringRule.getMessage() + "实际输入是：" + cellStr + "<BR>");
 					continue;
 				}
 			}
@@ -183,9 +183,9 @@ public class CoreParseUtil {
 				} catch(RuleBugException e) {
 					e.printStackTrace();
 					if (CheckUtil.isNotNull(stringRule)) {
-						errorMsg.append("鍦╗" + som.getPropertyTitleMap().get(property) +"]鏈夎緭鍏ラ敊璇� 锛�" + stringRule.getMessage() + "<BR>");
+						errorMsg.append("在[" + som.getPropertyTitleMap().get(property) +"]有输入错误 ：" + stringRule.getMessage() + "<BR>");
 					} else {
-						errorMsg.append("鍦╗" + som.getPropertyTitleMap().get(property) +"]鏈夎緭鍏ラ敊璇細璇锋鏌�<BR>");
+						errorMsg.append("在[" + som.getPropertyTitleMap().get(property) +"]有输入错误：请检查<BR>");
 					}
 					continue;
 				}

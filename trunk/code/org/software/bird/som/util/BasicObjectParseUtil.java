@@ -39,10 +39,10 @@ import org.software.bird.som.exception.UnsupportedParseException;
 
 
 /**
- * 鍩烘湰绫诲瀷鐨勮В鏋�
+ * 基本类型的解析
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: BasicObjectFormat.java,v0.1 2007-12-7 涓嬪崍04:03:41 cyyan Exp$
+ * @version $Id: BasicObjectFormat.java,v0.1 2007-12-7 下午04:03:41 cyyan Exp$
  */
 public class BasicObjectParseUtil {
 	
@@ -77,7 +77,7 @@ public class BasicObjectParseUtil {
 		objectParsorMap.put(java.sql.Timestamp.class, new TimestampParser());
 	}
 	/**
-	 * 瑙ｆ瀽瀛楃鎴愬璞�
+	 * 解析字符成对象
 	 * @param str
 	 * @param pattern
 	 * @param objClass
@@ -95,7 +95,7 @@ public class BasicObjectParseUtil {
 	}
 	
 	/**
-	 * 瑙ｆ瀽瀛楃鎴愬璞�
+	 * 解析字符成对象
 	 * @param str
 	 * @param objClass
 	 * @return
@@ -104,7 +104,7 @@ public class BasicObjectParseUtil {
 	public static Object parase(String str, Class objClass)throws RuleBugException  {
 		
 		if (!allParsableObject.contains(objClass)) {
-			System.out.println("SOM:eroor! 涓嶆敮鎸佸姝ょ被鍨嬬殑瑙ｆ瀽!");
+			System.out.println("SOM:eroor! 不支持对此类型的解析!");
 			return null;
 		}
 		StringParser stringParsor = (StringParser)objectParsorMap.get(objClass);

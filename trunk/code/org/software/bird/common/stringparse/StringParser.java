@@ -20,27 +20,27 @@ package org.software.bird.common.stringparse;
 import org.software.bird.som.exception.EmptyException;
 
 /**
- * 瀵筍tring绫诲瀷鐨勮В鏋愮被
+ * 对String类型的解析类
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: StringParsor.java,v0.1 2007-12-7 涓嬪崍05:24:57 cyyan Exp$
+ * @version $Id: StringParsor.java,v0.1 2007-12-7 下午05:24:57 cyyan Exp$
  */
 public class StringParser  extends Parser {
 
 	/**
-	 * 瑙ｆ瀽瀛楃涓诧紝涓嶈兘涓虹┖
-	 * @param 瑕佽В鏋愬瓧绗︿覆
-	 * @exception 瀵逛簬null鍜岀┖鐧藉瓧绗︿覆閮借涓烘槸寮傚父
+	 * 解析字符串，不能为空
+	 * @param 要解析字符串
+	 * @exception 对于null和空白字符串都认为是异常
 	 */
 	public Object parse(String str) throws Exception {
 		if (str == null || str.trim().equals("")) {
-			throw new EmptyException("绌虹櫧瀛楃涓插紓甯�");
+			throw new EmptyException("空白字符串异常");
 		}
 		return str;
 	}
 
 	/**
-	 * 涓嶈姝ゆ柟娉�
+	 * 不要此方法
 	 * @deprecated
 	 */
 	public Object parse(String str, String pattern) throws Exception {
@@ -48,7 +48,7 @@ public class StringParser  extends Parser {
 	}
 
 	/**
-	 * 涓嶈姝ゆ柟娉�
+	 * 不要此方法
 	 * 
 	 * @deprecated
 	 */

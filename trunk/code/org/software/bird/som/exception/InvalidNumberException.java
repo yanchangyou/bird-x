@@ -19,10 +19,10 @@ package org.software.bird.som.exception;
 
 
 /**
- * 鏃犳晥鏁板瓧寮傚父
+ * 无效数字异常
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: NuberParseException.java,v0.1 2007-12-7 涓嬪崍04:46:26 cyyan Exp$
+ * @version $Id: NuberParseException.java,v0.1 2007-12-7 下午04:46:26 cyyan Exp$
  */
 public class InvalidNumberException extends BreakRuleException {
 	

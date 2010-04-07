@@ -19,15 +19,15 @@ package org.software.bird.common;
 
 
 /**
- * bird甯搁噺绫�
+ * bird常量类
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: BridConstant.java,v0.1 2007-12-16 涓嬪崍03:02:25 cyyan Exp$
+ * @version $Id: BridConstant.java,v0.1 2007-12-16 下午03:02:25 cyyan Exp$
  */
 public class BirdConstant {
 	
 	/**
-	 * 璺緞鍒嗗壊绗︼紝浣跨敤|鑳藉湪閰嶇疆鏂囦欢涓粺涓�鍒嗗壊绗�
+	 * 路径分割符，使用|能在配置文件中统一分割符
 	 */
 	public final static char separator_char_in_config_file = '|';
 	

@@ -17,32 +17,32 @@
 
 package org.software.bird.common.stringparse;
 /**
- * 瑙ｆ瀽鎺ュ彛
+ * 解析接口
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: Parsable.java,v0.1 2007-12-7 涓嬪崍04:34:24 cyyan Exp$
+ * @version $Id: Parsable.java,v0.1 2007-12-7 下午04:34:24 cyyan Exp$
  */
 public interface Parsable {
  
 	/**
-	 * 鎶婂瓧绗︿覆鐨勮В鏋愭垚瀵硅薄
-	 * @param str 寰呰В鏋愮殑瀛楃涓�
-	 * @return 杩斿洖瑙ｆ瀽鍚庣殑瀵硅薄
-	 * @throws Exception 瑙ｆ瀽杩囩▼鐨勫紓甯�
+	 * 把字符串的解析成对象
+	 * @param str 待解析的字符串
+	 * @return 返回解析后的对象
+	 * @throws Exception 解析过程的异常
 	 */
 	Object parse(String str) throws Exception;
 	
 	/**
-	 * 鎶婂瓧绗︿覆瑙ｆ瀽鎴愬璞″苟瀵瑰畠鎸囧畾鍙傛暟
-	 * @param str 寰呰В鏋愮殑瀛楃涓�
-	 * @param pattern 鏍峰紡
-	 * @return 杩斿洖瑙ｆ瀽鍚庣殑瀵硅薄
-	 * @throws Exception 瑙ｆ瀽杩囩▼鐨勫紓甯�
+	 * 把字符串解析成对象并对它指定参数
+	 * @param str 待解析的字符串
+	 * @param pattern 样式
+	 * @return 返回解析后的对象
+	 * @throws Exception 解析过程的异常
 	 */
 	Object parse(String str, String pattern) throws Exception;
 	
 	/**
-	 * 璁剧疆鏍峰紡
+	 * 设置样式
 	 * @param pattern
 	 */
 	void setPattern(String pattern);

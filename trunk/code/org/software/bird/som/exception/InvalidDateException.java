@@ -19,10 +19,10 @@ package org.software.bird.som.exception;
 
 
 /**
- * 鏃犳晥鏁板紓甯�
+ * 无效数异常
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: DateParseException.java,v0.1 2007-12-7 涓嬪崍04:47:38 cyyan Exp$
+ * @version $Id: DateParseException.java,v0.1 2007-12-7 下午04:47:38 cyyan Exp$
  */
 public class InvalidDateException extends BreakRuleException {
 

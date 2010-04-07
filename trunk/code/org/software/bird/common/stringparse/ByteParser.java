@@ -22,17 +22,17 @@ import org.software.bird.common.exception.OutOfRangeException;
 import org.software.bird.som.exception.InvalidNumberException;
 
 /**
- * 瀵笲yte绫诲瀷鐨勮В鏋愮被
+ * 对Byte类型的解析类
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: t.java,v0.1 2007-12-7 涓嬪崍05:44:50 cyyan Exp$
+ * @version $Id: t.java,v0.1 2007-12-7 下午05:44:50 cyyan Exp$
  */
 
 public class ByteParser extends NumberParser {
 
 	/**
-	 * 瑙ｆ瀽瀛楃涓叉垚瀛楄妭绫诲瀷
-	 * @param string 瑕佽В鏋愮殑瀛楃涓�
+	 * 解析字符串成字节类型
+	 * @param string 要解析的字符串
 	 */
 	public Object parse(String str) throws InvalidNumberException, OutOfRangeException {
 		Number num = (Number) super.parse(str);

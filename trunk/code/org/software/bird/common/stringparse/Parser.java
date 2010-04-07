@@ -17,10 +17,10 @@
 
 package org.software.bird.common.stringparse;
 /**
- * 鎵�鏈夎В鏋愮殑鐖剁被
+ * 所有解析的父类
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: Parsor.java,v0.1 2007-12-7 涓嬪崍05:28:12 cyyan Exp$
+ * @version $Id: Parsor.java,v0.1 2007-12-7 下午05:28:12 cyyan Exp$
  */
 public abstract class Parser implements Parsable {
 	

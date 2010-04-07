@@ -20,14 +20,14 @@ package org.software.bird.rule.ruleparse;
 import org.software.bird.rule.RuleBugException;
 
 /**
- * 瀵筍tring绫诲瀷鐨勮В鏋愮被
+ * 对String类型的解析类
  * 
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: StringParsor.java,v0.1 2007-12-7 涓嬪崍05:24:57 cyyan Exp$
+ * @version $Id: StringParsor.java,v0.1 2007-12-7 下午05:24:57 cyyan Exp$
  */
 public  class StringParser {
 	/**
-	 * 瀛楃瑙ｆ瀽绫�
+	 * 字符解析类
 	 * @param str
 	 * @return
 	 * @throws RuleBugException

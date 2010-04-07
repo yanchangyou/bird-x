@@ -20,16 +20,16 @@ package org.software.bird.rule.ruleparse;
 import org.software.bird.rule.RuleBugException;
 
 /**
- * 瀵笷loat绫诲瀷鐨勮В鏋愮被
+ * 对Float类型的解析类
  * 
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: te.java,v0.1 2007-12-7 涓嬪崍05:44:57 cyyan Exp$
+ * @version $Id: te.java,v0.1 2007-12-7 下午05:44:57 cyyan Exp$
  */
 
 public class FloatParser extends NumberParser {
 	/**
-	 * 鎶婂瓧绗︿覆瑙ｆ瀽鎴怓loat瀵硅薄
-	 * @param 寰呰В鏋愮殑瀛楃涓�
+	 * 把字符串解析成Float对象
+	 * @param 待解析的字符串
 	 */
 	public Object parse(String str) throws RuleBugException {
 		Number num = (Number) super.parse(str);
@@ -41,7 +41,7 @@ public class FloatParser extends NumberParser {
 	}
 	
 	/**
-	 * 鏄惁鍦‵loat鑼冨洿鍐呴儴
+	 * 是否在Float范围内部
 	 * @param Number
 	 */
 	public String getRange() {
@@ -49,8 +49,8 @@ public class FloatParser extends NumberParser {
 	}
 
 	/**
-	 * 鑾峰彇鑼冨洿
-	 * @return 鑼冨洿瀛楃涓�
+	 * 获取范围
+	 * @return 范围字符串
 	 */
 	public boolean isInRange(Number num) {
 		return -Float.MAX_VALUE <= num.doubleValue()

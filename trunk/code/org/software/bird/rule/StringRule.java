@@ -19,55 +19,55 @@ package org.software.bird.rule;
 
 
 /**
- * 瀛楃瑙勫垯绫�
+ * 字符规则类
  * 
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: StringRule.java,v0.1 2007-12-14 涓婂崍08:54:46 cyyan Exp$
+ * @version $Id: StringRule.java,v0.1 2007-12-14 上午08:54:46 cyyan Exp$
  */
 public class StringRule {
 
 	/**
-	 * 鐖惰鍒欏璞�
+	 * 父规则对象
 	 */
 	private StringRule parentStringRule; 
 	
 	/**
-	 * 瑙勫垯鎻忚堪
+	 * 规则描述
 	 */
 	private String description;
 
 	/**
-	 * 鏄惁涓虹┖
+	 * 是否为空
 	 */
 	private boolean emptyable = true;
 
 	/**
-	 * 鍖归厤瀛楃涓�
+	 * 匹配字符串
 	 */
 	private String match;
 
 	/**
-	 * 涓嶅尮閰嶇殑娑堟伅
+	 * 不匹配的消息
 	 */
 	private String message;
 
 	/**
-	 * 琚祴璇曪紝鏍￠獙鐨勫瓧绗︿覆
+	 * 被测试，校验的字符串
 	 */
 	private String testedString;
 	
 	/**
-	 * 娴嬭瘯鏃讹紝鍏堟祴璇曠埗瑙勫垯锛屾祴璇曟柟娉曞涓嬶細<br>
+	 * 测试时，先测试父规则，测试方法如下：<br>
 	 * 
-	 * 鐢ㄨ鍒欏幓娴嬭瘯瀛楃涓� 鏈変袱涓鍒欒妫�鏌� <br>
-	 * 1锛屾槸鍚︿负绌� <br>
-	 * 2锛屾槸鍚︽弧瓒虫鍒欒〃杈惧紡 <br>
+	 * 用规则去测试字符串 有两个规则要检查 <br>
+	 * 1，是否为空 <br>
+	 * 2，是否满足正则表达式 <br>
 	 * 
-	 * 娴嬭瘯涓嶉�氳繃灏嗘姏寮傚父 涓嶉�氳繃鐨勬潯浠跺涓嬶細 <br>
-	 * 1锛屽瓧绗︿覆鏄┖鐨勶紝浣嗚鍒欒鏄庝笉鑳戒负绌� code锛�(isEmpty && !emptyable)<br>
-	 * 2锛屽瓧绗︿覆涓嶄负绌猴紝瑙勫垯涔熶笉涓虹┖锛屼絾涓嶆弧瓒虫鍒欒〃杈惧紡 code锛�(!isEmpty && !isEmptyString(match) && !str.matches(match))<br>
+	 * 测试不通过将抛异常 不通过的条件如下： <br>
+	 * 1，字符串是空的，但规则说明不能为空 code：(isEmpty && !emptyable)<br>
+	 * 2，字符串不为空，规则也不为空，但不满足正则表达式 code：(!isEmpty && !isEmptyString(match) && !str.matches(match))<br>
 	 * 
-	 * 鐗规畩澶勭悊锛氫负浜嗛伩鍏� null 瀛楃涓茬殑鎯呭喌锛屽厛灏� null 杞寲涓� "",浠ヤ究澶勭悊<br>
+	 * 特殊处理：为了避免 null 字符串的情况，先将 null 转化为 "",以便处理<br>
 	 * 
 	 * @param str
 	 * @throws BreakStringRuleException
@@ -78,7 +78,7 @@ public class StringRule {
 
 		if (this.parentStringRule != null) {
 			/**
-			 * try-catch 浣滅敤 鏄妸 鏁翠釜瑙勫垯閫氭姤鍑哄幓锛屽鏋滄病鏈塼ry-catch 瀹冨彧閫氭姤鐖惰鍒�
+			 * try-catch 作用 是把 整个规则通报出去，如果没有try-catch 它只通报父规则
 			 */
 			try {
 				this.parentStringRule.test(testedString);
@@ -92,7 +92,7 @@ public class StringRule {
 	}
 
 	/**
-	 * 鏄惁鏄┖瀛楃涓�
+	 * 是否是空字符串
 	 * @param str
 	 * @return
 	 */
@@ -101,7 +101,7 @@ public class StringRule {
 	}
 
 	/**
-	 * 鎶妌ull澶勭悊鎴�""
+	 * 把null处理成""
 	 * @param str
 	 * @return
 	 */
@@ -110,7 +110,7 @@ public class StringRule {
 	}
 
 	/**
-	 * 鏄惁涓虹┖
+	 * 是否为空
 	 * @return
 	 */
 	public boolean isEmptyable() {
@@ -118,7 +118,7 @@ public class StringRule {
 	}
 
 	/**
-	 * emptyable 鐨刧etter鏂规硶
+	 * emptyable 的getter方法
 	 * @return
 	 */
 	public boolean getEmptyable() {
@@ -126,14 +126,14 @@ public class StringRule {
 	}
 
 	/**
-	 * emptyable 鐨剆etter鏂规硶
+	 * emptyable 的setter方法
 	 * @param emptyable
 	 */
 	public void setEmptyable(boolean emptyable) {
 		this.emptyable = emptyable;
 	}
 	/**
-	 * emptyable 鐨剆etter鏂规硶
+	 * emptyable 的setter方法
 	 * @param emptyable
 	 */
 	public void setEmptyable(String emptyable) {
@@ -165,11 +165,11 @@ public class StringRule {
 	}
 	
 	/**
-	 * 杞崲鎴愬瓧绗︿覆
+	 * 转换成字符串
 	 */
 	public String toString() {
 		StringBuffer buf = new StringBuffer();
-		buf.append("瀛楃涓诧細\n" + testedString + "\n瑙勫垯锛歕n");
+		buf.append("字符串：\n" + testedString + "\n规则：\n");
 		buf.append("{\n");
 		buf.append("\tdescription:" + description + "\n");
 		buf.append("\temptyable:" + emptyable + "\n");
@@ -183,14 +183,14 @@ public class StringRule {
 	}
 
 	/**
-	 * parentStringRule 鐨刧etter鏂规硶
+	 * parentStringRule 的getter方法
 	 * @return StringRule
 	 */
 	public StringRule getParentStringRule() {
 		return parentStringRule;
 	}
 	/**
-	 * parentStringRule 鐨剆etter鏂规硶
+	 * parentStringRule 的setter方法
 	 * @param parentStringRule
 	 */
 	public void setParentStringRule(StringRule parentStringRule) {
@@ -198,7 +198,7 @@ public class StringRule {
 	}
 
 	/**
-	 * testedString鐨� getter鏂规硶
+	 * testedString的 getter方法
 	 * @return
 	 */
 	public String getTestedString() {
@@ -206,7 +206,7 @@ public class StringRule {
 	}
 
 	/**
-	 * testedString 鐨剆etter鏂规硶
+	 * testedString 的setter方法
 	 * @param testedString
 	 */
 	public void setTestedString(String testedString) {

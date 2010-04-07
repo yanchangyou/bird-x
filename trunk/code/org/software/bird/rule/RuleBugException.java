@@ -17,16 +17,16 @@
 
 package org.software.bird.rule;
 /**
- *  瑙勫垯鏈韩鐨勫紓甯�
+ *  规则本身的异常
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: RuleBugException.java,v0.1 2007-12-16 涓嬪崍05:11:31 cyyan Exp$
+ * @version $Id: RuleBugException.java,v0.1 2007-12-16 下午05:11:31 cyyan Exp$
  */
 public class RuleBugException extends Exception {
 
 	private static final long serialVersionUID = -8876172406935676701L;
 	/**
-	 * 瑙勫垯鏈韩鐨勫紓甯�
+	 * 规则本身的异常
 	 * @param message
 	 */
 	public RuleBugException(String message) {
