@@ -17,10 +17,10 @@
 
 package org.software.bird.som.exception;
 /**
- * ±êÌâÃ»ÓĞÕÒµ½Òì³£
+ * éå›¬î•½å¨Œâ„ƒæ¹éµæƒ§åŸŒå¯®å‚šçˆ¶
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: TitleNotFoundException.java,v0.1 2007-12-17 ÉÏÎç10:41:50 cyyan Exp$
+ * @version $Id: TitleNotFoundException.java,v0.1 2007-12-17 æ¶“å©‚å´10:41:50 cyyan Exp$
  */
 public class SheetTitleNotFoundException extends Exception {
 	

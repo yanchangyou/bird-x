@@ -33,38 +33,38 @@ import org.software.bird.som.exception.SheetTitleNotFoundException;
 
 
 /**
- * SOM����Ľӿ��ļ�, SOM���й��ܶ�ͬ�������<br>
- * �÷����£�<br>
- * ExcelIO aExcelIO = new ExcelIO(excel�ļ�);<br>
- * ��excel�ļ�ת��Ϊpoi����,�ݴ����ڴ��еȴ�����<br>
+ * SOM缁勪欢鐨勬帴鍙ｆ枃浠�, SOM鎵�鏈夊姛鑳介兘鍚屾绫昏皟鐢�<br>
+ * 鐢ㄦ硶濡備笅锛�<br>
+ * ExcelIO aExcelIO = new ExcelIO(excel鏂囦欢);<br>
+ * 灏唀xcel鏂囦欢杞崲涓簆oi瀵硅薄,鏆傚瓨浜庡唴瀛樹腑绛夊緟瑙ｆ瀽<br>
  * List list = aExcelIO.readAll(aClass);<br>
- * ����excel,��ת��Ϊlist<br>
+ * 瑙ｆ瀽excel,骞惰浆鎹负list<br>
  * 
- * �����ļ��Ĵ��뷽ʽ��:<br>
- * 1, �ļ��� excelFileName<br>
- * 2, �ļ����� excelFile<br>
- * 3, �ļ������� excelInputStream<br>
+ * 瀵逛簬鏂囦欢鐨勪紶鍏ユ柟寮忔湁:<br>
+ * 1, 鏂囦欢鍚� excelFileName<br>
+ * 2, 鏂囦欢瀵硅薄 excelFile<br>
+ * 3, 鏂囦欢杈撳叆娴� excelInputStream<br>
  * 
- * ��excel�ж�ȡ���������з�ʽ��<br>
- * 1, �����ȡ<br>
- * 2, �����sheet����ȡ<br>
+ * 浠巈xcel涓鍙栧璞℃湁涓嬪垪鏂瑰紡锛�<br>
+ * 1, 鎸夌被璇诲彇<br>
+ * 2, 鎸夌被鍜宻heet鍚嶈鍙�<br>
  * 
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: ConvertUtil.java,v0.1 2007-12-6 ����01:47:14 cyyan Exp$
+ * @version $Id: ConvertUtil.java,v0.1 2007-12-6 涓嬪崍01:47:14 cyyan Exp$
  */
 public class ExcelIO {
 
 	/**
-	 * excelIO�����࣬ ���ԵĲ�����ת����excelIODelegation����
+	 * excelIO浠ｇ悊绫伙紝 鎵�浠ョ殑鎿嶄綔閮借浆浜や釜excelIODelegation鏉ュ仛
 	 */
 	private ExcelIODelegation excelIODelegation;
 
 	/**
-	 * excel���쳣��Ϣ����һ���н��Ľ�
+	 * excel鐨勫紓甯镐俊鎭紝涓嬩竴鐗堜腑灏嗘敼杩�
 	 */
-	public static String excel_read_exception_message = "excelû�ҵ�������, ����";
+	public static String excel_read_exception_message = "excel娌℃壘鍒版垨宸叉崯鍧�, 璇锋鏌�";
 	/**
-	 * ͨ���ļ�������excel�ļ�
+	 * 閫氳繃鏂囦欢鍚嶄紶閫抏xcel鏂囦欢
 	 * @param excelFileName
 	 * @throws Exception
 	 */
@@ -73,7 +73,7 @@ public class ExcelIO {
 	}
 
 	/**
-	 * ͨ���ļ����󴫵�excel�ļ�
+	 * 閫氳繃鏂囦欢瀵硅薄浼犻�抏xcel鏂囦欢
 	 * @param excelFile
 	 * @throws Exception
 	 */
@@ -82,7 +82,7 @@ public class ExcelIO {
 	}
 
 	/**
-	 * ͨ����������󴫵�excel�ļ�, ��web���ڳ��ô˷�ʽ
+	 * 閫氳繃娴佸璞″璞′紶閫抏xcel鏂囦欢, 鍦╳eb鐢ㄤ簬甯哥敤姝ゆ柟寮�
 	 * @param excelInputStream
 	 * @throws InvalidExcelFileException
 	 */
@@ -106,10 +106,10 @@ public class ExcelIO {
 	
 	/**
 	 * 
-	 * ����excel�ķ�ʽ1
-	 * ֻʹ����, ���Ӧ�ı����������ļ���
+	 * 瑙ｆ瀽excel鐨勬柟寮�1
+	 * 鍙娇鐢ㄧ被, 绫诲搴旂殑琛ㄥ崟鍦ㄩ厤缃枃浠朵腑
 	 * 
-	 * @param objClass Ŀ��������
+	 * @param objClass 鐩爣瀵硅薄鐨勭被
 	 * @return
 	 * @throws SheetNotFoundException
 	 * @throws BreakStringRuleException
@@ -122,8 +122,8 @@ public class ExcelIO {
 	}
 	
 	/**
-	 * ����excel�ķ�ʽ2
-	 * ֱ��ָ����������
+	 * 瑙ｆ瀽excel鐨勬柟寮�2
+	 * 鐩存帴鎸囧畾琛ㄥ崟鍚嶇О
 	 * 
 	 * @param sheetName
 	 * @param objClass
@@ -139,7 +139,7 @@ public class ExcelIO {
 	}
 
 	/**
-	 * δʵ��
+	 * 鏈疄鐜�
 	 * @param obj
 	 * @return
 	 */
@@ -148,7 +148,7 @@ public class ExcelIO {
 	}
 
 	/**
-	 * δʵ��
+	 * 鏈疄鐜�
 	 * @param obj
 	 * @return
 	 * @throws NotUniqueException
@@ -157,14 +157,14 @@ public class ExcelIO {
 		return null;
 	}
 	/**
-	 * δʵ��
+	 * 鏈疄鐜�
 	 * @param objList
 	 */
 	public void write(List objList) {
 		
 	}
 	/**
-	 * δʵ��
+	 * 鏈疄鐜�
 	 * @param obj
 	 */
 	public void write(Object obj) {

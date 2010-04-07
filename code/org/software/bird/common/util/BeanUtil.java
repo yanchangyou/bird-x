@@ -20,15 +20,15 @@ package org.software.bird.common.util;
 import java.lang.reflect.Method;
 
 /**
- * ´¦ÀíbeanµÄÊ¹ÓÃÀà
+ * æ¾¶å‹­æ‚Šbeané¨å‹ªå¨‡é¢ã„§è¢«
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: BeanUtil.java,v0.1 2007-12-14 ÏÂÎç05:35:29 cyyan Exp$
+ * @version $Id: BeanUtil.java,v0.1 2007-12-14 æ¶“å¬ªå´05:35:29 cyyan Exp$
  */
 public class BeanUtil {
 
 	/**
-	 * ÉèÖÃbeanµÄÊôĞÔÖµ
+	 * ç’å‰§ç–†beané¨å‹«ç˜é¬Ñƒï¿½ï¿½
 	 * @param obj
 	 * @param property
 	 * @param value
@@ -47,7 +47,7 @@ public class BeanUtil {
 	}
 	
 	/**
-	 * »ñÈ¡beanÊôĞÔµÄÀàÀàĞÍ
+	 * é‘¾å³°å½‡beançç‚´ï¿½Ñ…æ®‘ç»«è¤è¢«é¨ï¿½
 	 * @param obj
 	 * @param property
 	 * @return

@@ -32,15 +32,15 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 /**
- * ½âÎöxmlÎÄ¼şµÄ³£ÓÃº¯Êı
+ * ç‘™ï½†ç€½xmlé‚å›¦æ¬¢é¨å‹«çˆ¶é¢ã„¥åš±éï¿½
  * 
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: XMLUtil.java,v0.1 2007-12-6 ÏÂÎç01:46:58 cyyan Exp$
+ * @version $Id: XMLUtil.java,v0.1 2007-12-6 æ¶“å¬ªå´01:46:58 cyyan Exp$
  */
 public class XMLUtil {
 
 	/**
-	 * °´Ãû»ñÈ¡½Úµã
+	 * é¸å¤Šæ‚•é‘¾å³°å½‡é‘ºå‚œå£
 	 * @param xmlDocument
 	 * @param tagName
 	 * @param nodeNameValue
@@ -62,7 +62,7 @@ public class XMLUtil {
 	}
 
 	/**
-	 * »ñÈ¡½ÚµãµÄÊôĞÔÖµ
+	 * é‘¾å³°å½‡é‘ºå‚œå£é¨å‹«ç˜é¬Ñƒï¿½ï¿½
 	 * @param node
 	 * @param propertyName
 	 * @return
@@ -78,7 +78,7 @@ public class XMLUtil {
 	}
 
 	/**
-	 * ½âÎöÅäÖÃÁ÷³ÉpoiµÄDocument¶ÔÏó
+	 * ç‘™ï½†ç€½é–°å¶‡ç–†å¨´ä½¹åšpoié¨å‡ocumentç€µç¡…è–„
 	 * @param configFileInputStream
 	 * @return
 	 * @throws FactoryConfigurationError

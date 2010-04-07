@@ -21,7 +21,7 @@ package test;
  * Class description goes here.
  * 
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: StringTypeTest.java,v0.1 2007-12-12 ÏÂÎç09:47:44 cyyan Exp$
+ * @version $Id: StringTypeTest.java,v0.1 2007-12-12 ä¸‹åˆ09:47:44 cyyan Exp$
  */
 public class StringTypeTest {
 

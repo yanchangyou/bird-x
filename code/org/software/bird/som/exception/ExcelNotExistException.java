@@ -17,10 +17,10 @@
 
 package org.software.bird.som.exception;
 /**
- * excelÎÄ¼ş²»´æÔÚµÄÒì³£
+ * excelé‚å›¦æ¬¢æ¶“å¶…ç“¨é¦ã„§æ®‘å¯®å‚šçˆ¶
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: ExcelNotExistException.java,v0.1 2007-12-17 ÉÏÎç09:20:03 cyyan Exp$
+ * @version $Id: ExcelNotExistException.java,v0.1 2007-12-17 æ¶“å©‚å´09:20:03 cyyan Exp$
  */
 public class ExcelNotExistException extends Exception {
 

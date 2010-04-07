@@ -26,17 +26,17 @@ import org.software.bird.som.exception.InvalidDateException;
 
 
 /**
- * ¶ÔTimestampÀàĞÍµÄ½âÎöÀà
+ * ç€µç­imestampç»«è¯²ç€·é¨å‹®Ğ’é‹æ„®è¢«
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: TimestampParsor.java,v0.1 2007-12-7 ÏÂÎç05:54:50 cyyan Exp$
+ * @version $Id: TimestampParsor.java,v0.1 2007-12-7 æ¶“å¬ªå´05:54:50 cyyan Exp$
  */
 public class TimestampParser extends DateParser {
 
 	/**
-	 * °Ñ×Ö·û´®½âÎö³ÉTimestampParser¶ÔÏó
-	 * @param dateStr ´ı½âÎöµÄ×Ö·û´®
-	 * @exception ÎŞĞ§ÈÕÆÚÒì³£
+	 * é¶å©‚ç“§ç»—ï¸¿è¦†ç‘™ï½†ç€½é´æ€²imestampParserç€µç¡…è–„
+	 * @param dateStr å¯°å‘°Ğ’é‹æ„®æ®‘ç€›æ¥ƒîƒæ¶“ï¿½
+	 * @exception éƒçŠ³æ™¥éƒãƒ¦æ¹¡å¯®å‚šçˆ¶
 	 */
 	public Object parse(String dateStr) throws InvalidDateException{
 		Date date = (Date)super.parse(dateStr);

@@ -21,7 +21,7 @@ package test;
  * Class description goes here.
  * 
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: NumberTypeTest.java,v0.1 2007-12-12 ÏÂÎç05:52:43 cyyan Exp$
+ * @version $Id: NumberTypeTest.java,v0.1 2007-12-12 ä¸‹åˆ05:52:43 cyyan Exp$
  */
 public class NumberTypeTest {
 	private Byte byteVar;

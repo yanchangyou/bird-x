@@ -17,21 +17,21 @@
 
 package org.software.bird.rule;
 /**
- * ÆÆ»µ¹æÔòµÄÒì³£
+ * é®æ‘æ½–ç‘™å‹«å¯é¨å‹«ç´“ç”¯ï¿½
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: BreakStringRuleException.java,v0.1 2007-12-14 ÉÏÎç08:57:03 cyyan Exp$
+ * @version $Id: BreakStringRuleException.java,v0.1 2007-12-14 æ¶“å©‚å´08:57:03 cyyan Exp$
  */
 public class BreakStringRuleException extends Exception {
 	
 	private static final long serialVersionUID = -4115377227500062678L;
 	
 	/**
-	 * ×Ö·û¹æÔò
+	 * ç€›æ¥ƒîƒç‘™å‹«å¯
 	 */
 	private StringRule stringRule;
 	/**
-	 * getter·½·¨
+	 * getteré‚è§„ç¡¶
 	 * @return
 	 */
 	public StringRule getStringRule() {
@@ -39,7 +39,7 @@ public class BreakStringRuleException extends Exception {
 	}
 
 	/**
-	 * setter·½·¨
+	 * setteré‚è§„ç¡¶
 	 * @param stringRule
 	 */
 	public void setStringRule(StringRule stringRule) {
@@ -47,15 +47,15 @@ public class BreakStringRuleException extends Exception {
 	}
 
 	/**
-	 * ¹æÔòÒì³£
-	 * @param msg Òì³£ÏûÏ¢
+	 * ç‘™å‹«å¯å¯®å‚šçˆ¶
+	 * @param msg å¯®å‚šçˆ¶å¨‘å Ÿä¼…
 	 */
 	public BreakStringRuleException(String msg) {
 		super(msg);
 	}
 	
 	/**
-	 * ¹æÔòÒì³£
+	 * ç‘™å‹«å¯å¯®å‚šçˆ¶
 	 * @param stringRule
 	 */
 	public BreakStringRuleException(StringRule stringRule) {

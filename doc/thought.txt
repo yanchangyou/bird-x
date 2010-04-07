@@ -96,7 +96,7 @@ date
 true
 
 
-ÀàÐÍ¼ì²é
+ç±»åž‹æ£€æŸ¥
 nullable
 emptyable
 spaceable
@@ -110,23 +110,23 @@ spaceable
 outer
 inner
 
-=============layer0:Ô­Ê¼Êý¾Ý=================
+=============layer0:åŽŸå§‹æ•°æ®=================
 
-=============layer1:×Ö·û´®Êý×é=================
+=============layer1:å­—ç¬¦ä¸²æ•°ç»„=================
 table
 {
-	{property[N]}£¬
-	{value[N]}£¬
-	{value[N]}£¬
+	{property[N]}ï¼Œ
+	{value[N]}ï¼Œ
+	{value[N]}ï¼Œ
 	{value[N]}
 }
 
-============layer2:¶ÔÏó==================
+============layer2:å¯¹è±¡==================
 
-ÓÉ layer1-->layer2
-¾­¹ý Ð£Ñé ºÍ ×ª»»
+ç”± layer1-->layer2
+ç»è¿‡ æ ¡éªŒ å’Œ è½¬æ¢
 
-¹æ¶¨ title±ØÐë×ª»»Î»ÊôÐÔÃû³Æ
+è§„å®š titleå¿…é¡»è½¬æ¢ä½å±žæ€§åç§°
 
 
 
@@ -230,31 +230,31 @@ CheckFieldResult
 CheckTableResult
 
 
-====Ö§³ÖÁ½ÖÖ½á¹¹=========
+====æ”¯æŒä¸¤ç§ç»“æž„=========
 Table
-¾ßÓÐTree½á¹¹µÄTable£¨ÔÚÄ³¸ö×Ö¶Î¾ßÓÐTree½á¹¹µÄº¬ÓÐ£¬±ÈÈçlevelCode£©
+å…·æœ‰Treeç»“æž„çš„Tableï¼ˆåœ¨æŸä¸ªå­—æ®µå…·æœ‰Treeç»“æž„çš„å«æœ‰ï¼Œæ¯”å¦‚levelCodeï¼‰
 
-===Á½ÖÖ´¦Àí·½Ê½========
-ÊäÈë
-Êä³ö
+===ä¸¤ç§å¤„ç†æ–¹å¼========
+è¾“å…¥
+è¾“å‡º
 
 
-ÊäÈë excel----×ª»»·â×°----> table ----Ð£Ñé----> list
-Êä³ö list ---×ª»»·â×°----> table ----¸½¼Ó¸ñÊ½---> excel
+è¾“å…¥ excel----è½¬æ¢å°è£…----> table ----æ ¡éªŒ----> list
+è¾“å‡º list ---è½¬æ¢å°è£…----> table ----é™„åŠ æ ¼å¼---> excel
 
 
 
 sheet2table(excel)
 
 
-Êý¾ÝÀàÐÍµÄ×ª»»
+æ•°æ®ç±»åž‹çš„è½¬æ¢
 
 
-¿ÉÒÔÐ¡ÐÄ¿ØÖÆµÄ´íÎó
+å¯ä»¥å°å¿ƒæŽ§åˆ¶çš„é”™è¯¯
 
 
 
-¹æÔòÇý¶¯
+è§„åˆ™é©±åŠ¨
 
 
 <soa>
@@ -285,21 +285,21 @@ sheet2table(excel)
 </pipeline>
 
 
-ÓîÖæ.ÐÇÏµ.ÒøºÓÏµ.Ì«ÑôÏµÍ³.µØÇòÏµ.µØÇò.µØ¡£
-ÓîÖæ¡£ÎïÖÊ¡£
+å®‡å®™.æ˜Ÿç³».é“¶æ²³ç³».å¤ªé˜³ç³»ç»Ÿ.åœ°çƒç³».åœ°çƒ.åœ°ã€‚
+å®‡å®™ã€‚ç‰©è´¨ã€‚
 
-<ÓîÖæ>
+<å®‡å®™>
 </
 
 
-<·þÎñ>
-	<¾²Ì¬·þÎñ>
-		·½·¨µ÷ÓÃ
-	</¾²Ì¬·þÎñ>
-	<¶¯Ì¬·þÎñ>
-		ÍøÂçÇëÇó
-	</¶¯Ì¬·þÎñ>
-</·þÎñ>
+<æœåŠ¡>
+	<é™æ€æœåŠ¡>
+		æ–¹æ³•è°ƒç”¨
+	</é™æ€æœåŠ¡>
+	<åŠ¨æ€æœåŠ¡>
+		ç½‘ç»œè¯·æ±‚
+	</åŠ¨æ€æœåŠ¡>
+</æœåŠ¡>
 <pipeline>
 	
 

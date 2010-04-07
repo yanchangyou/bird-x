@@ -17,10 +17,10 @@
 
 package org.software.bird.som.exception;
 /**
- * ³¬¹ı×î´ó·¶Î§Òì³£
+ * ç“’å‘°ç¹ƒéˆï¿½æ¾¶Ñ†å¯–é¥æ‘ç´“ç”¯ï¿½
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: OutOfRangeException.java,v0.1 2007-12-7 ÏÂÎç05:36:29 cyyan Exp$
+ * @version $Id: OutOfRangeException.java,v0.1 2007-12-7 æ¶“å¬ªå´05:36:29 cyyan Exp$
  */
 public class OutOfRangeException extends Exception {
 	private static final long serialVersionUID = -9168063220958409888L;

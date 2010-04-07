@@ -17,17 +17,17 @@
 
 package org.software.bird.common.exception;
 /**
- * ¿ÕÒì³£
+ * ç»Œå“„ç´“ç”¯ï¿½
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: EmptyException.java,v0.1 2007-12-7 ÏÂÎç04:48:51 cyyan Exp$
+ * @version $Id: EmptyException.java,v0.1 2007-12-7 æ¶“å¬ªå´04:48:51 cyyan Exp$
  */
 public class EmptyException extends Exception {
 
 	private static final long serialVersionUID = 9207572284932525151L;
 	/**
-	 * ¹¹Ôì·½·¨
-	 * @param string Òì³£ĞÅÏ¢
+	 * é‹å‹¯ï¿½çŠ³æŸŸå¨‰ï¿½
+	 * @param string å¯®å‚šçˆ¶æ·‡â„ƒä¼…
 	 */
 	public EmptyException(String string) {
 		super(string);

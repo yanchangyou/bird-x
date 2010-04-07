@@ -17,15 +17,15 @@
 
 package org.software.bird.som.util;
 /**
- * ÊµÏÖ»ù±¾µÄ¼ì²é
+ * ç€¹ç‚µå¹‡é©çƒ˜æ¹°é¨å‹¬î—‘éŒï¿½
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: Checkor.java,v0.1 2007-12-7 ÏÂÎç07:04:53 cyyan Exp$
+ * @version $Id: Checkor.java,v0.1 2007-12-7 æ¶“å¬ªå´07:04:53 cyyan Exp$
  */
 public class CheckeUtil {
 
 	/**
-	 * ÊÇ·ñÊÇ¿Õ×Ö·û´®
+	 * é„îˆšæƒé„îˆœâ”–ç€›æ¥ƒîƒæ¶“ï¿½
 	 * @param string
 	 * @return
 	 */
@@ -34,7 +34,7 @@ public class CheckeUtil {
 	}
 	
 	/**
-	 * ÊÇ·ñ³¬¹ı×î´ó³¤¶È
+	 * é„îˆšæƒç“’å‘°ç¹ƒéˆï¿½æ¾¶Ñ‡æš±æ´ï¿½
 	 * @param string
 	 * @param length
 	 * @return

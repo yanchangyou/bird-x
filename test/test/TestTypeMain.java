@@ -33,13 +33,13 @@ import org.software.bird.som.exception.SheetTitleNotFoundException;
  * Class description goes here.
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: TestTypeMain.java,v0.1 2008-1-16 下午08:05:20 cyyan Exp$
+ * @version $Id: TestTypeMain.java,v0.1 2008-1-16 涓嬪崍08:05:20 cyyan Exp$
  */
 public class TestTypeMain {
 
 	public static void main(String[] args) {		
 		
-		String fileName = "测试.xls";		
+		String fileName = "娴嬭瘯.xls";		
 		InputStream inputStream = CommonUtil.getInputStreamBySourceName(fileName);
 		
 		try {
@@ -58,7 +58,7 @@ public class TestTypeMain {
 			System.out.println(e.getCause());
 			String msg = e.getMessage();
 			msg = msg == null ? "" : msg;
-			System.out.println("\n错误信息如下：\n" + msg.replaceAll("<BR>", "\n"));
+			System.out.println("\n閿欒淇℃伅濡備笅锛歕n" + msg.replaceAll("<BR>", "\n"));
 			//e.printStackTrace();
 		} catch (SheetTitleNotFoundException e) {
 			System.out.println(e.getMessage());

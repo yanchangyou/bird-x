@@ -17,18 +17,18 @@
 
 package org.software.bird.common.exception;
 /**
- * ²»Î¨Ò»Òì³£
+ * æ¶“å¶…æ•®æ¶“ï¿½å¯®å‚šçˆ¶
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: NotUniqueException.java,v0.1 2007-12-8 ÉÏÎç11:58:36 cyyan Exp$
+ * @version $Id: NotUniqueException.java,v0.1 2007-12-8 æ¶“å©‚å´11:58:36 cyyan Exp$
  */
 public class NotUniqueException  extends Exception {
 	
 	private static final long serialVersionUID = -4126768831286909445L;
 
 	/**
-	 * ¹¹Ôì·½·¨
-	 * @param string Òì³£ĞÅÏ¢
+	 * é‹å‹¯ï¿½çŠ³æŸŸå¨‰ï¿½
+	 * @param string å¯®å‚šçˆ¶æ·‡â„ƒä¼…
 	 */
 	public NotUniqueException(String string) {
 		super(string);

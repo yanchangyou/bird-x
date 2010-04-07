@@ -1,7 +1,7 @@
-°´ÕÕexcelµÄsheetÄ£°å£¬
-Ğ´³ö¶ÔÓ¦µÄObject
-ÆäÖĞsheetµÄÒ»¸ötitle¶ÔÓ¦¶ÔÓ¦ObjectµÄproperty£¬
-Í¨¹ıÅäÖÃÎÄ¼şsom½«ËüÃÇÒ»Ò»¶ÔÓ¦ÆğÀ´£¬
-È»ºó¶ÁÈ¡excel¿ªÊ¼Ó³Éä
+æŒ‰ç…§excelçš„sheetæ¨¡æ¿ï¼Œ
+å†™å‡ºå¯¹åº”çš„Object
+å…¶ä¸­sheetçš„ä¸€ä¸ªtitleå¯¹åº”å¯¹åº”Objectçš„propertyï¼Œ
+é€šè¿‡é…ç½®æ–‡ä»¶somå°†å®ƒä»¬ä¸€ä¸€å¯¹åº”èµ·æ¥ï¼Œ
+ç„¶åè¯»å–excelå¼€å§‹æ˜ å°„
 
-ÔÚio.excel.test.integrateTest.TestMainÖĞÓĞ¼¸¸ö²âÊÔÓÃÀı£º
+åœ¨io.excel.test.integrateTest.TestMainä¸­æœ‰å‡ ä¸ªæµ‹è¯•ç”¨ä¾‹ï¼š

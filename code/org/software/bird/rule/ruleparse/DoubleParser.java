@@ -20,17 +20,17 @@ package org.software.bird.rule.ruleparse;
 import org.software.bird.rule.RuleBugException;
 
 /**
- * ¶ÔDoubleÀàĞÍµÄ½âÎöÀà
+ * ç€µç¬µoubleç»«è¯²ç€·é¨å‹®Ğ’é‹æ„®è¢«
  * 
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: asdfasd.java,v0.1 2007-12-7 ÏÂÎç05:45:11 cyyan Exp$
+ * @version $Id: asdfasd.java,v0.1 2007-12-7 æ¶“å¬ªå´05:45:11 cyyan Exp$
  */
 
 public class DoubleParser extends NumberParser {
 
 	/**
-	 * °Ñ×Ö·û´®½âÎö³ÉDouble¶ÔÏó
-	 * @param ´ı½âÎöµÄ×Ö·û´®
+	 * é¶å©‚ç“§ç»—ï¸¿è¦†ç‘™ï½†ç€½é´æ€oubleç€µç¡…è–„
+	 * @param å¯°å‘°Ğ’é‹æ„®æ®‘ç€›æ¥ƒîƒæ¶“ï¿½
 	 */
 	public Object parse(String str) throws RuleBugException {
 		Number num = (Number) super.parse(str);
@@ -43,7 +43,7 @@ public class DoubleParser extends NumberParser {
 	}
 
 	/**
-	 * ÊÇ·ñÔÚDouble·¶Î§ÄÚ²¿
+	 * é„îˆšæƒé¦â€•oubleé‘¼å†¨æ´¿éå‘´å„´
 	 * @param Number
 	 */
 	public boolean isInRange(Number num) {
@@ -52,8 +52,8 @@ public class DoubleParser extends NumberParser {
 	}
 
 	/**
-	 * »ñÈ¡·¶Î§
-	 * @return ·¶Î§×Ö·û´®
+	 * é‘¾å³°å½‡é‘¼å†¨æ´¿
+	 * @return é‘¼å†¨æ´¿ç€›æ¥ƒîƒæ¶“ï¿½
 	 */
 	public String getRange() {
 		return "[" + -Double.MAX_VALUE + "," + Double.MAX_VALUE + "]";

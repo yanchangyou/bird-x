@@ -17,10 +17,10 @@
 
 package org.software.bird.som.exception;
 /**
- * ²»Î¨Ò»Òì³£
+ * æ¶“å¶…æ•®æ¶“ï¿½å¯®å‚šçˆ¶
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: NotUniqueException.java,v0.1 2007-12-8 ÉÏÎç11:58:36 cyyan Exp$
+ * @version $Id: NotUniqueException.java,v0.1 2007-12-8 æ¶“å©‚å´11:58:36 cyyan Exp$
  */
 public class NotUniqueException  extends Exception {
 	

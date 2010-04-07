@@ -20,18 +20,18 @@ package org.software.bird.rule.ruleparse;
 import org.software.bird.rule.RuleBugException;
 
 /**
- * ¶ÔSQLÀàĞÍµÄ½âÎöÀà
+ * ç€µç­QLç»«è¯²ç€·é¨å‹®Ğ’é‹æ„®è¢«
  * 
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: SQLDateParsor.java,v0.1 2007-12-7 ÏÂÎç05:54:32 cyyan Exp$
+ * @version $Id: SQLDateParsor.java,v0.1 2007-12-7 æ¶“å¬ªå´05:54:32 cyyan Exp$
  */
 public class SQLDateParser extends DateParser {
 
 	/**
-	 * ½âÎö³ÉÈÕÆÚ¶ÔÏó
+	 * ç‘™ï½†ç€½é´æ„­æ£©éˆç†·î‡®ç’ï¿½
 	 * 
-	 * @param dateStr ´ı½âÎöµÄ×Ö·û´®
-	 * @return ÈÕÆÚ¶ÔÏó
+	 * @param dateStr å¯°å‘°Ğ’é‹æ„®æ®‘ç€›æ¥ƒîƒæ¶“ï¿½
+	 * @return éƒãƒ¦æ¹¡ç€µç¡…è–„
 	 */
 	public Object parse(String dateStr) throws RuleBugException {
 		java.util.Date date = (java.util.Date) super.parse(dateStr);

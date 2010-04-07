@@ -39,10 +39,10 @@ import org.software.bird.som.exception.UnsupportedParseException;
 
 
 /**
- * »ù±¾ÀàĞÍµÄ½âÎö
+ * é©çƒ˜æ¹°ç»«è¯²ç€·é¨å‹®Ğ’é‹ï¿½
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: BasicObjectFormat.java,v0.1 2007-12-7 ÏÂÎç04:03:41 cyyan Exp$
+ * @version $Id: BasicObjectFormat.java,v0.1 2007-12-7 æ¶“å¬ªå´04:03:41 cyyan Exp$
  */
 public class BasicObjectParseUtil {
 	
@@ -77,7 +77,7 @@ public class BasicObjectParseUtil {
 		objectParsorMap.put(java.sql.Timestamp.class, new TimestampParser());
 	}
 	/**
-	 * ½âÎö×Ö·û³É¶ÔÏó
+	 * ç‘™ï½†ç€½ç€›æ¥ƒîƒé´æ„¬î‡®ç’ï¿½
 	 * @param str
 	 * @param pattern
 	 * @param objClass
@@ -95,7 +95,7 @@ public class BasicObjectParseUtil {
 	}
 	
 	/**
-	 * ½âÎö×Ö·û³É¶ÔÏó
+	 * ç‘™ï½†ç€½ç€›æ¥ƒîƒé´æ„¬î‡®ç’ï¿½
 	 * @param str
 	 * @param objClass
 	 * @return
@@ -104,7 +104,7 @@ public class BasicObjectParseUtil {
 	public static Object parase(String str, Class objClass)throws RuleBugException  {
 		
 		if (!allParsableObject.contains(objClass)) {
-			System.out.println("SOM:eroor! ²»Ö§³Ö¶Ô´ËÀàĞÍµÄ½âÎö!");
+			System.out.println("SOM:eroor! æ¶“å¶†æ•®é¸ä½¸î‡®å§ã‚‡è¢«é¨å¬¬æ®‘ç‘™ï½†ç€½!");
 			return null;
 		}
 		StringParser stringParsor = (StringParser)objectParsorMap.get(objClass);

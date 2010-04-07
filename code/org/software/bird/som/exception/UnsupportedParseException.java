@@ -17,10 +17,10 @@
 
 package org.software.bird.som.exception;
 /**
- * ²»Ö§³Ö½âÎöµÄÒì³£
+ * æ¶“å¶†æ•®é¸ä½½Ğ’é‹æ„®æ®‘å¯®å‚šçˆ¶
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: UnParseException.java,v0.1 2007-12-7 ÏÂÎç06:16:47 cyyan Exp$
+ * @version $Id: UnParseException.java,v0.1 2007-12-7 æ¶“å¬ªå´06:16:47 cyyan Exp$
  */
 public class UnsupportedParseException extends UnsurportException {
 

@@ -17,10 +17,10 @@
 
 package org.software.bird.som.exception;
 /**
- * ¹æÔòÒì³£
+ * ç‘™å‹«å¯å¯®å‚šçˆ¶
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: RuleException.java,v0.1 2007-12-8 ÏÂÎç05:05:08 cyyan Exp$
+ * @version $Id: RuleException.java,v0.1 2007-12-8 æ¶“å¬ªå´05:05:08 cyyan Exp$
  */
 public class RuleException  extends Exception {
 

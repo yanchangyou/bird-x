@@ -17,10 +17,10 @@
 
 package org.software.bird.som.exception;
 /**
- * excelÎÄ¼şÃ»ÓĞÕÒµ½µÄÒì³£
+ * excelé‚å›¦æ¬¢å¨Œâ„ƒæ¹éµæƒ§åŸŒé¨å‹«ç´“ç”¯ï¿½
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: ExcelFileNotFoundException.java,v0.1 2007-12-8 ÏÂÎç06:23:43 cyyan Exp$
+ * @version $Id: ExcelFileNotFoundException.java,v0.1 2007-12-8 æ¶“å¬ªå´06:23:43 cyyan Exp$
  */
 public class ExcelFileNotFoundException extends Exception {
 

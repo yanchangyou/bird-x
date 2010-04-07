@@ -17,10 +17,10 @@
 
 package org.software.bird.common.stringparse;
 /**
- * ËùÓĞ½âÎöµÄ¸¸Àà
+ * éµï¿½éˆå¤Ğ’é‹æ„®æ®‘é–å‰è¢«
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: Parsor.java,v0.1 2007-12-7 ÏÂÎç05:28:12 cyyan Exp$
+ * @version $Id: Parsor.java,v0.1 2007-12-7 æ¶“å¬ªå´05:28:12 cyyan Exp$
  */
 public abstract class Parser implements Parsable {
 	

@@ -27,37 +27,37 @@ import org.software.bird.som.exception.InvalidDateException;
 
 
 /**
- * ¶ÔDateÀàĞÍµÄ½âÎöÀà
+ * ç€µç¬µateç»«è¯²ç€·é¨å‹®Ğ’é‹æ„®è¢«
  * 
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: DateParsor.java,v0.1 2007-12-7 ÏÂÎç05:24:04 cyyan Exp$
+ * @version $Id: DateParsor.java,v0.1 2007-12-7 æ¶“å¬ªå´05:24:04 cyyan Exp$
  */
 public class DateParser extends Parser {
 
 	/**
-	 * ÈÕÇ°¸ñÊ½ yyyy-MM-dd
+	 * éƒãƒ¥å¢ éç…ç´¡ yyyy-MM-dd
 	 */
 	final private String DATE_PATTERN = "yyyy-MM-dd"; 
 	/**
-	 * ÈÕÇ°¸ñÊ½¶ÔÏóÓÃÓÚ¸ñÊ½ÈÕÇ°
+	 * éƒãƒ¥å¢ éç…ç´¡ç€µç¡…è–„é¢ã„¤ç°¬éç…ç´¡éƒãƒ¥å¢ 
 	 */
 	public static SimpleDateFormat DATE_FORMAT;
 
 	/**
-	 * ÈÕÇ°¸ñÊ½ÑùÊ½
+	 * éƒãƒ¥å¢ éç…ç´¡éå³°ç´¡
 	 */
 	private String pattern;
 	
 	/**
-	 * ÈÕÇ°¸ñÊ½½âÎöÀà¹¹Ôì·½·¨---Ö¸¶¨ÑùÊ½
-	 * @param pattern ¸ñÊ½ÑùÊ½
+	 * éƒãƒ¥å¢ éç…ç´¡ç‘™ï½†ç€½ç»«ç»˜ç€¯é–«çŠ³æŸŸå¨‰ï¿½---é¸å›§ç•¾éå³°ç´¡
+	 * @param pattern éç…ç´¡éå³°ç´¡
 	 */
 	public DateParser(String pattern) {
 		this.pattern = pattern;
 		DATE_FORMAT = new SimpleDateFormat(pattern);
 	}
 	/**
-	 * ÈÕÇ°¸ñÊ½½âÎöÀà¹¹Ôì·½·¨---Ê¹ÓÃÈ±Ê¡µÄÈÕÇ°ÑùÊ½ yyyy-MM-dd
+	 * éƒãƒ¥å¢ éç…ç´¡ç‘™ï½†ç€½ç»«ç»˜ç€¯é–«çŠ³æŸŸå¨‰ï¿½---æµ£è·¨æ•¤ç¼‚è™¹æ¸·é¨å‹¬æ£©é“å¶†ç‰±å¯®ï¿½ yyyy-MM-dd
 	 *
 	 */
 	public DateParser() {
@@ -65,8 +65,8 @@ public class DateParser extends Parser {
 	}
 
 	/**
-	 * ½âÎöÈÕÇ°×Ö·û´®
-	 * @param dateStr Òª½âÎöµÄÈÕÇ°×Ö·û´®
+	 * ç‘™ï½†ç€½éƒãƒ¥å¢ ç€›æ¥ƒîƒæ¶“ï¿½
+	 * @param dateStr ç‘•ä½½Ğ’é‹æ„®æ®‘éƒãƒ¥å¢ ç€›æ¥ƒîƒæ¶“ï¿½
 	 */
 	public Object parse(String dateStr) throws InvalidDateException {
 		Date date = null;
@@ -79,25 +79,25 @@ public class DateParser extends Parser {
 	}
 
 	/**
-	 * »ñÈ¡ÑùÊ½
-	 * @return ÈÕÇ°ÑùÊ½×Ö·û´®
+	 * é‘¾å³°å½‡éå³°ç´¡
+	 * @return éƒãƒ¥å¢ éå³°ç´¡ç€›æ¥ƒîƒæ¶“ï¿½
 	 */
 	public String getPattern() {
 		return pattern;
 	}
 
 	/**
-	 * ÉèÖÃÈÕÇ°ÑùÊ½
-	 * @param pattern ÑùÊ½
+	 * ç’å‰§ç–†éƒãƒ¥å¢ éå³°ç´¡
+	 * @param pattern éå³°ç´¡
 	 */
 	public void setPattern(String pattern) {
 		this.pattern = pattern;
 	}
 
 	/**
-	 * ½âÎö×Ö·û´®Ö¸¶¨ÑùÊ½
-	 * @param str Òª½âÎöµÄ×Ö·û´®
-	 * @param pattern ÈÕÇ°ÑùÊ½
+	 * ç‘™ï½†ç€½ç€›æ¥ƒîƒæ¶“å‰å¯šç€¹æ°­ç‰±å¯®ï¿½
+	 * @param str ç‘•ä½½Ğ’é‹æ„®æ®‘ç€›æ¥ƒîƒæ¶“ï¿½
+	 * @param pattern éƒãƒ¥å¢ éå³°ç´¡
 	 */
 	public Object parse(String str, String pattern) throws Exception {
 		return parse(str);

@@ -20,14 +20,14 @@ package org.software.bird.rule.ruleparse;
 import org.software.bird.rule.RuleBugException;
 
 /**
- * ¶ÔStringÀàĞÍµÄ½âÎöÀà
+ * ç€µç­tringç»«è¯²ç€·é¨å‹®Ğ’é‹æ„®è¢«
  * 
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: StringParsor.java,v0.1 2007-12-7 ÏÂÎç05:24:57 cyyan Exp$
+ * @version $Id: StringParsor.java,v0.1 2007-12-7 æ¶“å¬ªå´05:24:57 cyyan Exp$
  */
 public  class StringParser {
 	/**
-	 * ×Ö·û½âÎöÀà
+	 * ç€›æ¥ƒîƒç‘™ï½†ç€½ç»«ï¿½
 	 * @param str
 	 * @return
 	 * @throws RuleBugException

@@ -17,10 +17,10 @@
 
 package org.software.bird.som.exception;
 /**
- * ÅäÖÃÎÄ¼şÃ»ÓĞÕÒµ½µÄÒì³£
+ * é–°å¶‡ç–†é‚å›¦æ¬¢å¨Œâ„ƒæ¹éµæƒ§åŸŒé¨å‹«ç´“ç”¯ï¿½
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: ConfigFileNotFoundException.java,v0.1 2007-12-8 ÏÂÎç06:23:50 cyyan Exp$
+ * @version $Id: ConfigFileNotFoundException.java,v0.1 2007-12-8 æ¶“å¬ªå´06:23:50 cyyan Exp$
  */
 public class ConfigFileNotFoundException extends Exception {
 

@@ -20,16 +20,16 @@ package org.software.bird.rule.ruleparse;
 import org.software.bird.rule.RuleBugException;
 
 /**
- * ¶ÔFloatÀàĞÍµÄ½âÎöÀà
+ * ç€µç¬·loatç»«è¯²ç€·é¨å‹®Ğ’é‹æ„®è¢«
  * 
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: te.java,v0.1 2007-12-7 ÏÂÎç05:44:57 cyyan Exp$
+ * @version $Id: te.java,v0.1 2007-12-7 æ¶“å¬ªå´05:44:57 cyyan Exp$
  */
 
 public class FloatParser extends NumberParser {
 	/**
-	 * °Ñ×Ö·û´®½âÎö³ÉFloat¶ÔÏó
-	 * @param ´ı½âÎöµÄ×Ö·û´®
+	 * é¶å©‚ç“§ç»—ï¸¿è¦†ç‘™ï½†ç€½é´æ€“loatç€µç¡…è–„
+	 * @param å¯°å‘°Ğ’é‹æ„®æ®‘ç€›æ¥ƒîƒæ¶“ï¿½
 	 */
 	public Object parse(String str) throws RuleBugException {
 		Number num = (Number) super.parse(str);
@@ -41,7 +41,7 @@ public class FloatParser extends NumberParser {
 	}
 	
 	/**
-	 * ÊÇ·ñÔÚFloat·¶Î§ÄÚ²¿
+	 * é„îˆšæƒé¦â€µloaté‘¼å†¨æ´¿éå‘´å„´
 	 * @param Number
 	 */
 	public String getRange() {
@@ -49,8 +49,8 @@ public class FloatParser extends NumberParser {
 	}
 
 	/**
-	 * »ñÈ¡·¶Î§
-	 * @return ·¶Î§×Ö·û´®
+	 * é‘¾å³°å½‡é‘¼å†¨æ´¿
+	 * @return é‘¼å†¨æ´¿ç€›æ¥ƒîƒæ¶“ï¿½
 	 */
 	public boolean isInRange(Number num) {
 		return -Float.MAX_VALUE <= num.doubleValue()

@@ -21,21 +21,21 @@ import java.io.InputStream;
 import java.util.Properties;
 
 /**
- * ´¦ÀíºËĞÄÅäÖÃÎÄ¼ş£¬ÆäËüµÄÅäÖÃÎÄ¼şÂ·¾¶¶¼ÔÚ´ËÎÄ¼şÖĞ½øĞĞÅäÖÃ£¬³ÌĞò¾ÍÕë¶Ô´ËÎÄ¼ş½øĞĞ´¦Àí£¬Ò»¸öÍ³Ò»µÄÈë¿Ú
+ * æ¾¶å‹­æ‚Šéç¨¿ç¸¾é–°å¶‡ç–†é‚å›¦æ¬¢é”›å±½å¾ç€¹å†ªæ®‘é–°å¶‡ç–†é‚å›¦æ¬¢ç’ºîˆšç·é–®è—‰æ¹ªå§ã‚†æƒæµ æœµè…‘æ©æ¶œî”‘é–°å¶‡ç–†é”›å²€â–¼æ´å¿“æ°¨é–½å î‡®å§ã‚†æƒæµ æƒ°ç¹˜ç›å±½î˜µéå—­ç´æ¶“ï¿½æ¶“î†ç²ºæ¶“ï¿½é¨å‹«å†é™ï¿½
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: BootConfig.java,v0.1 2008-9-28 ÉÏÎç09:07:22 cyyan Exp$
+ * @version $Id: BootConfig.java,v0.1 2008-9-28 æ¶“å©‚å´09:07:22 cyyan Exp$
  */
 public class BootConfig {
 
 	/**
-	 * ºËĞÄÅäÖÃÎÄ¼şÂ·¾¶
+	 * éç¨¿ç¸¾é–°å¶‡ç–†é‚å›¦æ¬¢ç’ºîˆšç·
 	 */
 	final public static String bootPropertiesPath = "ether.properties";
 	final private static Properties bootProperties = new Properties();
 	static {
 		/**
-		 * ×Ô¶¯³õÊ¼»¯, ¼ÓÔØÅäÖÃÎÄ¼ş
+		 * é‘·î„å§©é’æ¿†îŠé–ï¿½, é”çŠºæµ‡é–°å¶‡ç–†é‚å›¦æ¬¢
 		 */
 		try {
 			InputStream configFileInputStream = CommonUtil.getInputStreamBySourceName(bootPropertiesPath);
@@ -46,7 +46,7 @@ public class BootConfig {
 		}
 	}
 	/**
-	 * »ñÈ¡¸ùÅäÖÃÎÄ¼şµÄÊôĞÔ
+	 * é‘¾å³°å½‡éå½’å¤ç¼ƒî†½æƒæµ å‰æ®‘çç‚´ï¿½ï¿½
 	 * @param key
 	 * @return
 	 */
@@ -60,9 +60,9 @@ public class BootConfig {
 	}
 	
 	/**
-	 * ´¦Àí¼æÈİĞÔÎÊÌâ, 1.5Ö®Ç°Ê¹ÓÃµÄÅäÖÃÎÄ¼şÂ·¾¶²»¹æ·¶, ´Ó1.5Ö®ºóĞŞ¸Ä³É config/config/bird/som/som.xml 
-	 * ºÍ config/config/bird/rule/rule.xml 
-	 * ´Ë´úÂë×Ô¶¯´¦ÀíÈç¹ûÃ»ÓĞÕÒµ½ ether.propertiesÎÄ¼ş¾ÍÈÏÎªÊÇ1.5Ö®Ç°µÄ, ²¢×Ô¶¯Ìæ»»ÎªÒÔÇ°µÄÂ·¾¶
+	 * æ¾¶å‹­æ‚Šéç…î†é¬Ñ‡æ£¶æ£°ï¿½, 1.5æ¶”å¬ªå¢ æµ£è·¨æ•¤é¨å‹¯å¤ç¼ƒî†½æƒæµ æƒ°çŸ¾å¯°å‹ªç¬‰ç‘™å‹®å¯–, æµ ï¿½1.5æ¶”å¬ªæ‚—æ·‡î†½æ•¼é´ï¿½ config/config/bird/som/som.xml 
+	 * éœï¿½ config/config/bird/rule/rule.xml 
+	 * å§ã‚„å”¬é®ä½½åšœé”ã„¥î˜µéå——îœ†é‹æ»„ç—…éˆå¤‹å£˜é’ï¿½ ether.propertiesé‚å›¦æ¬¢çè¾«î…»æ¶“çƒ˜æ§¸1.5æ¶”å¬ªå¢ é¨ï¿½, éªæƒ°åšœé”ã„¦æµ›é¹î–è´Ÿæµ ãƒ¥å¢ é¨å‹®çŸ¾å¯°ï¿½
 	 * @param bootProperties
 	 */
 	private static void dealCompatibilityLE_1_5(Properties bootProperties) {

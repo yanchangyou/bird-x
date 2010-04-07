@@ -19,55 +19,55 @@ package org.software.bird.rule;
 
 
 /**
- * ×Ö·û¹æÔòÀà
+ * ç€›æ¥ƒîƒç‘™å‹«å¯ç»«ï¿½
  * 
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: StringRule.java,v0.1 2007-12-14 ÉÏÎç08:54:46 cyyan Exp$
+ * @version $Id: StringRule.java,v0.1 2007-12-14 æ¶“å©‚å´08:54:46 cyyan Exp$
  */
 public class StringRule {
 
 	/**
-	 * ¸¸¹æÔò¶ÔÏó
+	 * é–æƒ°îƒé’æ¬î‡®ç’ï¿½
 	 */
 	private StringRule parentStringRule; 
 	
 	/**
-	 * ¹æÔòÃèÊö
+	 * ç‘™å‹«å¯é»å¿šå ª
 	 */
 	private String description;
 
 	/**
-	 * ÊÇ·ñÎª¿Õ
+	 * é„îˆšæƒæ¶“è™¹â”–
 	 */
 	private boolean emptyable = true;
 
 	/**
-	 * Æ¥Åä×Ö·û´®
+	 * é–å½’å¤ç€›æ¥ƒîƒæ¶“ï¿½
 	 */
 	private String match;
 
 	/**
-	 * ²»Æ¥ÅäµÄÏûÏ¢
+	 * æ¶“å¶…å°®é–°å¶‡æ®‘å¨‘å Ÿä¼…
 	 */
 	private String message;
 
 	/**
-	 * ±»²âÊÔ£¬Ğ£ÑéµÄ×Ö·û´®
+	 * çšî‚£ç¥´ç’‡æ›ªç´éï¿ ç™é¨å‹«ç“§ç»—ï¸¿è¦†
 	 */
 	private String testedString;
 	
 	/**
-	 * ²âÊÔÊ±£¬ÏÈ²âÊÔ¸¸¹æÔò£¬²âÊÔ·½·¨ÈçÏÂ£º<br>
+	 * å¨´å¬­ç˜¯éƒè®¹ç´éå Ÿç¥´ç’‡æ› åŸ—ç‘™å‹«å¯é”›å±¾ç¥´ç’‡æ›ŸæŸŸå¨‰æ›îœ†æ¶“å¬¶ç´°<br>
 	 * 
-	 * ÓÃ¹æÔòÈ¥²âÊÔ×Ö·û´® ÓĞÁ½¸ö¹æÔòÒª¼ì²é <br>
-	 * 1£¬ÊÇ·ñÎª¿Õ <br>
-	 * 2£¬ÊÇ·ñÂú×ãÕıÔò±í´ïÊ½ <br>
+	 * é¢ã„¨îƒé’æ¬å¹“å¨´å¬­ç˜¯ç€›æ¥ƒîƒæ¶“ï¿½ éˆå¤‰è¢±æ¶“î‡îƒé’æ¬’îœ…å¦«ï¿½éŒï¿½ <br>
+	 * 1é”›å±¾æ§¸éšï¸¿è´Ÿç»Œï¿½ <br>
+	 * 2é”›å±¾æ§¸éšï¸½å¼§ç“’è™«î„œé’æ¬’ã€ƒæˆæƒ§ç´¡ <br>
 	 * 
-	 * ²âÊÔ²»Í¨¹ı½«Å×Òì³£ ²»Í¨¹ıµÄÌõ¼şÈçÏÂ£º <br>
-	 * 1£¬×Ö·û´®ÊÇ¿ÕµÄ£¬µ«¹æÔòËµÃ÷²»ÄÜÎª¿Õ code£º(isEmpty && !emptyable)<br>
-	 * 2£¬×Ö·û´®²»Îª¿Õ£¬¹æÔòÒ²²»Îª¿Õ£¬µ«²»Âú×ãÕıÔò±í´ïÊ½ code£º(!isEmpty && !isEmptyString(match) && !str.matches(match))<br>
+	 * å¨´å¬­ç˜¯æ¶“å¶‰ï¿½æ°³ç¹ƒçå—˜å§å¯®å‚šçˆ¶ æ¶“å¶‰ï¿½æ°³ç¹ƒé¨å‹¬æ½¯æµ è·ºîœ†æ¶“å¬¶ç´° <br>
+	 * 1é”›å±½ç“§ç»—ï¸¿è¦†é„îˆœâ”–é¨å‹¶ç´æµ£å—šîƒé’æ¬’î‡©é„åºç¬‰é‘³æˆ’è´Ÿç»Œï¿½ codeé”›ï¿½(isEmpty && !emptyable)<br>
+	 * 2é”›å±½ç“§ç»—ï¸¿è¦†æ¶“å¶„è´Ÿç»ŒçŒ´ç´ç‘™å‹«å¯æ¶”ç†¶ç¬‰æ¶“è™¹â”–é”›å±¼çµ¾æ¶“å¶†å¼§ç“’è™«î„œé’æ¬’ã€ƒæˆæƒ§ç´¡ codeé”›ï¿½(!isEmpty && !isEmptyString(match) && !str.matches(match))<br>
 	 * 
-	 * ÌØÊâ´¦Àí£ºÎªÁË±ÜÃâ null ×Ö·û´®µÄÇé¿ö£¬ÏÈ½« null ×ª»¯Îª "",ÒÔ±ã´¦Àí<br>
+	 * é—è§„ç•©æ¾¶å‹­æ‚Šé”›æ°«è´Ÿæµœå—›ä¼©éï¿½ null ç€›æ¥ƒîƒæ¶“èŒ¬æ®‘é¯å‘­å–Œé”›å±½å›çï¿½ null æî„€å¯²æ¶“ï¿½ "",æµ ãƒ¤ç©¶æ¾¶å‹­æ‚Š<br>
 	 * 
 	 * @param str
 	 * @throws BreakStringRuleException
@@ -78,7 +78,7 @@ public class StringRule {
 
 		if (this.parentStringRule != null) {
 			/**
-			 * try-catch ×÷ÓÃ ÊÇ°Ñ Õû¸ö¹æÔòÍ¨±¨³öÈ¥£¬Èç¹ûÃ»ÓĞtry-catch ËüÖ»Í¨±¨¸¸¹æÔò
+			 * try-catch æµ£æ»…æ•¤ é„îˆ›å¦¸ éç¿ é‡œç‘™å‹«å¯é–«æ°­å§¤é‘å“„å¹“é”›å±½îœ†é‹æ»„ç—…éˆå¡¼ry-catch ç€¹å†¨å½§é–«æ°­å§¤é–æƒ°îƒé’ï¿½
 			 */
 			try {
 				this.parentStringRule.test(testedString);
@@ -92,7 +92,7 @@ public class StringRule {
 	}
 
 	/**
-	 * ÊÇ·ñÊÇ¿Õ×Ö·û´®
+	 * é„îˆšæƒé„îˆœâ”–ç€›æ¥ƒîƒæ¶“ï¿½
 	 * @param str
 	 * @return
 	 */
@@ -101,7 +101,7 @@ public class StringRule {
 	}
 
 	/**
-	 * °Ñnull´¦Àí³É""
+	 * é¶å¦Œullæ¾¶å‹­æ‚Šé´ï¿½""
 	 * @param str
 	 * @return
 	 */
@@ -110,7 +110,7 @@ public class StringRule {
 	}
 
 	/**
-	 * ÊÇ·ñÎª¿Õ
+	 * é„îˆšæƒæ¶“è™¹â”–
 	 * @return
 	 */
 	public boolean isEmptyable() {
@@ -118,7 +118,7 @@ public class StringRule {
 	}
 
 	/**
-	 * emptyable µÄgetter·½·¨
+	 * emptyable é¨åˆ§etteré‚è§„ç¡¶
 	 * @return
 	 */
 	public boolean getEmptyable() {
@@ -126,14 +126,14 @@ public class StringRule {
 	}
 
 	/**
-	 * emptyable µÄsetter·½·¨
+	 * emptyable é¨å‰†etteré‚è§„ç¡¶
 	 * @param emptyable
 	 */
 	public void setEmptyable(boolean emptyable) {
 		this.emptyable = emptyable;
 	}
 	/**
-	 * emptyable µÄsetter·½·¨
+	 * emptyable é¨å‰†etteré‚è§„ç¡¶
 	 * @param emptyable
 	 */
 	public void setEmptyable(String emptyable) {
@@ -165,11 +165,11 @@ public class StringRule {
 	}
 	
 	/**
-	 * ×ª»»³É×Ö·û´®
+	 * æî„å´²é´æ„¬ç“§ç»—ï¸¿è¦†
 	 */
 	public String toString() {
 		StringBuffer buf = new StringBuffer();
-		buf.append("×Ö·û´®£º\n" + testedString + "\n¹æÔò£º\n");
+		buf.append("ç€›æ¥ƒîƒæ¶“è¯§ç´°\n" + testedString + "\nç‘™å‹«å¯é”›æ­•n");
 		buf.append("{\n");
 		buf.append("\tdescription:" + description + "\n");
 		buf.append("\temptyable:" + emptyable + "\n");
@@ -183,14 +183,14 @@ public class StringRule {
 	}
 
 	/**
-	 * parentStringRule µÄgetter·½·¨
+	 * parentStringRule é¨åˆ§etteré‚è§„ç¡¶
 	 * @return StringRule
 	 */
 	public StringRule getParentStringRule() {
 		return parentStringRule;
 	}
 	/**
-	 * parentStringRule µÄsetter·½·¨
+	 * parentStringRule é¨å‰†etteré‚è§„ç¡¶
 	 * @param parentStringRule
 	 */
 	public void setParentStringRule(StringRule parentStringRule) {
@@ -198,7 +198,7 @@ public class StringRule {
 	}
 
 	/**
-	 * testedStringµÄ getter·½·¨
+	 * testedStringé¨ï¿½ getteré‚è§„ç¡¶
 	 * @return
 	 */
 	public String getTestedString() {
@@ -206,7 +206,7 @@ public class StringRule {
 	}
 
 	/**
-	 * testedString µÄsetter·½·¨
+	 * testedString é¨å‰†etteré‚è§„ç¡¶
 	 * @param testedString
 	 */
 	public void setTestedString(String testedString) {

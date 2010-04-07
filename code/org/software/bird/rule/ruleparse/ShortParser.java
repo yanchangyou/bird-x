@@ -21,17 +21,17 @@ import org.software.bird.rule.RuleBugException;
 
 
 /**
- * ¶ÔShortÀàĞÍµÄ½âÎöÀà
+ * ç€µç­hortç»«è¯²ç€·é¨å‹®Ğ’é‹æ„®è¢«
  * 
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: safd.java,v0.1 2007-12-7 ÏÂÎç05:45:02 cyyan Exp$
+ * @version $Id: safd.java,v0.1 2007-12-7 æ¶“å¬ªå´05:45:02 cyyan Exp$
  */
 
 public class ShortParser extends NumberParser {
 	
 	/**
-	 * °Ñ×Ö·û´®½âÎö³ÉLong¶ÔÏó
-	 * @param ´ı½âÎöµÄ×Ö·û´®
+	 * é¶å©‚ç“§ç»—ï¸¿è¦†ç‘™ï½†ç€½é´æ€¢ongç€µç¡…è–„
+	 * @param å¯°å‘°Ğ’é‹æ„®æ®‘ç€›æ¥ƒîƒæ¶“ï¿½
 	 */
 	public Object parse(String str) throws RuleBugException {
 		Number num = (Number) super.parse(str);
@@ -44,7 +44,7 @@ public class ShortParser extends NumberParser {
 	}
 	
 	/**
-	 * ÊÇ·ñÔÚShort·¶Î§ÄÚ²¿
+	 * é„îˆšæƒé¦âŠ¿horté‘¼å†¨æ´¿éå‘´å„´
 	 * @param Number
 	 */
 	public String getRange() {
@@ -52,8 +52,8 @@ public class ShortParser extends NumberParser {
 	}
 
 	/**
-	 * »ñÈ¡·¶Î§
-	 * @return ·¶Î§×Ö·û´®
+	 * é‘¾å³°å½‡é‘¼å†¨æ´¿
+	 * @return é‘¼å†¨æ´¿ç€›æ¥ƒîƒæ¶“ï¿½
 	 */
 	public boolean isInRange(Number num) {
 		return Short.MIN_VALUE <= num.doubleValue()

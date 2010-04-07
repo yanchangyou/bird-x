@@ -34,15 +34,15 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 /**
- * ½âÎöxmlÎÄ¼şµÄ³£ÓÃº¯Êı
+ * ç‘™ï½†ç€½xmlé‚å›¦æ¬¢é¨å‹«çˆ¶é¢ã„¥åš±éï¿½
  * 
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: XMLUtil.java,v0.1 2007-12-6 ÏÂÎç01:46:58 cyyan Exp$
+ * @version $Id: XMLUtil.java,v0.1 2007-12-6 æ¶“å¬ªå´01:46:58 cyyan Exp$
  */
 public class XMLUtil {
 
 	/**
-	 * °´Ãû»ñÈ¡½Úµã
+	 * é¸å¤Šæ‚•é‘¾å³°å½‡é‘ºå‚œå£
 	 * @param xmlDocument
 	 * @param tagName
 	 * @param nodeNameValue
@@ -64,7 +64,7 @@ public class XMLUtil {
 	}
 
 	/**
-	 * »ñÈ¡±êÇ©ÖĞµÄµÚÒ»¸ö½Úµã
+	 * é‘¾å³°å½‡éå›©î„·æ¶“î… æ®‘ç»—îƒ¿ç«´æ¶“î‡å¦­éï¿½
 	 * @param parentNode
 	 * @param tagName
 	 * @return
@@ -90,7 +90,7 @@ public class XMLUtil {
 	}
 
 	/**
-	 * »ñÈ¡Ä³±êÇ©µÄËùÓĞ½Úµã
+	 * é‘¾å³°å½‡éŒæ„­çˆ£ç»›å‰§æ®‘éµï¿½éˆå¤å¦­éï¿½
 	 * @param parentNode
 	 * @param tagName
 	 * @return
@@ -117,7 +117,7 @@ public class XMLUtil {
 	}
 	
 	/**
-	 * »ñÈ¡½ÚµãÎÄ±¾
+	 * é‘¾å³°å½‡é‘ºå‚œå£é‚å›¨æ¹°
 	 * @param node
 	 * @return
 	 */
@@ -140,7 +140,7 @@ public class XMLUtil {
 	}
 
 	/**
-	 * »ñÈ¡½ÚµãµÄÊôĞÔÖµ
+	 * é‘¾å³°å½‡é‘ºå‚œå£é¨å‹«ç˜é¬Ñƒï¿½ï¿½
 	 * @param node
 	 * @param propertyName
 	 * @return
@@ -162,7 +162,7 @@ public class XMLUtil {
 	}
 
 	/**
-	 * ´ÓÁ÷ÖĞ»ñÈ¡poi¶ÔÏóµÄDocument¶ÔÏó
+	 * æµ åº¢ç¥¦æ¶“î…¡å¹é™æ™oiç€µç¡…è–„é¨å‡ocumentç€µç¡…è–„
 	 * @param inputStream
 	 * @return
 	 * @throws FactoryConfigurationError
@@ -182,7 +182,7 @@ public class XMLUtil {
 	}
 
 	/**
-	 * »ñÈ¡ËùÓĞµÄ½ÚµãÖµ
+	 * é‘¾å³°å½‡éµï¿½éˆå¤Œæ®‘é‘ºå‚œå£éŠï¿½
 	 * @param nodeList
 	 * @param propertyName
 	 * @return

@@ -19,15 +19,15 @@ package org.software.bird.common;
 
 
 /**
- * bird³£Á¿Àà
+ * birdç”¯æå™ºç»«ï¿½
  *
  * @author <a href="mailto:cyyan@isoftstone.com">cyyan</a>
- * @version $Id: BridConstant.java,v0.1 2007-12-16 ÏÂÎç03:02:25 cyyan Exp$
+ * @version $Id: BridConstant.java,v0.1 2007-12-16 æ¶“å¬ªå´03:02:25 cyyan Exp$
  */
 public class BirdConstant {
 	
 	/**
-	 * Â·¾¶·Ö¸î·û£¬Ê¹ÓÃ|ÄÜÔÚÅäÖÃÎÄ¼şÖĞÍ³Ò»·Ö¸î·û
+	 * ç’ºîˆšç·é’å——å£Šç»—ï¸¼ç´æµ£è·¨æ•¤|é‘³è—‰æ¹ªé–°å¶‡ç–†é‚å›¦æ¬¢æ¶“î… ç²ºæ¶“ï¿½é’å——å£Šç»—ï¿½
 	 */
 	public final static char separator_char_in_config_file = '|';
 	
